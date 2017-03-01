@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.cpp
+consts.h
+C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.h
+
+C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.h
+
+C:/Users/efremov_aa/ClionProjects/MFG/mfgl/solver1.cpp
+math.h
+-
+
