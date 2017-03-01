@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../mfgl/common.h
-consts.h
-../mfgl/consts.h
-
 ../mfgl/consts.h
 
 ../mfgl/utils.h
@@ -264,8 +260,6 @@ acxx_demangle.h
 
 C:/Users/efremov_aa/ClionProjects/MFG/mfgt/tests/tests.cpp
 utils.h
--
-common.h
 -
 gtest/gtest.h
 C:/Users/efremov_aa/ClionProjects/MFG/mfgt/tests/gtest/gtest.h

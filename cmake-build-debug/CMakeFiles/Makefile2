@@ -287,9 +287,9 @@ mfgt/tests/preinstall:
 # Target rules for target mfgt/tests/CMakeFiles/run_mfgt.dir
 
 # All Build rule for target.
-mfgt/tests/CMakeFiles/run_mfgt.dir/all: mfgl/CMakeFiles/mfg.dir/all
-mfgt/tests/CMakeFiles/run_mfgt.dir/all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
 mfgt/tests/CMakeFiles/run_mfgt.dir/all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
+mfgt/tests/CMakeFiles/run_mfgt.dir/all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
+mfgt/tests/CMakeFiles/run_mfgt.dir/all: mfgl/CMakeFiles/mfg.dir/all
 	$(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/depend
 	$(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=10,11 "Built target run_mfgt"

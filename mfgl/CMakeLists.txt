@@ -13,7 +13,7 @@ if(OPENMP_FOUND)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 endif()
 
-set(SOURCE_FILES solver1.cpp consts.cpp)
+set(SOURCE_FILES consts.cpp malgo.h)
 
 add_library(mfg STATIC ${SOURCE_FILES} ${HEADER_FILES})
 

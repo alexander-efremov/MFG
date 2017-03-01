@@ -292,6 +292,9 @@
 		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.h">
 			<Option target="mfg"/>
 		</Unit>
+		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfgl/malgo.h">
+			<Option target="mfg"/>
+		</Unit>
 		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfgl/solver1.cpp">
 			<Option target="mfg"/>
 		</Unit>
