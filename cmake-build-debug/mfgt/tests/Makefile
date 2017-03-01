@@ -124,32 +124,59 @@ run_mfgt/fast:
 	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/build
 .PHONY : run_mfgt/fast
 
-tests.obj: tests.cpp.obj
+malgo_tests.obj: malgo_tests.cpp.obj
 
-.PHONY : tests.obj
+.PHONY : malgo_tests.obj
 
 # target to build an object file
-tests.cpp.obj:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/tests.cpp.obj
-.PHONY : tests.cpp.obj
+malgo_tests.cpp.obj:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/malgo_tests.cpp.obj
+.PHONY : malgo_tests.cpp.obj
 
-tests.i: tests.cpp.i
+malgo_tests.i: malgo_tests.cpp.i
 
-.PHONY : tests.i
+.PHONY : malgo_tests.i
 
 # target to preprocess a source file
-tests.cpp.i:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/tests.cpp.i
-.PHONY : tests.cpp.i
+malgo_tests.cpp.i:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/malgo_tests.cpp.i
+.PHONY : malgo_tests.cpp.i
 
-tests.s: tests.cpp.s
+malgo_tests.s: malgo_tests.cpp.s
 
-.PHONY : tests.s
+.PHONY : malgo_tests.s
 
 # target to generate assembly for a file
-tests.cpp.s:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/tests.cpp.s
-.PHONY : tests.cpp.s
+malgo_tests.cpp.s:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/malgo_tests.cpp.s
+.PHONY : malgo_tests.cpp.s
+
+mfgl_tests.obj: mfgl_tests.cpp.obj
+
+.PHONY : mfgl_tests.obj
+
+# target to build an object file
+mfgl_tests.cpp.obj:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/mfgl_tests.cpp.obj
+.PHONY : mfgl_tests.cpp.obj
+
+mfgl_tests.i: mfgl_tests.cpp.i
+
+.PHONY : mfgl_tests.i
+
+# target to preprocess a source file
+mfgl_tests.cpp.i:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/mfgl_tests.cpp.i
+.PHONY : mfgl_tests.cpp.i
+
+mfgl_tests.s: mfgl_tests.cpp.s
+
+.PHONY : mfgl_tests.s
+
+# target to generate assembly for a file
+mfgl_tests.cpp.s:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/mfgl_tests.cpp.s
+.PHONY : mfgl_tests.cpp.s
 
 # Help Target
 help:
@@ -160,9 +187,12 @@ help:
 	@echo ... run_mfgt
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... tests.obj
-	@echo ... tests.i
-	@echo ... tests.s
+	@echo ... malgo_tests.obj
+	@echo ... malgo_tests.i
+	@echo ... malgo_tests.s
+	@echo ... mfgl_tests.obj
+	@echo ... mfgl_tests.i
+	@echo ... mfgl_tests.s
 .PHONY : help
 
 

@@ -30,7 +30,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/cmake_install.cmake")
-  include("C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgt/cmake_install.cmake")
+  include("C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/cmake_install.cmake")
+  include("C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/cmake_install.cmake")
 
 endif()
 

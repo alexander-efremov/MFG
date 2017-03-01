@@ -24,7 +24,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files (x86)/JetBrains/CLion 2016.3.3/bin/cmake/share/cmake-3.6/Modules/Compiler/GNU-C.cmake"
   "C:/Program Files (x86)/JetBrains/CLion 2016.3.3/bin/cmake/share/cmake-3.6/Modules/Compiler/GNU-CXX.cmake"
   "C:/Program Files (x86)/JetBrains/CLion 2016.3.3/bin/cmake/share/cmake-3.6/Modules/Compiler/GNU.cmake"
-  "C:/Program Files (x86)/JetBrains/CLion 2016.3.3/bin/cmake/share/cmake-3.6/Modules/FindOpenMP.cmake"
   "C:/Program Files (x86)/JetBrains/CLion 2016.3.3/bin/cmake/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake"
   "C:/Program Files (x86)/JetBrains/CLion 2016.3.3/bin/cmake/share/cmake-3.6/Modules/FindPackageMessage.cmake"
   "C:/Program Files (x86)/JetBrains/CLion 2016.3.3/bin/cmake/share/cmake-3.6/Modules/FindPythonInterp.cmake"
@@ -43,11 +42,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.6.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.6.3/CMakeRCCompiler.cmake"
   "CMakeFiles/3.6.3/CMakeSystem.cmake"
+  "../malgo/CMakeLists.txt"
   "../mfgl/CMakeLists.txt"
-  "../mfgt/CMakeLists.txt"
-  "../mfgt/lib/gtest-1.7.0/CMakeLists.txt"
-  "../mfgt/lib/gtest-1.7.0/cmake/internal_utils.cmake"
-  "../mfgt/tests/CMakeLists.txt"
+  "../tests/CMakeLists.txt"
+  "../tests/lib/gtest-1.7.0/CMakeLists.txt"
+  "../tests/lib/gtest-1.7.0/cmake/internal_utils.cmake"
+  "../tests/tests/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -60,16 +60,18 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "mfgl/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "mfgt/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "mfgt/lib/gtest-1.7.0/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "mfgt/tests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/lib/gtest-1.7.0/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/tests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "malgo/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/MFG.dir/DependInfo.cmake"
   "mfgl/CMakeFiles/mfg.dir/DependInfo.cmake"
-  "mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "mfgt/tests/CMakeFiles/run_mfgt.dir/DependInfo.cmake"
+  "tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "tests/tests/CMakeFiles/run_tests.dir/DependInfo.cmake"
+  "malgo/CMakeFiles/malgo.dir/DependInfo.cmake"
   )

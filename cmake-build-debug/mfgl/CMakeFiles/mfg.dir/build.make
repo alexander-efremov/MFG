@@ -56,35 +56,10 @@ include mfgl/CMakeFiles/mfg.dir/progress.make
 # Include the compile flags for this target's objects.
 include mfgl/CMakeFiles/mfg.dir/flags.make
 
-mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj: mfgl/CMakeFiles/mfg.dir/flags.make
-mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj: mfgl/CMakeFiles/mfg.dir/includes_CXX.rsp
-mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj: ../mfgl/solver1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfgl && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\mfg.dir\solver1.cpp.obj -c C:\Users\efremov_aa\ClionProjects\MFG\mfgl\solver1.cpp
-
-mfgl/CMakeFiles/mfg.dir/solver1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mfg.dir/solver1.cpp.i"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfgl && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\efremov_aa\ClionProjects\MFG\mfgl\solver1.cpp > CMakeFiles\mfg.dir\solver1.cpp.i
-
-mfgl/CMakeFiles/mfg.dir/solver1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mfg.dir/solver1.cpp.s"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfgl && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\efremov_aa\ClionProjects\MFG\mfgl\solver1.cpp -o CMakeFiles\mfg.dir\solver1.cpp.s
-
-mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj.requires:
-
-.PHONY : mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj.requires
-
-mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj.provides: mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj.requires
-	$(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj.provides.build
-.PHONY : mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj.provides
-
-mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj.provides.build: mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj
-
-
 mfgl/CMakeFiles/mfg.dir/consts.cpp.obj: mfgl/CMakeFiles/mfg.dir/flags.make
 mfgl/CMakeFiles/mfg.dir/consts.cpp.obj: mfgl/CMakeFiles/mfg.dir/includes_CXX.rsp
 mfgl/CMakeFiles/mfg.dir/consts.cpp.obj: ../mfgl/consts.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object mfgl/CMakeFiles/mfg.dir/consts.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object mfgl/CMakeFiles/mfg.dir/consts.cpp.obj"
 	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfgl && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\mfg.dir\consts.cpp.obj -c C:\Users\efremov_aa\ClionProjects\MFG\mfgl\consts.cpp
 
 mfgl/CMakeFiles/mfg.dir/consts.cpp.i: cmake_force
@@ -108,17 +83,15 @@ mfgl/CMakeFiles/mfg.dir/consts.cpp.obj.provides.build: mfgl/CMakeFiles/mfg.dir/c
 
 # Object files for target mfg
 mfg_OBJECTS = \
-"CMakeFiles/mfg.dir/solver1.cpp.obj" \
 "CMakeFiles/mfg.dir/consts.cpp.obj"
 
 # External object files for target mfg
 mfg_EXTERNAL_OBJECTS =
 
-mfgl/libmfg.a: mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj
 mfgl/libmfg.a: mfgl/CMakeFiles/mfg.dir/consts.cpp.obj
 mfgl/libmfg.a: mfgl/CMakeFiles/mfg.dir/build.make
 mfgl/libmfg.a: mfgl/CMakeFiles/mfg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libmfg.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmfg.a"
 	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfgl && $(CMAKE_COMMAND) -P CMakeFiles\mfg.dir\cmake_clean_target.cmake
 	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfgl && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mfg.dir\link.txt --verbose=$(VERBOSE)
 
@@ -127,7 +100,6 @@ mfgl/CMakeFiles/mfg.dir/build: mfgl/libmfg.a
 
 .PHONY : mfgl/CMakeFiles/mfg.dir/build
 
-mfgl/CMakeFiles/mfg.dir/requires: mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj.requires
 mfgl/CMakeFiles/mfg.dir/requires: mfgl/CMakeFiles/mfg.dir/consts.cpp.obj.requires
 
 .PHONY : mfgl/CMakeFiles/mfg.dir/requires

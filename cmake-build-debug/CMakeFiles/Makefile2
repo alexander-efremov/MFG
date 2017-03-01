@@ -120,7 +120,7 @@ mfgl/preinstall:
 mfgl/CMakeFiles/mfg.dir/all:
 	$(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/depend
 	$(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=7,8,9 "Built target mfg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=8,9 "Built target mfg"
 .PHONY : mfgl/CMakeFiles/mfg.dir/all
 
 # Include target in all.
@@ -130,7 +130,7 @@ all: mfgl/CMakeFiles/mfg.dir/all
 
 # Build rule for subdir invocation for target.
 mfgl/CMakeFiles/mfg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 mfgl/CMakeFiles/mfg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
 .PHONY : mfgl/CMakeFiles/mfg.dir/rule
@@ -151,174 +151,228 @@ clean: mfgl/CMakeFiles/mfg.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory mfgt
+# Directory level rules for directory tests
 
 # Convenience name for "all" pass in the directory.
-mfgt/all: mfgt/lib/gtest-1.7.0/all
-mfgt/all: mfgt/tests/all
+tests/all: tests/lib/gtest-1.7.0/all
+tests/all: tests/tests/all
 
-.PHONY : mfgt/all
+.PHONY : tests/all
 
 # Convenience name for "clean" pass in the directory.
-mfgt/clean: mfgt/lib/gtest-1.7.0/clean
-mfgt/clean: mfgt/tests/clean
+tests/clean: tests/lib/gtest-1.7.0/clean
+tests/clean: tests/tests/clean
 
-.PHONY : mfgt/clean
+.PHONY : tests/clean
 
 # Convenience name for "preinstall" pass in the directory.
-mfgt/preinstall: mfgt/lib/gtest-1.7.0/preinstall
-mfgt/preinstall: mfgt/tests/preinstall
+tests/preinstall: tests/lib/gtest-1.7.0/preinstall
+tests/preinstall: tests/tests/preinstall
 
-.PHONY : mfgt/preinstall
+.PHONY : tests/preinstall
 
 #=============================================================================
-# Directory level rules for directory mfgt/lib/gtest-1.7.0
+# Directory level rules for directory tests/lib/gtest-1.7.0
 
 # Convenience name for "all" pass in the directory.
-mfgt/lib/gtest-1.7.0/all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
-mfgt/lib/gtest-1.7.0/all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
+tests/lib/gtest-1.7.0/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
+tests/lib/gtest-1.7.0/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
 
-.PHONY : mfgt/lib/gtest-1.7.0/all
+.PHONY : tests/lib/gtest-1.7.0/all
 
 # Convenience name for "clean" pass in the directory.
-mfgt/lib/gtest-1.7.0/clean: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean
-mfgt/lib/gtest-1.7.0/clean: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean
+tests/lib/gtest-1.7.0/clean: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean
+tests/lib/gtest-1.7.0/clean: tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean
 
-.PHONY : mfgt/lib/gtest-1.7.0/clean
+.PHONY : tests/lib/gtest-1.7.0/clean
 
 # Convenience name for "preinstall" pass in the directory.
-mfgt/lib/gtest-1.7.0/preinstall:
+tests/lib/gtest-1.7.0/preinstall:
 
-.PHONY : mfgt/lib/gtest-1.7.0/preinstall
+.PHONY : tests/lib/gtest-1.7.0/preinstall
 
 #=============================================================================
-# Target rules for target mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir
+# Target rules for target tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir
 
 # All Build rule for target.
-mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all:
-	$(MAKE) -f mfgt\lib\gtest-1.7.0\CMakeFiles\gtest.dir\build.make mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/depend
-	$(MAKE) -f mfgt\lib\gtest-1.7.0\CMakeFiles\gtest.dir\build.make mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/build
+tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all:
+	$(MAKE) -f tests\lib\gtest-1.7.0\CMakeFiles\gtest.dir\build.make tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/depend
+	$(MAKE) -f tests\lib\gtest-1.7.0\CMakeFiles\gtest.dir\build.make tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target gtest"
-.PHONY : mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
+.PHONY : tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
 
 # Include target in all.
-all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
+all: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
-.PHONY : mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/rule
+.PHONY : tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
-gtest: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/rule
+gtest: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/rule
 
 .PHONY : gtest
 
 # clean rule for target.
-mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean:
-	$(MAKE) -f mfgt\lib\gtest-1.7.0\CMakeFiles\gtest.dir\build.make mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean
-.PHONY : mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean
+tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean:
+	$(MAKE) -f tests\lib\gtest-1.7.0\CMakeFiles\gtest.dir\build.make tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean
+.PHONY : tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean
 
 # clean rule for target.
-clean: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean
+clean: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir
+# Target rules for target tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir
 
 # All Build rule for target.
-mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
-	$(MAKE) -f mfgt\lib\gtest-1.7.0\CMakeFiles\gtest_main.dir\build.make mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/depend
-	$(MAKE) -f mfgt\lib\gtest-1.7.0\CMakeFiles\gtest_main.dir\build.make mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/build
+tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
+	$(MAKE) -f tests\lib\gtest-1.7.0\CMakeFiles\gtest_main.dir\build.make tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) -f tests\lib\gtest-1.7.0\CMakeFiles\gtest_main.dir\build.make tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target gtest_main"
-.PHONY : mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
+.PHONY : tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
-all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
+all: tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 4
-	$(MAKE) -f CMakeFiles\Makefile2 mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
-.PHONY : mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/rule
+.PHONY : tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
-gtest_main: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/rule
+gtest_main: tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/rule
 
 .PHONY : gtest_main
 
 # clean rule for target.
-mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean:
-	$(MAKE) -f mfgt\lib\gtest-1.7.0\CMakeFiles\gtest_main.dir\build.make mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean
-.PHONY : mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean
+tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) -f tests\lib\gtest-1.7.0\CMakeFiles\gtest_main.dir\build.make tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean
+.PHONY : tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean
 
 # clean rule for target.
-clean: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean
+clean: tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory mfgt/tests
+# Directory level rules for directory tests/tests
 
 # Convenience name for "all" pass in the directory.
-mfgt/tests/all: mfgt/tests/CMakeFiles/run_mfgt.dir/all
+tests/tests/all: tests/tests/CMakeFiles/run_tests.dir/all
 
-.PHONY : mfgt/tests/all
+.PHONY : tests/tests/all
 
 # Convenience name for "clean" pass in the directory.
-mfgt/tests/clean: mfgt/tests/CMakeFiles/run_mfgt.dir/clean
+tests/tests/clean: tests/tests/CMakeFiles/run_tests.dir/clean
 
-.PHONY : mfgt/tests/clean
+.PHONY : tests/tests/clean
 
 # Convenience name for "preinstall" pass in the directory.
-mfgt/tests/preinstall:
+tests/tests/preinstall:
 
-.PHONY : mfgt/tests/preinstall
+.PHONY : tests/tests/preinstall
 
 #=============================================================================
-# Target rules for target mfgt/tests/CMakeFiles/run_mfgt.dir
+# Target rules for target tests/tests/CMakeFiles/run_tests.dir
 
 # All Build rule for target.
-mfgt/tests/CMakeFiles/run_mfgt.dir/all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
-mfgt/tests/CMakeFiles/run_mfgt.dir/all: mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
-mfgt/tests/CMakeFiles/run_mfgt.dir/all: mfgl/CMakeFiles/mfg.dir/all
-	$(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/depend
-	$(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=10,11 "Built target run_mfgt"
-.PHONY : mfgt/tests/CMakeFiles/run_mfgt.dir/all
+tests/tests/CMakeFiles/run_tests.dir/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
+tests/tests/CMakeFiles/run_tests.dir/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
+	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/depend
+	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=10,11,12 "Built target run_tests"
+.PHONY : tests/tests/CMakeFiles/run_tests.dir/all
 
 # Include target in all.
-all: mfgt/tests/CMakeFiles/run_mfgt.dir/all
+all: tests/tests/CMakeFiles/run_tests.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-mfgt/tests/CMakeFiles/run_mfgt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 9
-	$(MAKE) -f CMakeFiles\Makefile2 mfgt/tests/CMakeFiles/run_mfgt.dir/all
+tests/tests/CMakeFiles/run_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 7
+	$(MAKE) -f CMakeFiles\Makefile2 tests/tests/CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
-.PHONY : mfgt/tests/CMakeFiles/run_mfgt.dir/rule
+.PHONY : tests/tests/CMakeFiles/run_tests.dir/rule
 
 # Convenience name for target.
-run_mfgt: mfgt/tests/CMakeFiles/run_mfgt.dir/rule
+run_tests: tests/tests/CMakeFiles/run_tests.dir/rule
 
-.PHONY : run_mfgt
-
-# clean rule for target.
-mfgt/tests/CMakeFiles/run_mfgt.dir/clean:
-	$(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/clean
-.PHONY : mfgt/tests/CMakeFiles/run_mfgt.dir/clean
+.PHONY : run_tests
 
 # clean rule for target.
-clean: mfgt/tests/CMakeFiles/run_mfgt.dir/clean
+tests/tests/CMakeFiles/run_tests.dir/clean:
+	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/clean
+.PHONY : tests/tests/CMakeFiles/run_tests.dir/clean
+
+# clean rule for target.
+clean: tests/tests/CMakeFiles/run_tests.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory malgo
+
+# Convenience name for "all" pass in the directory.
+malgo/all: malgo/CMakeFiles/malgo.dir/all
+
+.PHONY : malgo/all
+
+# Convenience name for "clean" pass in the directory.
+malgo/clean: malgo/CMakeFiles/malgo.dir/clean
+
+.PHONY : malgo/clean
+
+# Convenience name for "preinstall" pass in the directory.
+malgo/preinstall:
+
+.PHONY : malgo/preinstall
+
+#=============================================================================
+# Target rules for target malgo/CMakeFiles/malgo.dir
+
+# All Build rule for target.
+malgo/CMakeFiles/malgo.dir/all:
+	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/depend
+	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=7 "Built target malgo"
+.PHONY : malgo/CMakeFiles/malgo.dir/all
+
+# Include target in all.
+all: malgo/CMakeFiles/malgo.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+malgo/CMakeFiles/malgo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 1
+	$(MAKE) -f CMakeFiles\Makefile2 malgo/CMakeFiles/malgo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
+.PHONY : malgo/CMakeFiles/malgo.dir/rule
+
+# Convenience name for target.
+malgo: malgo/CMakeFiles/malgo.dir/rule
+
+.PHONY : malgo
+
+# clean rule for target.
+malgo/CMakeFiles/malgo.dir/clean:
+	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/clean
+.PHONY : malgo/CMakeFiles/malgo.dir/clean
+
+# clean rule for target.
+clean: malgo/CMakeFiles/malgo.dir/clean
 
 .PHONY : clean
 

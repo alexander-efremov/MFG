@@ -3,7 +3,13 @@
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="CidrRootsConfiguration">
     <sourceRoots>
+      <file path="$PROJECT_DIR$/malgo" />
+      <file path="$PROJECT_DIR$/malgot" />
       <file path="$PROJECT_DIR$/mfgt" />
+      <file path="$PROJECT_DIR$/tests" />
     </sourceRoots>
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/gtest-1.7.0" />
+    </excludeRoots>
   </component>
 </project>

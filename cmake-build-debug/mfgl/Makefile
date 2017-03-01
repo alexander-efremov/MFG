@@ -151,33 +151,6 @@ consts.cpp.s:
 	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/consts.cpp.s
 .PHONY : consts.cpp.s
 
-solver1.obj: solver1.cpp.obj
-
-.PHONY : solver1.obj
-
-# target to build an object file
-solver1.cpp.obj:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj
-.PHONY : solver1.cpp.obj
-
-solver1.i: solver1.cpp.i
-
-.PHONY : solver1.i
-
-# target to preprocess a source file
-solver1.cpp.i:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/solver1.cpp.i
-.PHONY : solver1.cpp.i
-
-solver1.s: solver1.cpp.s
-
-.PHONY : solver1.s
-
-# target to generate assembly for a file
-solver1.cpp.s:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/solver1.cpp.s
-.PHONY : solver1.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -190,9 +163,6 @@ help:
 	@echo ... consts.obj
 	@echo ... consts.i
 	@echo ... consts.s
-	@echo ... solver1.obj
-	@echo ... solver1.i
-	@echo ... solver1.s
 .PHONY : help
 
 

@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mfg.dir/solver1.cpp.obj"
   "CMakeFiles/mfg.dir/consts.cpp.obj"
   "libmfg.pdb"
   "libmfg.a"

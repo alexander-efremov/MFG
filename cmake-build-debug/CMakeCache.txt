@@ -206,13 +206,13 @@ OpenMP_C_FLAGS:STRING=-fopenmp
 PYTHON_EXECUTABLE:FILEPATH=PYTHON_EXECUTABLE-NOTFOUND
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgt/lib/gtest-1.7.0
+gtest_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0
 
 //Dependencies for target
 gtest_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/mfgt/lib/gtest-1.7.0
+gtest_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -231,25 +231,34 @@ gtest_force_shared_crt:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
+malgo_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo
+
+//Dependencies for target
+malgo_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+malgo_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/malgo
+
+//Value Computed by CMake
+malgot_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgot
+
+//Value Computed by CMake
+malgot_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/malgot
+
+//Value Computed by CMake
 mfg_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl
 
-//Dependencies for the target
-mfg_LIB_DEPENDS:STATIC=general;-fopenmp;
+//Dependencies for target
+mfg_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 mfg_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/mfgl
 
 //Value Computed by CMake
-mfg_tests_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgt
+mfgt_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests
 
 //Value Computed by CMake
-mfg_tests_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/mfgt
-
-//Value Computed by CMake
-mfgt_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgt
-
-//Value Computed by CMake
-mfgt_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/mfgt
+mfgt_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/tests
 
 
 ########################
@@ -354,7 +363,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../malgo/malgo.h
+stdlib.h
+-
+assert.h
+-
+cfloat
+-
+
 ../mfgl/consts.h
 
 ../mfgl/utils.h
@@ -258,7 +266,13 @@ cxxabi.h
 acxx_demangle.h
 -
 
-C:/Users/efremov_aa/ClionProjects/MFG/mfgt/tests/tests.cpp
+C:/Users/efremov_aa/ClionProjects/MFG/mfgt/tests/malgo_tests.cpp
+malgo.h
+-
+gtest/gtest.h
+C:/Users/efremov_aa/ClionProjects/MFG/mfgt/tests/gtest/gtest.h
+
+C:/Users/efremov_aa/ClionProjects/MFG/mfgt/tests/mfgl_tests.cpp
 utils.h
 -
 gtest/gtest.h

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/run_mfgt.dir/tests.cpp.obj"
+  "CMakeFiles/run_mfgt.dir/malgo_tests.cpp.obj"
+  "CMakeFiles/run_mfgt.dir/mfgl_tests.cpp.obj"
   "run_mfgt.pdb"
   "run_mfgt.exe"
   "run_mfgt.exe.manifest"

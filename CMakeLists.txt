@@ -7,6 +7,8 @@ set(SOURCE_FILES main.cpp)
 add_executable(MFG ${SOURCE_FILES})
 
 include_directories(mfgl)
+include_directories(malgo)
 
 add_subdirectory(mfgl)
-add_subdirectory(mfgt)
+add_subdirectory(tests)
+add_subdirectory(malgo)

@@ -145,7 +145,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) -f mfgt\lib\gtest-1.7.0\CMakeFiles\gtest.dir\build.make mfgt/lib/gtest-1.7.0/CMakeFiles/gtest.dir/build
+	$(MAKE) -f tests\lib\gtest-1.7.0\CMakeFiles\gtest.dir\build.make tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 #=============================================================================
@@ -158,21 +158,34 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) -f mfgt\lib\gtest-1.7.0\CMakeFiles\gtest_main.dir\build.make mfgt/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/build
+	$(MAKE) -f tests\lib\gtest-1.7.0\CMakeFiles\gtest_main.dir\build.make tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
-# Target rules for targets named run_mfgt
+# Target rules for targets named run_tests
 
 # Build rule for target.
-run_mfgt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 run_mfgt
-.PHONY : run_mfgt
+run_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 run_tests
+.PHONY : run_tests
 
 # fast build rule for target.
-run_mfgt/fast:
-	$(MAKE) -f mfgt\tests\CMakeFiles\run_mfgt.dir\build.make mfgt/tests/CMakeFiles/run_mfgt.dir/build
-.PHONY : run_mfgt/fast
+run_tests/fast:
+	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
+#=============================================================================
+# Target rules for targets named malgo
+
+# Build rule for target.
+malgo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 malgo
+.PHONY : malgo
+
+# fast build rule for target.
+malgo/fast:
+	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/build
+.PHONY : malgo/fast
 
 main.obj: main.cpp.obj
 
@@ -213,7 +226,8 @@ help:
 	@echo ... mfg
 	@echo ... gtest
 	@echo ... gtest_main
-	@echo ... run_mfgt
+	@echo ... run_tests
+	@echo ... malgo
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
