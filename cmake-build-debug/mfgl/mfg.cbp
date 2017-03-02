@@ -5,7 +5,7 @@
 		<Option title="mfg"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\mfgl\;CMake Files\tests\;CMake Files\tests\lib\;CMake Files\tests\lib\gtest-1.7.0\;CMake Files\tests\lib\gtest-1.7.0\cmake\;CMake Files\tests\tests\;CMake Files\malgo\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\mfgl\;CMake Files\malgo\;CMake Files\tests\;CMake Files\tests\lib\;CMake Files\tests\lib\gtest-1.7.0\;CMake Files\tests\lib\gtest-1.7.0\cmake\;CMake Files\tests\tests\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl"/>
@@ -17,8 +17,8 @@
 					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="mfg">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/libmfg.a" prefix_auto="0" extension_auto="0"/>
+			<Target title="mfgl">
+				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/libmfgl.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
@@ -35,14 +35,14 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 mfg"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 mfgl"/>
 					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="mfg/fast">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/libmfg.a" prefix_auto="0" extension_auto="0"/>
+			<Target title="mfgl/fast">
+				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/libmfgl.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
@@ -59,7 +59,7 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 mfg/fast"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 mfgl/fast"/>
 					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl/Makefile&quot;  VERBOSE=1 clean"/>
@@ -67,13 +67,16 @@
 			</Target>
 		</Build>
 		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfgl">
-			<Option target="mfg"/>
+			<Option target="mfgl"/>
 		</Unit>
 		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.cpp">
-			<Option target="mfg"/>
+			<Option target="mfgl"/>
 		</Unit>
 		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.h">
-			<Option target="mfg"/>
+			<Option target="mfgl"/>
+		</Unit>
+		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfgl/solver1.cpp">
+			<Option target="mfgl"/>
 		</Unit>
 		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
@@ -84,6 +87,12 @@
 		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfgl/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\mfgl\"/>
 		</Unit>
+		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/malgo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\malgo\"/>
+		</Unit>
+		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/malgo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\malgo\"/>
+		</Unit>
 		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\"/>
 		</Unit>
@@ -113,12 +122,6 @@
 		</Unit>
 		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\tests\"/>
-		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/malgo/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\malgo\"/>
-		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/malgo/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\malgo\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -90,6 +90,7 @@ MFG_EXTERNAL_OBJECTS =
 
 MFG.exe: CMakeFiles/MFG.dir/main.cpp.obj
 MFG.exe: CMakeFiles/MFG.dir/build.make
+MFG.exe: mfg/libmfg.a
 MFG.exe: CMakeFiles/MFG.dir/linklibs.rsp
 MFG.exe: CMakeFiles/MFG.dir/objects1.rsp
 MFG.exe: CMakeFiles/MFG.dir/link.txt

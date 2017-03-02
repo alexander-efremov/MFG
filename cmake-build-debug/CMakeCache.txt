@@ -196,12 +196,6 @@ MFG_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug
 //Value Computed by CMake
 MFG_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG
 
-//C++ compiler flags for OpenMP parallization
-OpenMP_CXX_FLAGS:STRING=-fopenmp
-
-//C compiler flags for OpenMP parallization
-OpenMP_C_FLAGS:STRING=-fopenmp
-
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=PYTHON_EXECUTABLE-NOTFOUND
 
@@ -240,19 +234,13 @@ malgo_LIB_DEPENDS:STATIC=
 malgo_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/malgo
 
 //Value Computed by CMake
-malgot_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgot
-
-//Value Computed by CMake
-malgot_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/malgot
-
-//Value Computed by CMake
-mfg_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfgl
+mfg_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg
 
 //Dependencies for target
 mfg_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
-mfg_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/mfgl
+mfg_SOURCE_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/mfg
 
 //Value Computed by CMake
 mfgt_BINARY_DIR:STATIC=C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests
@@ -407,16 +395,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding OpenMP
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[-fopenmp][-fopenmp][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//ADVANCED property for variable: OpenMP_CXX_FLAGS
-OpenMP_CXX_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OpenMP_C_FLAGS
-OpenMP_C_FLAGS-ADVANCED:INTERNAL=1
-//Test OpenMP_FLAG_DETECTED
-OpenMP_FLAG_DETECTED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 

@@ -10,12 +10,13 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../mfgl"
+  "../mfg"
   "../malgo"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/CMakeFiles/mfg.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

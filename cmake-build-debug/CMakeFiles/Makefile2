@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug
 # Target rules for target CMakeFiles/MFG.dir
 
 # All Build rule for target.
-CMakeFiles/MFG.dir/all:
+CMakeFiles/MFG.dir/all: mfg/CMakeFiles/mfg.dir/all
 	$(MAKE) -f CMakeFiles\MFG.dir\build.make CMakeFiles/MFG.dir/depend
 	$(MAKE) -f CMakeFiles\MFG.dir\build.make CMakeFiles/MFG.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target MFG"
@@ -75,7 +75,7 @@ all: CMakeFiles/MFG.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MFG.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 5
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/MFG.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/MFG.dir/rule
@@ -96,57 +96,112 @@ clean: CMakeFiles/MFG.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory mfgl
+# Directory level rules for directory mfg
 
 # Convenience name for "all" pass in the directory.
-mfgl/all: mfgl/CMakeFiles/mfg.dir/all
+mfg/all: mfg/CMakeFiles/mfg.dir/all
 
-.PHONY : mfgl/all
+.PHONY : mfg/all
 
 # Convenience name for "clean" pass in the directory.
-mfgl/clean: mfgl/CMakeFiles/mfg.dir/clean
+mfg/clean: mfg/CMakeFiles/mfg.dir/clean
 
-.PHONY : mfgl/clean
+.PHONY : mfg/clean
 
 # Convenience name for "preinstall" pass in the directory.
-mfgl/preinstall:
+mfg/preinstall:
 
-.PHONY : mfgl/preinstall
+.PHONY : mfg/preinstall
 
 #=============================================================================
-# Target rules for target mfgl/CMakeFiles/mfg.dir
+# Target rules for target mfg/CMakeFiles/mfg.dir
 
 # All Build rule for target.
-mfgl/CMakeFiles/mfg.dir/all:
-	$(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/depend
-	$(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=8,9 "Built target mfg"
-.PHONY : mfgl/CMakeFiles/mfg.dir/all
+mfg/CMakeFiles/mfg.dir/all:
+	$(MAKE) -f mfg\CMakeFiles\mfg.dir\build.make mfg/CMakeFiles/mfg.dir/depend
+	$(MAKE) -f mfg\CMakeFiles\mfg.dir\build.make mfg/CMakeFiles/mfg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=8,9,10 "Built target mfg"
+.PHONY : mfg/CMakeFiles/mfg.dir/all
 
 # Include target in all.
-all: mfgl/CMakeFiles/mfg.dir/all
+all: mfg/CMakeFiles/mfg.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-mfgl/CMakeFiles/mfg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 mfgl/CMakeFiles/mfg.dir/all
+mfg/CMakeFiles/mfg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 3
+	$(MAKE) -f CMakeFiles\Makefile2 mfg/CMakeFiles/mfg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
-.PHONY : mfgl/CMakeFiles/mfg.dir/rule
+.PHONY : mfg/CMakeFiles/mfg.dir/rule
 
 # Convenience name for target.
-mfg: mfgl/CMakeFiles/mfg.dir/rule
+mfg: mfg/CMakeFiles/mfg.dir/rule
 
 .PHONY : mfg
 
 # clean rule for target.
-mfgl/CMakeFiles/mfg.dir/clean:
-	$(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/clean
-.PHONY : mfgl/CMakeFiles/mfg.dir/clean
+mfg/CMakeFiles/mfg.dir/clean:
+	$(MAKE) -f mfg\CMakeFiles\mfg.dir\build.make mfg/CMakeFiles/mfg.dir/clean
+.PHONY : mfg/CMakeFiles/mfg.dir/clean
 
 # clean rule for target.
-clean: mfgl/CMakeFiles/mfg.dir/clean
+clean: mfg/CMakeFiles/mfg.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory malgo
+
+# Convenience name for "all" pass in the directory.
+malgo/all: malgo/CMakeFiles/malgo.dir/all
+
+.PHONY : malgo/all
+
+# Convenience name for "clean" pass in the directory.
+malgo/clean: malgo/CMakeFiles/malgo.dir/clean
+
+.PHONY : malgo/clean
+
+# Convenience name for "preinstall" pass in the directory.
+malgo/preinstall:
+
+.PHONY : malgo/preinstall
+
+#=============================================================================
+# Target rules for target malgo/CMakeFiles/malgo.dir
+
+# All Build rule for target.
+malgo/CMakeFiles/malgo.dir/all:
+	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/depend
+	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=7 "Built target malgo"
+.PHONY : malgo/CMakeFiles/malgo.dir/all
+
+# Include target in all.
+all: malgo/CMakeFiles/malgo.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+malgo/CMakeFiles/malgo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 1
+	$(MAKE) -f CMakeFiles\Makefile2 malgo/CMakeFiles/malgo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
+.PHONY : malgo/CMakeFiles/malgo.dir/rule
+
+# Convenience name for target.
+malgo: malgo/CMakeFiles/malgo.dir/rule
+
+.PHONY : malgo
+
+# clean rule for target.
+malgo/CMakeFiles/malgo.dir/clean:
+	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/clean
+.PHONY : malgo/CMakeFiles/malgo.dir/clean
+
+# clean rule for target.
+clean: malgo/CMakeFiles/malgo.dir/clean
 
 .PHONY : clean
 
@@ -287,11 +342,12 @@ tests/tests/preinstall:
 # Target rules for target tests/tests/CMakeFiles/run_tests.dir
 
 # All Build rule for target.
+tests/tests/CMakeFiles/run_tests.dir/all: mfg/CMakeFiles/mfg.dir/all
 tests/tests/CMakeFiles/run_tests.dir/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
 tests/tests/CMakeFiles/run_tests.dir/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
 	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=10,11,12 "Built target run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=11,12,13 "Built target run_tests"
 .PHONY : tests/tests/CMakeFiles/run_tests.dir/all
 
 # Include target in all.
@@ -301,7 +357,7 @@ all: tests/tests/CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 tests/tests/CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 10
 	$(MAKE) -f CMakeFiles\Makefile2 tests/tests/CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
 .PHONY : tests/tests/CMakeFiles/run_tests.dir/rule
@@ -318,61 +374,6 @@ tests/tests/CMakeFiles/run_tests.dir/clean:
 
 # clean rule for target.
 clean: tests/tests/CMakeFiles/run_tests.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory malgo
-
-# Convenience name for "all" pass in the directory.
-malgo/all: malgo/CMakeFiles/malgo.dir/all
-
-.PHONY : malgo/all
-
-# Convenience name for "clean" pass in the directory.
-malgo/clean: malgo/CMakeFiles/malgo.dir/clean
-
-.PHONY : malgo/clean
-
-# Convenience name for "preinstall" pass in the directory.
-malgo/preinstall:
-
-.PHONY : malgo/preinstall
-
-#=============================================================================
-# Target rules for target malgo/CMakeFiles/malgo.dir
-
-# All Build rule for target.
-malgo/CMakeFiles/malgo.dir/all:
-	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/depend
-	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=7 "Built target malgo"
-.PHONY : malgo/CMakeFiles/malgo.dir/all
-
-# Include target in all.
-all: malgo/CMakeFiles/malgo.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-malgo/CMakeFiles/malgo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 1
-	$(MAKE) -f CMakeFiles\Makefile2 malgo/CMakeFiles/malgo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
-.PHONY : malgo/CMakeFiles/malgo.dir/rule
-
-# Convenience name for target.
-malgo: malgo/CMakeFiles/malgo.dir/rule
-
-.PHONY : malgo
-
-# clean rule for target.
-malgo/CMakeFiles/malgo.dir/clean:
-	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/clean
-.PHONY : malgo/CMakeFiles/malgo.dir/clean
-
-# clean rule for target.
-clean: malgo/CMakeFiles/malgo.dir/clean
 
 .PHONY : clean
 

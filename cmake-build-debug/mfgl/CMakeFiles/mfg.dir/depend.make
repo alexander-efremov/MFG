@@ -4,3 +4,7 @@
 mfgl/CMakeFiles/mfg.dir/consts.cpp.obj: ../mfgl/consts.cpp
 mfgl/CMakeFiles/mfg.dir/consts.cpp.obj: ../mfgl/consts.h
 
+mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj: ../mfgl/common.h
+mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj: ../mfgl/consts.h
+mfgl/CMakeFiles/mfg.dir/solver1.cpp.obj: ../mfgl/solver1.cpp
+

@@ -132,8 +132,21 @@ mfg: cmake_check_build_system
 
 # fast build rule for target.
 mfg/fast:
-	$(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/build
+	$(MAKE) -f mfg\CMakeFiles\mfg.dir\build.make mfg/CMakeFiles/mfg.dir/build
 .PHONY : mfg/fast
+
+#=============================================================================
+# Target rules for targets named malgo
+
+# Build rule for target.
+malgo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 malgo
+.PHONY : malgo
+
+# fast build rule for target.
+malgo/fast:
+	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/build
+.PHONY : malgo/fast
 
 #=============================================================================
 # Target rules for targets named gtest
@@ -174,19 +187,6 @@ run_tests/fast:
 	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
 
-#=============================================================================
-# Target rules for targets named malgo
-
-# Build rule for target.
-malgo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 malgo
-.PHONY : malgo
-
-# fast build rule for target.
-malgo/fast:
-	$(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/build
-.PHONY : malgo/fast
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -224,10 +224,10 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... mfg
+	@echo ... malgo
 	@echo ... gtest
 	@echo ... gtest_main
 	@echo ... run_tests
-	@echo ... malgo
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

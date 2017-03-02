@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/efremov_aa/ClionProjects/MFG/mfgl/common.h
+consts.h
+C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.h
+
 C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.cpp
 consts.h
 C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.h
 
 C:/Users/efremov_aa/ClionProjects/MFG/mfgl/consts.h
+
+C:/Users/efremov_aa/ClionProjects/MFG/mfgl/solver1.cpp
+common.h
+C:/Users/efremov_aa/ClionProjects/MFG/mfgl/common.h
 

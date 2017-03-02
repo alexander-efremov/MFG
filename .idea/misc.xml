@@ -5,6 +5,8 @@
     <sourceRoots>
       <file path="$PROJECT_DIR$/malgo" />
       <file path="$PROJECT_DIR$/malgot" />
+      <file path="$PROJECT_DIR$/mfg" />
+      <file path="$PROJECT_DIR$/mfgl" />
       <file path="$PROJECT_DIR$/mfgt" />
       <file path="$PROJECT_DIR$/tests" />
     </sourceRoots>

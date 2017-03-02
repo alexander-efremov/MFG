@@ -110,19 +110,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-mfgl/CMakeFiles/mfg.dir/rule:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 mfgl/CMakeFiles/mfg.dir/rule
-.PHONY : mfgl/CMakeFiles/mfg.dir/rule
+mfgl/CMakeFiles/mfgl.dir/rule:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 mfgl/CMakeFiles/mfgl.dir/rule
+.PHONY : mfgl/CMakeFiles/mfgl.dir/rule
 
 # Convenience name for target.
-mfg: mfgl/CMakeFiles/mfg.dir/rule
+mfgl: mfgl/CMakeFiles/mfgl.dir/rule
 
-.PHONY : mfg
+.PHONY : mfgl
 
 # fast build rule for target.
-mfg/fast:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/build
-.PHONY : mfg/fast
+mfgl/fast:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfgl.dir\build.make mfgl/CMakeFiles/mfgl.dir/build
+.PHONY : mfgl/fast
 
 consts.obj: consts.cpp.obj
 
@@ -130,7 +130,7 @@ consts.obj: consts.cpp.obj
 
 # target to build an object file
 consts.cpp.obj:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/consts.cpp.obj
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfgl.dir\build.make mfgl/CMakeFiles/mfgl.dir/consts.cpp.obj
 .PHONY : consts.cpp.obj
 
 consts.i: consts.cpp.i
@@ -139,7 +139,7 @@ consts.i: consts.cpp.i
 
 # target to preprocess a source file
 consts.cpp.i:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/consts.cpp.i
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfgl.dir\build.make mfgl/CMakeFiles/mfgl.dir/consts.cpp.i
 .PHONY : consts.cpp.i
 
 consts.s: consts.cpp.s
@@ -148,8 +148,35 @@ consts.s: consts.cpp.s
 
 # target to generate assembly for a file
 consts.cpp.s:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfg.dir\build.make mfgl/CMakeFiles/mfg.dir/consts.cpp.s
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfgl.dir\build.make mfgl/CMakeFiles/mfgl.dir/consts.cpp.s
 .PHONY : consts.cpp.s
+
+solver1.obj: solver1.cpp.obj
+
+.PHONY : solver1.obj
+
+# target to build an object file
+solver1.cpp.obj:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfgl.dir\build.make mfgl/CMakeFiles/mfgl.dir/solver1.cpp.obj
+.PHONY : solver1.cpp.obj
+
+solver1.i: solver1.cpp.i
+
+.PHONY : solver1.i
+
+# target to preprocess a source file
+solver1.cpp.i:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfgl.dir\build.make mfgl/CMakeFiles/mfgl.dir/solver1.cpp.i
+.PHONY : solver1.cpp.i
+
+solver1.s: solver1.cpp.s
+
+.PHONY : solver1.s
+
+# target to generate assembly for a file
+solver1.cpp.s:
+	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f mfgl\CMakeFiles\mfgl.dir\build.make mfgl/CMakeFiles/mfgl.dir/solver1.cpp.s
+.PHONY : solver1.cpp.s
 
 # Help Target
 help:
@@ -157,12 +184,15 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... mfg
+	@echo ... mfgl
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... consts.obj
 	@echo ... consts.i
 	@echo ... consts.s
+	@echo ... solver1.obj
+	@echo ... solver1.i
+	@echo ... solver1.s
 .PHONY : help
 
 
