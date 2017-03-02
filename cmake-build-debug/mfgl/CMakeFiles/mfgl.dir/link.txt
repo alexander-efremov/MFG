@@ -1,0 +1,2 @@
+C:\TDM-GCC-64\bin\ar.exe qc libmfgl.a  CMakeFiles/mfgl.dir/consts.cpp.obj CMakeFiles/mfgl.dir/solver1.cpp.obj
+C:\TDM-GCC-64\bin\ranlib.exe libmfgl.a

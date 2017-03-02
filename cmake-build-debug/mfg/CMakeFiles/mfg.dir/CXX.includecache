@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/efremov_aa/ClionProjects/MFG/mfg/common.h
+consts.h
+C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.h
+
+C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.cpp
+consts.h
+C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.h
+
+C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.h
+
+C:/Users/efremov_aa/ClionProjects/MFG/mfg/solver1.cpp
+common.h
+C:/Users/efremov_aa/ClionProjects/MFG/mfg/common.h
+
