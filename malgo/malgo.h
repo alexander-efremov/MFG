@@ -5,6 +5,23 @@
 #include <assert.h>
 #include <cfloat>
 
+inline int is_diagonally_dominating_matrix(double *arr, int n, int m) {
+    double diag_sum = 0.;
+    double sum = 0.;
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if (i == j) {
+                diag_sum += abs(arr[i * n + j]);
+            } else {
+                sum += abs(arr[i * n + j]);
+            }
+        }
+    }
+    if (diag_sum >= sum) return 1;
+    return 0;
+}
+
 inline double *thomas_algo(int n, double *arr, double *f) {
     assert(n > 2);
     assert(arr != nullptr);
@@ -42,9 +59,8 @@ inline double *thomas_algo(int n, double *arr, double *f) {
         offset += n + 1;
     }
 
-    double b_n = arr[n - 1];
-    double a_n = arr[n - 2];
-
+    double a_n = arr[offset];
+    double b_n = arr[offset + 1];
     double alpha_n_minus_1 = alpha[n - 2];
     double beta_n_minus_1 = beta[n - 2];
 
@@ -54,7 +70,7 @@ inline double *thomas_algo(int n, double *arr, double *f) {
     // step 2
 
     res[n - 1] = beta[n - 1];
-    for (int i = n - 2; i < 0; ++i) {
+    for (int i = n - 2; i >= 0; --i) {
         res[i] = alpha[i] * res[i + 1] + beta[i];
     }
 
