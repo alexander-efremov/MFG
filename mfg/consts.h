@@ -1,6 +1,5 @@
-#ifndef FEM_CIRCLE_CONSTS_H
-#define FEM_CIRCLE_CONSTS_H
-
+#ifndef MFG_CONSTS_H
+#define MFG_CONSTS_H
 
 #if defined _WIN32 || defined __CYGWIN__ || defined WIN32
     extern long timerStart;
@@ -20,4 +19,4 @@ extern double HX;
 extern double HX_SQ;
 extern double ALPHA;
 
-#endif //FEM_CIRCLE_CONSTS_H
+#endif //MFG_CONSTS_H

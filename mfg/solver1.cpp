@@ -14,7 +14,7 @@ inline double get_lc_3() {
     return get_lc_1();
 }
 
-double func_alpha(double t, double x) {
+inline double func_alpha(double t, double x) {
     return ALPHA;
 }
 
@@ -27,11 +27,10 @@ double *solve_1(int *grid, int *gridPr) {
     return nullptr;
 }
 
-double *
-calc_error_1(int *grid, double *solution, double tt, int nx_1, double hx) {
-    return nullptr;
-}
-
 double *calc_exact_1(int *grid, double t, int nx_1, double hx) {
+    assert(grid != NULL);
+    assert(t > 0.);
+    assert(nx_1 > 0);
+    assert(hx > 0.);
     return nullptr;
 }
