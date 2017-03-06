@@ -75,6 +75,7 @@ inline void print_matrix(double *a, int n, int m, int precision = 8) {
                 case 8:
                     printf("%.8le ", a[k]);
                     break;
+                default:break;
             }
         }
         printf("\n");
@@ -111,6 +112,7 @@ inline void print_matrix(double *a, int n, int m, const char *text, int precisio
                 case 8:
                     printf("%.8le ", a[k]);
                     break;
+                default:break;
             }
         }
         printf("\n");
@@ -144,6 +146,7 @@ inline void print_vector(double *a, int n, int precision = 8) {
             case 8:
                 printf("%.8f ", a[k]);
                 break;
+            default:break;
         }
     }
 }
