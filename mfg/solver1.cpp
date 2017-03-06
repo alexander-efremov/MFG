@@ -1,6 +1,7 @@
 #include <assert.h>
 #include <math.h>
 #include "common.h"
+#include "malgo.h"
 
 inline double get_lc_1() {
     return 1. / (8. * TAU) - SIGMA_SQ / (2. * HX_SQ);
@@ -24,6 +25,14 @@ double *solve_1(int *grid, int *gridPr) {
     assert(HX_SQ = sqrt(HX));
     assert(SIGMA_SQ = sqrt(SIGMA));
 
+    // corner point i = 0;
+
+    // corner point i = N;
+
+    // inner points
+    for (int i = 1; i < NX; ++i) {
+
+    }
     return nullptr;
 }
 
