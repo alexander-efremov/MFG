@@ -9,6 +9,7 @@
 #endif
 
 extern double SIGMA;
+extern double SIGMA_SQ;
 extern double TAU;
 extern double A;
 extern double B;
@@ -16,6 +17,7 @@ extern unsigned int NX;
 extern unsigned int NX_1;
 extern int TIME_STEP_CNT;
 extern double HX;
-extern double U;
+extern double HX_SQ;
+extern double ALPHA;
 
 #endif //FEM_CIRCLE_CONSTS_H

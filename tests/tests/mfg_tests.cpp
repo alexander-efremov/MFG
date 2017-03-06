@@ -18,8 +18,11 @@ public:
 
 void print_params() {
     printf("\nNX = %dx\n", NX);
-    printf("U = %le\n", U);
+    printf("ALPHA = %le\n", ALPHA);
+    printf("SIGMA = %le\n", SIGMA);
+    printf("SIGMA_SQ = %le\n", SIGMA_SQ);
     printf("HX = %le\n", HX);
+    printf("HX_SQ = %le\n", HX_SQ);
     printf("TAU = %le\n", TAU);
     printf("TIME_STEP_CNT = %d\n", TIME_STEP_CNT);
     fflush(stdout);
@@ -31,12 +34,15 @@ void run_solver_1(unsigned int d) {
     A = 0.;
     B = 1.;
     SIGMA = 0.1;
+    SIGMA_SQ = SIGMA * SIGMA;
     NX = d;
     NX_1 = NX + 1;
     HX = (B - A) / NX;
-    U = 1.;
+    HX_SQ = HX * HX;
+    ALPHA = 1.;
     TAU = 1.e-3;
     TIME_STEP_CNT = 5;
+
     print_params();
 
     int *grid = new int[NX_1];

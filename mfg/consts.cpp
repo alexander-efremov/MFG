@@ -7,6 +7,7 @@ long timerStart = 0;
 #endif
 
 double SIGMA = 0.;
+double SIGMA_SQ = 0.;
 double TAU = 0.;
 double A = 0.;
 double B = 0.;
@@ -14,5 +15,6 @@ unsigned int NX = 0;
 unsigned int NX_1 = 0;
 int TIME_STEP_CNT = 0;
 double HX = 0.;
-double U = 0.;
+double HX_SQ = 0.;
+double ALPHA = 0.;
 
