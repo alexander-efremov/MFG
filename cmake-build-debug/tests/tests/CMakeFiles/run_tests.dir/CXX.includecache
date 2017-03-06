@@ -11,6 +11,8 @@ stdlib.h
 -
 assert.h
 -
+math.h
+-
 cfloat
 -
 
@@ -282,6 +284,14 @@ C:/Users/HOME/Source/Repos/MFG/tests/tests/mfg_tests.cpp
 consts.h
 -
 common.h
+-
+utils.h
+-
+gtest/gtest.h
+C:/Users/HOME/Source/Repos/MFG/tests/tests/gtest/gtest.h
+
+C:/Users/HOME/Source/Repos/MFG/tests/tests/misc_tests.cpp
+consts.h
 -
 utils.h
 -

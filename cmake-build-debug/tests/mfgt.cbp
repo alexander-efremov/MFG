@@ -186,6 +186,9 @@
 		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/tests/mfg_tests.cpp">
 			<Option target="run_tests"/>
 		</Unit>
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/tests/misc_tests.cpp">
+			<Option target="run_tests"/>
+		</Unit>
 		<Unit filename="C:/Users/HOME/Source/Repos/MFG/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

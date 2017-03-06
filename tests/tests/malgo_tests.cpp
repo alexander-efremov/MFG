@@ -55,6 +55,7 @@ TEST_F(MalgoFixture, thomas_algo_test1) {
 
     double *arr = (double *) malloc(n * n * sizeof(double));
     double *f = (double *) malloc(n * sizeof(double));
+    double *sol = (double *) malloc(n * sizeof(double));
 
     arr[0] = 2;
     arr[1] = -1;
@@ -74,7 +75,7 @@ TEST_F(MalgoFixture, thomas_algo_test1) {
     print_matrix(arr, n, n);
     print_vector(f, n);
 
-    double *sol = thomas_algo(n, arr, f);
+    thomas_algo(n, arr, f, sol);
 
     ASSERT_NEAR(sol[0], 1.49, 1e-2);
     ASSERT_NEAR(sol[1], -0.02, 1e-2);
@@ -95,6 +96,7 @@ TEST_F(MalgoFixture, thomas_algo_test2) {
 
     double *arr = (double *) malloc(n * n * sizeof(double));
     double *f = (double *) malloc(n * sizeof(double));
+    double *sol = (double *) malloc(n * sizeof(double));
 
     arr[0] = 1;
     arr[1] = 1;
@@ -114,7 +116,7 @@ TEST_F(MalgoFixture, thomas_algo_test2) {
     print_matrix(arr, n, n);
     print_vector(f, n);
 
-    double *sol = thomas_algo(n, arr, f);
+    thomas_algo(n, arr, f, sol);
 
     ASSERT_NEAR(sol[0], 1., 1e-2);
     ASSERT_NEAR(sol[1], 1., 1e-2);

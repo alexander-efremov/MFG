@@ -34,6 +34,7 @@ void assert_params() {
     assert(NX > 0);
     assert(NX_1 == NX + 1);
     assert(A == 0.);
+    assert(TAU > 0.);
 }
 
 void run_solver_1(unsigned int d) {

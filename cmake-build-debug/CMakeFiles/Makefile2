@@ -342,12 +342,12 @@ tests/tests/preinstall:
 # Target rules for target tests/tests/CMakeFiles/run_tests.dir
 
 # All Build rule for target.
-tests/tests/CMakeFiles/run_tests.dir/all: mfg/CMakeFiles/mfg.dir/all
 tests/tests/CMakeFiles/run_tests.dir/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
+tests/tests/CMakeFiles/run_tests.dir/all: mfg/CMakeFiles/mfg.dir/all
 tests/tests/CMakeFiles/run_tests.dir/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
 	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=12,13,14 "Built target run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=12,13,14,15 "Built target run_tests"
 .PHONY : tests/tests/CMakeFiles/run_tests.dir/all
 
 # Include target in all.
@@ -357,7 +357,7 @@ all: tests/tests/CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 tests/tests/CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles 12
 	$(MAKE) -f CMakeFiles\Makefile2 tests/tests/CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles 0
 .PHONY : tests/tests/CMakeFiles/run_tests.dir/rule

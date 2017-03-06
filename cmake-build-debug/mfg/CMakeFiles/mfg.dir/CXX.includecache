@@ -35,10 +35,14 @@ C:/Users/HOME/Source/Repos/MFG/mfg/consts.h
 C:/Users/HOME/Source/Repos/MFG/mfg/solver1.cpp
 assert.h
 -
-math.h
+stdio.h
 -
 common.h
 C:/Users/HOME/Source/Repos/MFG/mfg/common.h
+math.h
+-
+string.h
+-
 malgo.h
-C:/Users/HOME/Source/Repos/MFG/mfg/malgo.h
+-
 

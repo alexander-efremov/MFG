@@ -23,13 +23,12 @@ inline int is_diagonally_dominating_matrix(double *arr, int n, int m) {
     return 0;
 }
 
-inline double *thomas_algo(int n, double *arr, double *f) {
+inline void thomas_algo(int n, double *matrix, double *f, double *res) {
     assert(n > 2);
-    assert(arr != nullptr);
+    assert(matrix != nullptr);
     assert(f != nullptr);
-    assert(is_diagonally_dominating_matrix(arr, n, n) == 1);
+    assert(is_diagonally_dominating_matrix(matrix, n, n) == 1);
 
-    double *res = (double *) malloc(n * sizeof(double));
     double *alpha = (double *) malloc(n * sizeof(double));
     double *beta = (double *) malloc(n * sizeof(double));
 
@@ -41,16 +40,16 @@ inline double *thomas_algo(int n, double *arr, double *f) {
 
     // step 1
 
-    double y = arr[0];
-    alpha[0] = -arr[1] / y;
+    double y = matrix[0];
+    alpha[0] = -matrix[1] / y;
     beta[0] = f[0] / y;
 
     int offset = n;
     for (int i = 1; i < n - 1; ++i) {
 
-        double a_i = arr[offset];
-        double b_i = arr[offset + 1];
-        double c_i = arr[offset + 2];
+        double a_i = matrix[offset];
+        double b_i = matrix[offset + 1];
+        double c_i = matrix[offset + 2];
 
         y = b_i + a_i * alpha[i - 1];
 
@@ -61,8 +60,8 @@ inline double *thomas_algo(int n, double *arr, double *f) {
         offset += n + 1;
     }
 
-    double a_n = arr[offset];
-    double b_n = arr[offset + 1];
+    double a_n = matrix[offset];
+    double b_n = matrix[offset + 1];
     double alpha_n_minus_1 = alpha[n - 2];
     double beta_n_minus_1 = beta[n - 2];
 
@@ -78,8 +77,6 @@ inline double *thomas_algo(int n, double *arr, double *f) {
 
     free(alpha);
     free(beta);
-
-    return res;
 }
 
 #endif //MFG_MALGO_H
