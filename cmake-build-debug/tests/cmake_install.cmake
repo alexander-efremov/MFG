@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/efremov_aa/ClionProjects/MFG/tests
+# Install script for directory: C:/Users/HOME/Source/Repos/MFG/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,8 +29,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/cmake_install.cmake")
-  include("C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/cmake_install.cmake")
+  include("C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/cmake_install.cmake")
+  include("C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/cmake_install.cmake")
 
 endif()
 

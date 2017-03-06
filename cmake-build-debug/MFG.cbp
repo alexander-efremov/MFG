@@ -8,24 +8,24 @@
 		<Option virtualFolders="CMake Files\;CMake Files\mfg\;CMake Files\malgo\;CMake Files\tests\;CMake Files\tests\lib\;CMake Files\tests\lib\gtest-1.7.0\;CMake Files\tests\lib\gtest-1.7.0\cmake\;CMake Files\tests\tests\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="MFG">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/MFG.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/MFG.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -35,21 +35,21 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 MFG"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 MFG"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="MFG/fast">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/MFG.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/MFG.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -59,41 +59,41 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 MFG/fast"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 MFG/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mfg">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/libmfg.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/libmfg.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -103,21 +103,21 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 mfg"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 mfg"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mfg/fast">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/libmfg.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/libmfg.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -127,21 +127,21 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 mfg/fast"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 mfg/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/mfg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="malgo">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/libmalgo.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/libmalgo.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -151,21 +151,21 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 malgo"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 malgo"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="malgo/fast">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/libmalgo.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/libmalgo.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -175,23 +175,23 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 malgo/fast"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 malgo/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/malgo/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/include"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/include"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -201,23 +201,23 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/include"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/include"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -227,23 +227,23 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/include"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/include"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -253,23 +253,23 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/include"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/include"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -279,23 +279,23 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/lib/gtest-1.7.0/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="run_tests">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/run_tests.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/run_tests.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/include"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/include"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -305,23 +305,23 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 run_tests"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 run_tests"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="run_tests/fast">
-				<Option output="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/run_tests.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests"/>
+				<Option output="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/run_tests.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/mfg"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/malgo"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/include"/>
-					<Add directory="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/mfg"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/malgo"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/include"/>
+					<Add directory="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
@@ -331,89 +331,89 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 run_tests/fast"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/efremov_aa/ClionProjects/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 run_tests/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/HOME/Source/Repos/MFG/cmake-build-debug/tests/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/main.cpp">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/main.cpp">
 			<Option target="MFG"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/malgo">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/malgo">
 			<Option target="malgo"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/malgo/malgo.h">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/malgo/malgo.h">
 			<Option target="malgo"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfg">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg">
 			<Option target="mfg"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.cpp">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg/consts.cpp">
 			<Option target="mfg"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.h">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg/consts.h">
 			<Option target="mfg"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfg/solver1.cpp">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg/solver1.cpp">
 			<Option target="mfg"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/src/gtest-all.cc">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/src/gtest_main.cc">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/tests/malgo_tests.cpp">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/tests/malgo_tests.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/tests/mfg_tests.cpp">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/tests/mfg_tests.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfg/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\mfg\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/mfg/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\mfg\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/malgo/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/malgo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\malgo\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/malgo/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/malgo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\malgo\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\lib\gtest-1.7.0\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\lib\gtest-1.7.0\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\lib\gtest-1.7.0\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/cmake/internal_utils.cmake">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\tests\lib\gtest-1.7.0\cmake\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/cmake/internal_utils.cmake">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\tests\lib\gtest-1.7.0\cmake\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0/cmake/internal_utils.cmake">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\tests\lib\gtest-1.7.0\cmake\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/tests/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\tests\"/>
 		</Unit>
-		<Unit filename="C:/Users/efremov_aa/ClionProjects/MFG/tests/tests/CMakeLists.txt">
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/tests/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\tests\"/>
 		</Unit>
 	</Project>

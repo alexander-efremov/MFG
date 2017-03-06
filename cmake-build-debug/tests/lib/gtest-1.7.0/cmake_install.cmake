@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/efremov_aa/ClionProjects/MFG/tests/lib/gtest-1.7.0
+# Install script for directory: C:/Users/HOME/Source/Repos/MFG/tests/lib/gtest-1.7.0
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/efremov_aa/ClionProjects/MFG/mfg
+# Install script for directory: C:/Users/HOME/Source/Repos/MFG/mfg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

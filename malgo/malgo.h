@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <assert.h>
+#include <math.h>
 #include <cfloat>
 
 inline int is_diagonally_dominating_matrix(double *arr, int n, int m) {
@@ -10,11 +11,11 @@ inline int is_diagonally_dominating_matrix(double *arr, int n, int m) {
     double sum = 0.;
 
     for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
+        for (int j = 0; j < m; ++j) {
             if (i == j) {
-                diag_sum += abs(arr[i * n + j]);
+                diag_sum += fabs(arr[i * n + j]);
             } else {
-                sum += abs(arr[i * n + j]);
+                sum += fabs(arr[i * n + j]);
             }
         }
     }

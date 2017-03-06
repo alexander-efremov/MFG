@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\efremov_aa\ClionProjects\MFG
+CMAKE_SOURCE_DIR = C:\Users\HOME\Source\Repos\MFG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\HOME\Source\Repos\MFG\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include tests/tests/CMakeFiles/run_tests.dir/depend.make
@@ -59,16 +59,16 @@ include tests/tests/CMakeFiles/run_tests.dir/flags.make
 tests/tests/CMakeFiles/run_tests.dir/malgo_tests.cpp.obj: tests/tests/CMakeFiles/run_tests.dir/flags.make
 tests/tests/CMakeFiles/run_tests.dir/malgo_tests.cpp.obj: tests/tests/CMakeFiles/run_tests.dir/includes_CXX.rsp
 tests/tests/CMakeFiles/run_tests.dir/malgo_tests.cpp.obj: ../tests/tests/malgo_tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/tests/CMakeFiles/run_tests.dir/malgo_tests.cpp.obj"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\run_tests.dir\malgo_tests.cpp.obj -c C:\Users\efremov_aa\ClionProjects\MFG\tests\tests\malgo_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/tests/CMakeFiles/run_tests.dir/malgo_tests.cpp.obj"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\run_tests.dir\malgo_tests.cpp.obj -c C:\Users\HOME\Source\Repos\MFG\tests\tests\malgo_tests.cpp
 
 tests/tests/CMakeFiles/run_tests.dir/malgo_tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/malgo_tests.cpp.i"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\efremov_aa\ClionProjects\MFG\tests\tests\malgo_tests.cpp > CMakeFiles\run_tests.dir\malgo_tests.cpp.i
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\HOME\Source\Repos\MFG\tests\tests\malgo_tests.cpp > CMakeFiles\run_tests.dir\malgo_tests.cpp.i
 
 tests/tests/CMakeFiles/run_tests.dir/malgo_tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/malgo_tests.cpp.s"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\efremov_aa\ClionProjects\MFG\tests\tests\malgo_tests.cpp -o CMakeFiles\run_tests.dir\malgo_tests.cpp.s
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\HOME\Source\Repos\MFG\tests\tests\malgo_tests.cpp -o CMakeFiles\run_tests.dir\malgo_tests.cpp.s
 
 tests/tests/CMakeFiles/run_tests.dir/malgo_tests.cpp.obj.requires:
 
@@ -84,16 +84,16 @@ tests/tests/CMakeFiles/run_tests.dir/malgo_tests.cpp.obj.provides.build: tests/t
 tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.obj: tests/tests/CMakeFiles/run_tests.dir/flags.make
 tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.obj: tests/tests/CMakeFiles/run_tests.dir/includes_CXX.rsp
 tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.obj: ../tests/tests/mfg_tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.obj"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\run_tests.dir\mfg_tests.cpp.obj -c C:\Users\efremov_aa\ClionProjects\MFG\tests\tests\mfg_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.obj"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\run_tests.dir\mfg_tests.cpp.obj -c C:\Users\HOME\Source\Repos\MFG\tests\tests\mfg_tests.cpp
 
 tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/mfg_tests.cpp.i"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\efremov_aa\ClionProjects\MFG\tests\tests\mfg_tests.cpp > CMakeFiles\run_tests.dir\mfg_tests.cpp.i
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\HOME\Source\Repos\MFG\tests\tests\mfg_tests.cpp > CMakeFiles\run_tests.dir\mfg_tests.cpp.i
 
 tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/mfg_tests.cpp.s"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\efremov_aa\ClionProjects\MFG\tests\tests\mfg_tests.cpp -o CMakeFiles\run_tests.dir\mfg_tests.cpp.s
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\HOME\Source\Repos\MFG\tests\tests\mfg_tests.cpp -o CMakeFiles\run_tests.dir\mfg_tests.cpp.s
 
 tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.obj.requires:
 
@@ -124,8 +124,8 @@ tests/tests/run_tests.exe: tests/lib/gtest-1.7.0/libgtest.a
 tests/tests/run_tests.exe: tests/tests/CMakeFiles/run_tests.dir/linklibs.rsp
 tests/tests/run_tests.exe: tests/tests/CMakeFiles/run_tests.dir/objects1.rsp
 tests/tests/run_tests.exe: tests/tests/CMakeFiles/run_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable run_tests.exe"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\run_tests.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable run_tests.exe"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\run_tests.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/tests/CMakeFiles/run_tests.dir/build: tests/tests/run_tests.exe
@@ -138,10 +138,10 @@ tests/tests/CMakeFiles/run_tests.dir/requires: tests/tests/CMakeFiles/run_tests.
 .PHONY : tests/tests/CMakeFiles/run_tests.dir/requires
 
 tests/tests/CMakeFiles/run_tests.dir/clean:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests && $(CMAKE_COMMAND) -P CMakeFiles\run_tests.dir\cmake_clean.cmake
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests && $(CMAKE_COMMAND) -P CMakeFiles\run_tests.dir\cmake_clean.cmake
 .PHONY : tests/tests/CMakeFiles/run_tests.dir/clean
 
 tests/tests/CMakeFiles/run_tests.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\efremov_aa\ClionProjects\MFG C:\Users\efremov_aa\ClionProjects\MFG\tests\tests C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\tests\CMakeFiles\run_tests.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\HOME\Source\Repos\MFG C:\Users\HOME\Source\Repos\MFG\tests\tests C:\Users\HOME\Source\Repos\MFG\cmake-build-debug C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\tests\CMakeFiles\run_tests.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/tests/CMakeFiles/run_tests.dir/depend
 

@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\efremov_aa\ClionProjects\MFG
+CMAKE_SOURCE_DIR = C:\Users\HOME\Source\Repos\MFG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\HOME\Source\Repos\MFG\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/depend.make
@@ -59,16 +59,16 @@ include tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/flags.make
 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/flags.make
 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/includes_CXX.rsp
 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: ../tests/lib/gtest-1.7.0/src/gtest-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\gtest.dir\src\gtest-all.cc.obj -c C:\Users\efremov_aa\ClionProjects\MFG\tests\lib\gtest-1.7.0\src\gtest-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\gtest.dir\src\gtest-all.cc.obj -c C:\Users\HOME\Source\Repos\MFG\tests\lib\gtest-1.7.0\src\gtest-all.cc
 
 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.cc.i"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\efremov_aa\ClionProjects\MFG\tests\lib\gtest-1.7.0\src\gtest-all.cc > CMakeFiles\gtest.dir\src\gtest-all.cc.i
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\HOME\Source\Repos\MFG\tests\lib\gtest-1.7.0\src\gtest-all.cc > CMakeFiles\gtest.dir\src\gtest-all.cc.i
 
 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/src/gtest-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest.dir/src/gtest-all.cc.s"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\efremov_aa\ClionProjects\MFG\tests\lib\gtest-1.7.0\src\gtest-all.cc -o CMakeFiles\gtest.dir\src\gtest-all.cc.s
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\HOME\Source\Repos\MFG\tests\lib\gtest-1.7.0\src\gtest-all.cc -o CMakeFiles\gtest.dir\src\gtest-all.cc.s
 
 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/src/gtest-all.cc.obj.requires:
 
@@ -91,9 +91,9 @@ gtest_EXTERNAL_OBJECTS =
 tests/lib/gtest-1.7.0/libgtest.a: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
 tests/lib/gtest-1.7.0/libgtest.a: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/build.make
 tests/lib/gtest-1.7.0/libgtest.a: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgtest.a"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && $(CMAKE_COMMAND) -P CMakeFiles\gtest.dir\cmake_clean_target.cmake
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gtest.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgtest.a"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && $(CMAKE_COMMAND) -P CMakeFiles\gtest.dir\cmake_clean_target.cmake
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gtest.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/build: tests/lib/gtest-1.7.0/libgtest.a
@@ -105,10 +105,10 @@ tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/requires: tests/lib/gtest-1.7.0/CMake
 .PHONY : tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/requires
 
 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && $(CMAKE_COMMAND) -P CMakeFiles\gtest.dir\cmake_clean.cmake
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 && $(CMAKE_COMMAND) -P CMakeFiles\gtest.dir\cmake_clean.cmake
 .PHONY : tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/clean
 
 tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\efremov_aa\ClionProjects\MFG C:\Users\efremov_aa\ClionProjects\MFG\tests\lib\gtest-1.7.0 C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\lib\gtest-1.7.0\CMakeFiles\gtest.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\HOME\Source\Repos\MFG C:\Users\HOME\Source\Repos\MFG\tests\lib\gtest-1.7.0 C:\Users\HOME\Source\Repos\MFG\cmake-build-debug C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\lib\gtest-1.7.0 C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\lib\gtest-1.7.0\CMakeFiles\gtest.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/depend
 

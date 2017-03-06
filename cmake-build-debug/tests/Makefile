@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\efremov_aa\ClionProjects\MFG
+CMAKE_SOURCE_DIR = C:\Users\HOME\Source\Repos\MFG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\HOME\Source\Repos\MFG\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,14 +79,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\tests\CMakeFiles\progress.marks
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\tests\CMakeFiles\progress.marks
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 tests/clean
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -96,17 +96,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 tests/preinstall
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 tests/preinstall
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -128,6 +128,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

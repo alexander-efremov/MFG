@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/efremov_aa/ClionProjects/MFG/malgo
+# Install script for directory: C:/Users/HOME/Source/Repos/MFG/malgo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

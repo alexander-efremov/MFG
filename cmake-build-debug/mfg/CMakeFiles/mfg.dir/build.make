@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\efremov_aa\ClionProjects\MFG
+CMAKE_SOURCE_DIR = C:\Users\HOME\Source\Repos\MFG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\HOME\Source\Repos\MFG\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include mfg/CMakeFiles/mfg.dir/depend.make
@@ -59,16 +59,16 @@ include mfg/CMakeFiles/mfg.dir/flags.make
 mfg/CMakeFiles/mfg.dir/consts.cpp.obj: mfg/CMakeFiles/mfg.dir/flags.make
 mfg/CMakeFiles/mfg.dir/consts.cpp.obj: mfg/CMakeFiles/mfg.dir/includes_CXX.rsp
 mfg/CMakeFiles/mfg.dir/consts.cpp.obj: ../mfg/consts.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object mfg/CMakeFiles/mfg.dir/consts.cpp.obj"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\mfg.dir\consts.cpp.obj -c C:\Users\efremov_aa\ClionProjects\MFG\mfg\consts.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object mfg/CMakeFiles/mfg.dir/consts.cpp.obj"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\mfg.dir\consts.cpp.obj -c C:\Users\HOME\Source\Repos\MFG\mfg\consts.cpp
 
 mfg/CMakeFiles/mfg.dir/consts.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mfg.dir/consts.cpp.i"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\efremov_aa\ClionProjects\MFG\mfg\consts.cpp > CMakeFiles\mfg.dir\consts.cpp.i
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\HOME\Source\Repos\MFG\mfg\consts.cpp > CMakeFiles\mfg.dir\consts.cpp.i
 
 mfg/CMakeFiles/mfg.dir/consts.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mfg.dir/consts.cpp.s"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\efremov_aa\ClionProjects\MFG\mfg\consts.cpp -o CMakeFiles\mfg.dir\consts.cpp.s
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\HOME\Source\Repos\MFG\mfg\consts.cpp -o CMakeFiles\mfg.dir\consts.cpp.s
 
 mfg/CMakeFiles/mfg.dir/consts.cpp.obj.requires:
 
@@ -84,16 +84,16 @@ mfg/CMakeFiles/mfg.dir/consts.cpp.obj.provides.build: mfg/CMakeFiles/mfg.dir/con
 mfg/CMakeFiles/mfg.dir/solver1.cpp.obj: mfg/CMakeFiles/mfg.dir/flags.make
 mfg/CMakeFiles/mfg.dir/solver1.cpp.obj: mfg/CMakeFiles/mfg.dir/includes_CXX.rsp
 mfg/CMakeFiles/mfg.dir/solver1.cpp.obj: ../mfg/solver1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object mfg/CMakeFiles/mfg.dir/solver1.cpp.obj"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\mfg.dir\solver1.cpp.obj -c C:\Users\efremov_aa\ClionProjects\MFG\mfg\solver1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object mfg/CMakeFiles/mfg.dir/solver1.cpp.obj"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\mfg.dir\solver1.cpp.obj -c C:\Users\HOME\Source\Repos\MFG\mfg\solver1.cpp
 
 mfg/CMakeFiles/mfg.dir/solver1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mfg.dir/solver1.cpp.i"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\efremov_aa\ClionProjects\MFG\mfg\solver1.cpp > CMakeFiles\mfg.dir\solver1.cpp.i
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\HOME\Source\Repos\MFG\mfg\solver1.cpp > CMakeFiles\mfg.dir\solver1.cpp.i
 
 mfg/CMakeFiles/mfg.dir/solver1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mfg.dir/solver1.cpp.s"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\efremov_aa\ClionProjects\MFG\mfg\solver1.cpp -o CMakeFiles\mfg.dir\solver1.cpp.s
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\HOME\Source\Repos\MFG\mfg\solver1.cpp -o CMakeFiles\mfg.dir\solver1.cpp.s
 
 mfg/CMakeFiles/mfg.dir/solver1.cpp.obj.requires:
 
@@ -118,9 +118,9 @@ mfg/libmfg.a: mfg/CMakeFiles/mfg.dir/consts.cpp.obj
 mfg/libmfg.a: mfg/CMakeFiles/mfg.dir/solver1.cpp.obj
 mfg/libmfg.a: mfg/CMakeFiles/mfg.dir/build.make
 mfg/libmfg.a: mfg/CMakeFiles/mfg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libmfg.a"
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg && $(CMAKE_COMMAND) -P CMakeFiles\mfg.dir\cmake_clean_target.cmake
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mfg.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libmfg.a"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && $(CMAKE_COMMAND) -P CMakeFiles\mfg.dir\cmake_clean_target.cmake
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mfg.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 mfg/CMakeFiles/mfg.dir/build: mfg/libmfg.a
@@ -133,10 +133,10 @@ mfg/CMakeFiles/mfg.dir/requires: mfg/CMakeFiles/mfg.dir/solver1.cpp.obj.requires
 .PHONY : mfg/CMakeFiles/mfg.dir/requires
 
 mfg/CMakeFiles/mfg.dir/clean:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg && $(CMAKE_COMMAND) -P CMakeFiles\mfg.dir\cmake_clean.cmake
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && $(CMAKE_COMMAND) -P CMakeFiles\mfg.dir\cmake_clean.cmake
 .PHONY : mfg/CMakeFiles/mfg.dir/clean
 
 mfg/CMakeFiles/mfg.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\efremov_aa\ClionProjects\MFG C:\Users\efremov_aa\ClionProjects\MFG\mfg C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\mfg\CMakeFiles\mfg.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\HOME\Source\Repos\MFG C:\Users\HOME\Source\Repos\MFG\mfg C:\Users\HOME\Source\Repos\MFG\cmake-build-debug C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg\CMakeFiles\mfg.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : mfg/CMakeFiles/mfg.dir/depend
 

@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\efremov_aa\ClionProjects\MFG
+CMAKE_SOURCE_DIR = C:\Users\HOME\Source\Repos\MFG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\HOME\Source\Repos\MFG\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,14 +79,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\malgo\CMakeFiles\progress.marks
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\malgo\CMakeFiles\progress.marks
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/clean
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/clean
 .PHONY : clean
 
 # The main clean target
@@ -96,22 +96,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/preinstall
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/preinstall
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 malgo/CMakeFiles/malgo.dir/rule:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/CMakeFiles/malgo.dir/rule
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 malgo/CMakeFiles/malgo.dir/rule
 .PHONY : malgo/CMakeFiles/malgo.dir/rule
 
 # Convenience name for target.
@@ -121,7 +121,7 @@ malgo: malgo/CMakeFiles/malgo.dir/rule
 
 # fast build rule for target.
 malgo/fast:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/build
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f malgo\CMakeFiles\malgo.dir\build.make malgo/CMakeFiles/malgo.dir/build
 .PHONY : malgo/fast
 
 # Help Target
@@ -144,6 +144,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\efremov_aa\ClionProjects\MFG\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
