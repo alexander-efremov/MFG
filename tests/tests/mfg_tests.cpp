@@ -28,6 +28,14 @@ void print_params() {
     fflush(stdout);
 }
 
+void assert_params() {
+    assert(HX_SQ = sqrt(HX));
+    assert(SIGMA_SQ = sqrt(SIGMA));
+    assert(NX > 0);
+    assert(NX_1 == NX + 1);
+    assert(A == 0.);
+}
+
 void run_solver_1(unsigned int d) {
     assert(d >= 50);
 
@@ -44,15 +52,11 @@ void run_solver_1(unsigned int d) {
     TIME_STEP_CNT = 5;
 
     print_params();
+    assert_params();
 
-    double *grid = (double*)malloc(NX_1* sizeof(double));
-    double *gridPr = (double*)malloc(NX_1* sizeof(double));;
+    double *density = solve_1();
 
-    double *density = solve_1(grid, gridPr);
-
-    delete[] density;
-    free(grid);
-    free(gridPr);
+    free(density);
 }
 
 TEST_F(MfgFixture, mfg_solver_1) {

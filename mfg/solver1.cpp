@@ -23,14 +23,12 @@ double analytical_solution_1(double time, double dot) {
     return sin(time * dot);
 }
 
-double *solve_1(double *vec, double *vecPr) {
-    assert(vec != NULL);
-    assert(vecPr != NULL);
-    assert(HX_SQ = sqrt(HX));
-    assert(SIGMA_SQ = sqrt(SIGMA));
+double *solve_1() {
+    double *m = (double *) malloc(NX_1 * sizeof(double));
+    double *m_pr = (double *) malloc(NX_1 * sizeof(double));
 
-    for (int j = 0; j < NX_1; ++j) {
-        vecPr[j] = analytical_solution_1(0, vecPr[j]);
+    for (int i = 0; i < NX_1; ++i) {
+        m_pr[i] = analytical_solution_1(0., A + i * HX);
     }
     // corner point i = 0;
 
@@ -40,8 +38,8 @@ double *solve_1(double *vec, double *vecPr) {
     for (int i = 1; i < NX; ++i) {
 
     }
-    return nullptr;
+
+    free(m_pr);
+
+    return m;
 }
-
-
-

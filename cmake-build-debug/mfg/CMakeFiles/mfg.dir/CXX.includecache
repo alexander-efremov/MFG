@@ -6,17 +6,39 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/efremov_aa/ClionProjects/MFG/mfg/common.h
+../malgo/malgo.h
+stdlib.h
+-
+assert.h
+-
+math.h
+-
+cfloat
+-
+
+C:/Users/HOME/Source/Repos/MFG/mfg/common.cpp
+assert.h
+-
+math.h
+-
+
+C:/Users/HOME/Source/Repos/MFG/mfg/common.h
 consts.h
-C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.h
+C:/Users/HOME/Source/Repos/MFG/mfg/consts.h
 
-C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.cpp
+C:/Users/HOME/Source/Repos/MFG/mfg/consts.cpp
 consts.h
-C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.h
+C:/Users/HOME/Source/Repos/MFG/mfg/consts.h
 
-C:/Users/efremov_aa/ClionProjects/MFG/mfg/consts.h
+C:/Users/HOME/Source/Repos/MFG/mfg/consts.h
 
-C:/Users/efremov_aa/ClionProjects/MFG/mfg/solver1.cpp
+C:/Users/HOME/Source/Repos/MFG/mfg/solver1.cpp
+assert.h
+-
+math.h
+-
 common.h
-C:/Users/efremov_aa/ClionProjects/MFG/mfg/common.h
+C:/Users/HOME/Source/Repos/MFG/mfg/common.h
+malgo.h
+C:/Users/HOME/Source/Repos/MFG/mfg/malgo.h
 
