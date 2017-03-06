@@ -45,18 +45,14 @@ void run_solver_1(unsigned int d) {
 
     print_params();
 
-    int *grid = new int[NX_1];
-    int *gridPr = new int[NX_1];
+    double *grid = (double*)malloc(NX_1* sizeof(double));
+    double *gridPr = (double*)malloc(NX_1* sizeof(double));;
 
     double *density = solve_1(grid, gridPr);
-    double *exact0 = calc_exact_1(grid, 0., NX_1, HX);
-    double *exactT = calc_exact_1(grid, TAU * TIME_STEP_CNT, NX_1, HX);
 
     delete[] density;
-    delete[] exact0;
-    delete[] exactT;
-    delete[] grid;
-    delete[] gridPr;
+    free(grid);
+    free(gridPr);
 }
 
 TEST_F(MfgFixture, mfg_solver_1) {

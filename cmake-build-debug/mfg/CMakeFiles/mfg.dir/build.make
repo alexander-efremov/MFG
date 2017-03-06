@@ -106,19 +106,46 @@ mfg/CMakeFiles/mfg.dir/solver1.cpp.obj.provides: mfg/CMakeFiles/mfg.dir/solver1.
 mfg/CMakeFiles/mfg.dir/solver1.cpp.obj.provides.build: mfg/CMakeFiles/mfg.dir/solver1.cpp.obj
 
 
+mfg/CMakeFiles/mfg.dir/common.cpp.obj: mfg/CMakeFiles/mfg.dir/flags.make
+mfg/CMakeFiles/mfg.dir/common.cpp.obj: mfg/CMakeFiles/mfg.dir/includes_CXX.rsp
+mfg/CMakeFiles/mfg.dir/common.cpp.obj: ../mfg/common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object mfg/CMakeFiles/mfg.dir/common.cpp.obj"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\mfg.dir\common.cpp.obj -c C:\Users\HOME\Source\Repos\MFG\mfg\common.cpp
+
+mfg/CMakeFiles/mfg.dir/common.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mfg.dir/common.cpp.i"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\HOME\Source\Repos\MFG\mfg\common.cpp > CMakeFiles\mfg.dir\common.cpp.i
+
+mfg/CMakeFiles/mfg.dir/common.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mfg.dir/common.cpp.s"
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\HOME\Source\Repos\MFG\mfg\common.cpp -o CMakeFiles\mfg.dir\common.cpp.s
+
+mfg/CMakeFiles/mfg.dir/common.cpp.obj.requires:
+
+.PHONY : mfg/CMakeFiles/mfg.dir/common.cpp.obj.requires
+
+mfg/CMakeFiles/mfg.dir/common.cpp.obj.provides: mfg/CMakeFiles/mfg.dir/common.cpp.obj.requires
+	$(MAKE) -f mfg\CMakeFiles\mfg.dir\build.make mfg/CMakeFiles/mfg.dir/common.cpp.obj.provides.build
+.PHONY : mfg/CMakeFiles/mfg.dir/common.cpp.obj.provides
+
+mfg/CMakeFiles/mfg.dir/common.cpp.obj.provides.build: mfg/CMakeFiles/mfg.dir/common.cpp.obj
+
+
 # Object files for target mfg
 mfg_OBJECTS = \
 "CMakeFiles/mfg.dir/consts.cpp.obj" \
-"CMakeFiles/mfg.dir/solver1.cpp.obj"
+"CMakeFiles/mfg.dir/solver1.cpp.obj" \
+"CMakeFiles/mfg.dir/common.cpp.obj"
 
 # External object files for target mfg
 mfg_EXTERNAL_OBJECTS =
 
 mfg/libmfg.a: mfg/CMakeFiles/mfg.dir/consts.cpp.obj
 mfg/libmfg.a: mfg/CMakeFiles/mfg.dir/solver1.cpp.obj
+mfg/libmfg.a: mfg/CMakeFiles/mfg.dir/common.cpp.obj
 mfg/libmfg.a: mfg/CMakeFiles/mfg.dir/build.make
 mfg/libmfg.a: mfg/CMakeFiles/mfg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libmfg.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libmfg.a"
 	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && $(CMAKE_COMMAND) -P CMakeFiles\mfg.dir\cmake_clean_target.cmake
 	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\mfg && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mfg.dir\link.txt --verbose=$(VERBOSE)
 
@@ -129,6 +156,7 @@ mfg/CMakeFiles/mfg.dir/build: mfg/libmfg.a
 
 mfg/CMakeFiles/mfg.dir/requires: mfg/CMakeFiles/mfg.dir/consts.cpp.obj.requires
 mfg/CMakeFiles/mfg.dir/requires: mfg/CMakeFiles/mfg.dir/solver1.cpp.obj.requires
+mfg/CMakeFiles/mfg.dir/requires: mfg/CMakeFiles/mfg.dir/common.cpp.obj.requires
 
 .PHONY : mfg/CMakeFiles/mfg.dir/requires
 

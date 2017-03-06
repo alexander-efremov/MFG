@@ -124,6 +124,33 @@ mfg/fast:
 	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f mfg\CMakeFiles\mfg.dir\build.make mfg/CMakeFiles/mfg.dir/build
 .PHONY : mfg/fast
 
+common.obj: common.cpp.obj
+
+.PHONY : common.obj
+
+# target to build an object file
+common.cpp.obj:
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f mfg\CMakeFiles\mfg.dir\build.make mfg/CMakeFiles/mfg.dir/common.cpp.obj
+.PHONY : common.cpp.obj
+
+common.i: common.cpp.i
+
+.PHONY : common.i
+
+# target to preprocess a source file
+common.cpp.i:
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f mfg\CMakeFiles\mfg.dir\build.make mfg/CMakeFiles/mfg.dir/common.cpp.i
+.PHONY : common.cpp.i
+
+common.s: common.cpp.s
+
+.PHONY : common.s
+
+# target to generate assembly for a file
+common.cpp.s:
+	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f mfg\CMakeFiles\mfg.dir\build.make mfg/CMakeFiles/mfg.dir/common.cpp.s
+.PHONY : common.cpp.s
+
 consts.obj: consts.cpp.obj
 
 .PHONY : consts.obj
@@ -187,6 +214,9 @@ help:
 	@echo ... mfg
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... common.obj
+	@echo ... common.i
+	@echo ... common.s
 	@echo ... consts.obj
 	@echo ... consts.i
 	@echo ... consts.s

@@ -6,6 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR})
 
-set(SOURCE_FILES consts.cpp solver1.cpp)
+set(SOURCE_FILES consts.cpp solver1.cpp common.cpp)
 
 add_library(mfg STATIC ${SOURCE_FILES} ${HEADER_FILES})

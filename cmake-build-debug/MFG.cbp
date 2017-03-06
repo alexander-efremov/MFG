@@ -350,6 +350,12 @@
 		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg">
 			<Option target="mfg"/>
 		</Unit>
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg/common.cpp">
+			<Option target="mfg"/>
+		</Unit>
+		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg/common.h">
+			<Option target="mfg"/>
+		</Unit>
 		<Unit filename="C:/Users/HOME/Source/Repos/MFG/mfg/consts.cpp">
 			<Option target="mfg"/>
 		</Unit>

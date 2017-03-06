@@ -19,12 +19,19 @@ inline double func_alpha(double t, double x) {
     return ALPHA;
 }
 
-double *solve_1(int *grid, int *gridPr) {
-    assert(grid != NULL);
-    assert(gridPr != NULL);
+double analytical_solution_1(double time, double dot) {
+    return sin(time * dot);
+}
+
+double *solve_1(double *vec, double *vecPr) {
+    assert(vec != NULL);
+    assert(vecPr != NULL);
     assert(HX_SQ = sqrt(HX));
     assert(SIGMA_SQ = sqrt(SIGMA));
 
+    for (int j = 0; j < NX_1; ++j) {
+        vecPr[j] = analytical_solution_1(0, vecPr[j]);
+    }
     // corner point i = 0;
 
     // corner point i = N;
@@ -36,10 +43,5 @@ double *solve_1(int *grid, int *gridPr) {
     return nullptr;
 }
 
-double *calc_exact_1(int *grid, double t, int nx_1, double hx) {
-    assert(grid != NULL);
-    assert(t > 0.);
-    assert(nx_1 > 0);
-    assert(hx > 0.);
-    return nullptr;
-}
+
+
