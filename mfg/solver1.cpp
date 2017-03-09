@@ -47,53 +47,46 @@ double *build_a(int n) {
     return r;
 }
 
-inline double func_alpha(double t, double x) {
+inline double func_alpha(double a, double t, double x) {
+    //return a * t * x * (1 - x);
     return ALPHA;
 }
 
 double get_right_part_inner_points(int ii, double *m_pr, double time_value) {
 
-    double x_hat_left = A + ii * HX;
-    double x_hat_right = A + (ii + 1) * HX;
+    double x_left = A + ii * HX;
+    double x_right = A + (ii + 1) * HX;
 
-    double u = func_alpha(time_value, x_hat_left);
-    x_hat_left = x_hat_left - TAU * u;
-    u = func_alpha(time_value, x_hat_right);
-    x_hat_right = x_hat_right - TAU * u;
-    if (x_hat_left <= A || x_hat_left >= B || x_hat_right <= A || x_hat_right >= B)
-        printf("Time value %.8le! ERROR INDEX i=%d : x1=%.8le ** x2=%.8le\n ", time_value, ii, x_hat_left, x_hat_right);
-
-    int sq_i_left = (int) ((x_hat_left - A) / HX);
-    int sq_i_right = (int) ((x_hat_right - A) / HX);
+    double u = func_alpha(ALPHA, time_value, x_left);
+    x_left -= TAU * u;
+    u = func_alpha(ALPHA, time_value, x_right);
+    x_right -= TAU * u;
+    if (x_left <= A || x_left >= B || x_right <= A || x_right >= B)
+        printf("Time value %.8le! ERROR INDEX i=%d : x1=%.8le ** x2=%.8le\n ", time_value, ii, x_left, x_right);
 
     double r = -1.;
-    if (sq_i_right - 1 == sq_i_left) // intervals are joint
-    {
-        double xi_plus_one_half = A + sq_i_left * HX + HX / 2.;
-        double xi_minus_one_half = A + sq_i_left * HX - HX / 2.;
 
-        int idx1 = (int) ((xi_plus_one_half - x_hat_left) / HX);
-        int idx2 = (int) ((x_hat_left - xi_minus_one_half) / HX);
-        r = idx1 + idx2;
+    int int_left = (int) (((x_left - A) / HX) + 0.5);
+    int int_right = (int) (((x_right - A) / HX) + 0.5);
 
-        xi_plus_one_half = A + sq_i_right * HX + HX / 2.;
-        xi_minus_one_half = A + sq_i_right * HX - HX / 2.;
+    double m_left;
+    double xi_plus_one_half = A + int_left * HX + HX / 2.;
+    double xi_minus_one_half = A + int_left * HX - HX / 2.;
+    m_left = m_pr[int_left] * (xi_plus_one_half - x_left) + m_pr[int_left] * (xi_minus_one_half - x_left);
+    double val_left = 0.5 * (m_left + m_pr[int_left + 1]) * (A + int_left * HX - x_left);
+    r += val_left;
 
-        idx1 = (int) ((xi_plus_one_half - x_hat_right) / HX);
-        idx2 = (int) ((x_hat_right - xi_minus_one_half) / HX);
-        r += idx1 + idx2;
-
-    } else {
-        int diff = sq_i_right - sq_i_left;
-
-        while (diff > 0) {
-            diff--;
-            // TODO
-            printf("TODO: INTERVALS ISN'T JOINDED");
-        }
-
+    for (int i = int_left + 1; i < int_right; ++i) {
+        double val_middle = 0.5 * (m_pr[i] + m_pr[i + 1]) * HX;
+        r += val_middle;
     }
 
+    double m_right;
+    xi_plus_one_half = A + int_right * HX + HX / 2.;
+    xi_minus_one_half = A + int_right * HX - HX / 2.;
+    m_right = m_pr[int_right] * (xi_plus_one_half - x_right) + m_pr[int_right] * (xi_minus_one_half - x_right);
+    double val_right = 0.5 * (m_right + m_pr[int_right + 1]) * (A + int_right * HX - x_right);
+    r += val_right;
 
     return r;
 }
@@ -104,37 +97,37 @@ double *get_rp(double *rp, double *m_pr, double time) {
     // i = N;
     // TODO
     // inner points
-    for (int i = 2; i < NX * 2 + 1; ++i)
+    for (int i = 1; i < N_1 + 1; ++i)
         rp[i] = get_right_part_inner_points(i, m_pr, time);
 }
 
 
-double analytical_solution_1(double time, double dot) {
-    return 1. + sin(time * dot);
+double analytical_solution_1(double a, double time, double x) {
+    return a * time * (x * x / 6.) * (3 - 2 * x);
 }
 
 double *solve_1() {
-    double *m = (double *) malloc((NX_1 * 2 + 2) * sizeof(double));
-    double *m_pr = (double *) malloc((NX_1 * 2 + 2) * sizeof(double));
-    double *rp = (double *) malloc(NX_1 * sizeof(double));
-    double *a = (double *) malloc(NX_1 * NX_1 * sizeof(double));
+    double *m = (double *) malloc((N_1 + 2) * sizeof(double));
+    double *m_pr = (double *) malloc((N_1 + 2) * sizeof(double));
+    double *rp = (double *) malloc(N_1 * sizeof(double));
+    double *a = (double *) malloc(N_1 * N_1 * sizeof(double));
 
-    for (int i = 0; i < NX * 2 + 2; ++i) {
+    for (int i = 0; i < NX + 2; ++i) {
         m[i] = 0.;
         m_pr[i] = 0.;
     }
 
-    for (int i = 1; i < NX * 2 + 1; ++i) {
-        m_pr[i] = analytical_solution_1(0., A + i * HX);
+    for (int i = 0; i < N_1 + 2; ++i) {
+        m_pr[i] = analytical_solution_1(ALPHA, 0., A + i * HX);
     }
 
-    for (int tl = 1; tl <= TIME_STEP_CNT; tl++) {
+    for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         rp = get_rp(rp, m_pr, TAU * tl);
-        a = build_a(NX_1);
+        a = build_a(N_1);
 
-        thomas_algo(NX_1, a, rp, m);
+        thomas_algo(N_1, a, rp, m);
 
-        memcpy(m_pr, m, NX_1 * sizeof(double));
+        memcpy(m_pr, m, N_1 * sizeof(double));
     }
 
     free(m_pr);

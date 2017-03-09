@@ -17,7 +17,7 @@ public:
 };
 
 void print_params() {
-    printf("\nNX = %dx\n", NX);
+    printf("\nNX = %d\n", NX);
     printf("ALPHA = %le\n", ALPHA);
     printf("SIGMA = %le\n", SIGMA);
     printf("SIGMA_SQ = %le\n", SIGMA_SQ);
@@ -32,9 +32,10 @@ void assert_params() {
     assert(HX_SQ = sqrt(HX));
     assert(SIGMA_SQ = sqrt(SIGMA));
     assert(NX > 0);
-    assert(NX_1 == NX + 1);
+    assert(N_1 == NX + 1);
     assert(A == 0.);
     assert(TAU > 0.);
+    assert(ALPHA > 0.);
 }
 
 void run_solver_1(unsigned int d) {
@@ -45,12 +46,12 @@ void run_solver_1(unsigned int d) {
     SIGMA = 0.1;
     SIGMA_SQ = SIGMA * SIGMA;
     NX = d;
-    NX_1 = NX + 1;
+    N_1 = NX + 1;
     HX = (B - A) / NX;
     HX_SQ = HX * HX;
     ALPHA = 1.;
     TAU = 1.e-3;
-    TIME_STEP_CNT = 5;
+    TIME_STEP_CNT = 1;
 
     print_params();
     assert_params();

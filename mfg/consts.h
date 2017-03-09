@@ -13,7 +13,7 @@ extern double TAU;
 extern double A;
 extern double B;
 extern unsigned int NX;
-extern unsigned int NX_1;
+extern unsigned int N_1;
 extern int TIME_STEP_CNT;
 extern double HX;
 extern double HX_SQ;
