@@ -1,7 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
 #include "common.h"
-#include <math.h>
 #include <string.h>
 #include <malgo.h>
 
@@ -48,8 +47,8 @@ double *build_a(int n) {
 }
 
 inline double func_alpha(double a, double t, double x) {
-    //return a * t * x * (1 - x);
-    return ALPHA;
+    return a * t * x * (1 - x);
+    //return ALPHA;
 }
 
 double get_right_part_inner_points(int ii, double *m_pr, double time_value) {
@@ -65,11 +64,12 @@ double get_right_part_inner_points(int ii, double *m_pr, double time_value) {
         printf("Time value %.8le! ERROR INDEX i=%d : x1=%.8le ** x2=%.8le\n ", time_value, ii, x_left, x_right);
 
     double r = -1.;
+    double m_left;
+    double m_right;
 
     int int_left = (int) (((x_left - A) / HX) + 0.5);
     int int_right = (int) (((x_right - A) / HX) + 0.5);
 
-    double m_left;
     double xi_plus_one_half = A + int_left * HX + HX / 2.;
     double xi_minus_one_half = A + int_left * HX - HX / 2.;
     m_left = m_pr[int_left] * (xi_plus_one_half - x_left) + m_pr[int_left] * (xi_minus_one_half - x_left);
@@ -81,7 +81,6 @@ double get_right_part_inner_points(int ii, double *m_pr, double time_value) {
         r += val_middle;
     }
 
-    double m_right;
     xi_plus_one_half = A + int_right * HX + HX / 2.;
     xi_minus_one_half = A + int_right * HX - HX / 2.;
     m_right = m_pr[int_right] * (xi_plus_one_half - x_right) + m_pr[int_right] * (xi_minus_one_half - x_right);
@@ -91,16 +90,17 @@ double get_right_part_inner_points(int ii, double *m_pr, double time_value) {
     return r;
 }
 
-double *get_rp(double *rp, double *m_pr, double time) {
+void fill_rp(double *rp, double *m_pr, double time) {
     // i = 0;
     // TODO
+    rp[0]=0.;
     // i = N;
     // TODO
+    rp[N_1]=0.;
     // inner points
     for (int i = 1; i < N_1 + 1; ++i)
         rp[i] = get_right_part_inner_points(i, m_pr, time);
 }
-
 
 double analytical_solution_1(double a, double time, double x) {
     return a * time * (x * x / 6.) * (3 - 2 * x);
@@ -122,12 +122,13 @@ double *solve_1() {
     }
 
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
-        rp = get_rp(rp, m_pr, TAU * tl);
+        fill_rp(rp, m_pr, TAU * tl);
+
         a = build_a(N_1);
 
         thomas_algo(N_1, a, rp, m);
 
-        memcpy(m_pr, m, N_1 * sizeof(double));
+        memcpy(m_pr, m, (N_1 + 2) * sizeof(double));
     }
 
     free(m_pr);
