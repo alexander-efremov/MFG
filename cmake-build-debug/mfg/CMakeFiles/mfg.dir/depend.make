@@ -7,6 +7,7 @@ mfg/CMakeFiles/mfg.dir/consts.cpp.obj: ../mfg/consts.cpp
 mfg/CMakeFiles/mfg.dir/consts.cpp.obj: ../mfg/consts.h
 
 mfg/CMakeFiles/mfg.dir/solver1.cpp.obj: ../malgo/malgo.h
+mfg/CMakeFiles/mfg.dir/solver1.cpp.obj: ../mfg/utils.h
 mfg/CMakeFiles/mfg.dir/solver1.cpp.obj: ../mfg/common.h
 mfg/CMakeFiles/mfg.dir/solver1.cpp.obj: ../mfg/consts.h
 mfg/CMakeFiles/mfg.dir/solver1.cpp.obj: ../mfg/solver1.cpp

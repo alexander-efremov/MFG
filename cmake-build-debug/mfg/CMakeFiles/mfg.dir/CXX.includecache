@@ -16,6 +16,16 @@ math.h
 cfloat
 -
 
+../mfg/utils.h
+float.h
+-
+stdio.h
+-
+math.h
+-
+consts.h
+../mfg/consts.h
+
 C:/Users/HOME/Source/Repos/MFG/mfg/common.cpp
 assert.h
 -
@@ -42,5 +52,7 @@ C:/Users/HOME/Source/Repos/MFG/mfg/common.h
 string.h
 -
 malgo.h
+-
+utils.h
 -
 

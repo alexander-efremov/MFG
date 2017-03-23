@@ -3,6 +3,7 @@
 #include "common.h"
 #include <string.h>
 #include <malgo.h>
+#include <utils.h>
 
 inline double get_lc_0() {
     return (7. / (8. * TAU)) - (SIGMA_SQ / (2. * HX_SQ));
@@ -91,15 +92,17 @@ double get_right_part_inner_points(int ii, double *m_pr, double time_value) {
 }
 
 void fill_rp(double *rp, double *m_pr, double time) {
-    // i = 0;
-    // TODO
-    rp[0]=0.;
-    // i = N;
-    // TODO
-    rp[N_1]=0.;
+    rp[0] = analytical_solution_1(ALPHA, 0., A + 0 * HX);
+    rp[1] = analytical_solution_1(ALPHA, 0., A + 0.5 * HX);
+    rp[N_1] = analytical_solution_1(ALPHA, 0., A + N_1 * HX);;
+    rp[N_1 + 1] = analytical_solution_1(ALPHA, 0., A + (N_1 + 1) * HX);;
+
     // inner points
-    for (int i = 1; i < N_1 + 1; ++i)
+    for (int i = 1; i < N_1 + 1; ++i) {
         rp[i] = get_right_part_inner_points(i, m_pr, time);
+        if (rp[i] == -1.)
+            printf("rp error %d = %e\n", i, rp[i]);
+    }
 }
 
 double analytical_solution_1(double a, double time, double x) {
@@ -123,6 +126,8 @@ double *solve_1() {
 
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl);
+
+        print_matrix(rp, 1, N_1 + 2);
 
         a = build_a(N_1);
 
