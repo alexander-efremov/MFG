@@ -112,8 +112,8 @@ double analytical_solution_1(double a, double time, double x) {
 double *solve_1() {
     double *m = (double *) malloc((N_1 + 2) * sizeof(double));
     double *m_pr = (double *) malloc((N_1 + 2) * sizeof(double));
-    double *rp = (double *) malloc(N_1 * sizeof(double));
-    double *a = (double *) malloc(N_1 * N_1 * sizeof(double));
+    double *rp = (double *) malloc((N_1 + 2) * sizeof(double));
+    double *a = (double *) malloc((N_1 + 2) * (N_1 + 2) * sizeof(double));
 
     for (int i = 0; i < NX + 2; ++i) {
         m[i] = 0.;
@@ -142,7 +142,3 @@ double *solve_1() {
 
     return m;
 }
-
-
-
-
