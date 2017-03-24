@@ -623,7 +623,7 @@ TEST(PrintArrayTest, ConstArray) {
 TEST(PrintArrayTest, CharArrayWithNoTerminatingNul) {
   // Array a contains '\0' in the middle and doesn't end with '\0'.
   char a[] = { 'H', '\0', 'i' };
-  EXPECT_EQ("\"HX\\0i\" (no terminating NUL)", PrintArrayHelper(a));
+  EXPECT_EQ("\"H\\0i\" (no terminating NUL)", PrintArrayHelper(a));
 }
 
 // const char array with terminating NUL.
@@ -636,7 +636,7 @@ TEST(PrintArrayTest, ConstCharArrayWithTerminatingNul) {
 TEST(PrintArrayTest, WCharArrayWithNoTerminatingNul) {
   // Array a contains '\0' in the middle and doesn't end with '\0'.
   const wchar_t a[] = { L'H', L'\0', L'i' };
-  EXPECT_EQ("L\"HX\\0i\" (no terminating NUL)", PrintArrayHelper(a));
+  EXPECT_EQ("L\"H\\0i\" (no terminating NUL)", PrintArrayHelper(a));
 }
 
 // wchar_t array with terminating NUL.

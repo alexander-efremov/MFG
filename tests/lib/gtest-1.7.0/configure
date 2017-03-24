@@ -9323,7 +9323,7 @@ if ac_fn_c_try_link "$LINENO"; then :
 	      p
 	  }
       }'
-  lt_cv_aix_libpath_=`dump -HX conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
+  lt_cv_aix_libpath_=`dump -H conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
   # Check for a 64-bit object if we didn't find anything.
   if test -z "$lt_cv_aix_libpath_"; then
     lt_cv_aix_libpath_=`dump -HX64 conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
@@ -9376,7 +9376,7 @@ if ac_fn_c_try_link "$LINENO"; then :
 	      p
 	  }
       }'
-  lt_cv_aix_libpath_=`dump -HX conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
+  lt_cv_aix_libpath_=`dump -H conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
   # Check for a 64-bit object if we didn't find anything.
   if test -z "$lt_cv_aix_libpath_"; then
     lt_cv_aix_libpath_=`dump -HX64 conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
@@ -12261,7 +12261,7 @@ if ac_fn_cxx_try_link "$LINENO"; then :
 	      p
 	  }
       }'
-  lt_cv_aix_libpath__CXX=`dump -HX conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
+  lt_cv_aix_libpath__CXX=`dump -H conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
   # Check for a 64-bit object if we didn't find anything.
   if test -z "$lt_cv_aix_libpath__CXX"; then
     lt_cv_aix_libpath__CXX=`dump -HX64 conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
@@ -12315,7 +12315,7 @@ if ac_fn_cxx_try_link "$LINENO"; then :
 	      p
 	  }
       }'
-  lt_cv_aix_libpath__CXX=`dump -HX conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
+  lt_cv_aix_libpath__CXX=`dump -H conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
   # Check for a 64-bit object if we didn't find anything.
   if test -z "$lt_cv_aix_libpath__CXX"; then
     lt_cv_aix_libpath__CXX=`dump -HX64 conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
@@ -17004,7 +17004,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_write_fail=1
 fi # test -nx_1 "$CONFIG_HEADERS"
 
 
-eval set X "  :F $CONFIG_FILES  :HX $CONFIG_HEADERS    :C $CONFIG_COMMANDS"
+eval set X "  :F $CONFIG_FILES  :H $CONFIG_HEADERS    :C $CONFIG_COMMANDS"
 shift
 for ac_tag
 do
@@ -17223,7 +17223,7 @@ which seems to be undefined.  Please make sure it is defined" >&2;}
   esac \
   || as_fn_error $? "could not create $ac_file" "$LINENO" 5
  ;;
-  :HX)
+  :H)
   #
   # CONFIG_HEADER
   #

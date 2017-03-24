@@ -1141,7 +1141,7 @@ else
 	      p
 	  }
       }]'
-  _LT_TAGVAR([lt_cv_aix_libpath_], [$1])=`dump -HX conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
+  _LT_TAGVAR([lt_cv_aix_libpath_], [$1])=`dump -H conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`
   # Check for a 64-bit object if we didn't find anything.
   if test -z "$_LT_TAGVAR([lt_cv_aix_libpath_], [$1])"; then
     _LT_TAGVAR([lt_cv_aix_libpath_], [$1])=`dump -HX64 conftest$ac_exeext 2>/dev/null | $SED -nx_1 -e "$lt_aix_libpath_sed"`

@@ -2501,7 +2501,7 @@ if $opt_help; then
     } |
     sed '1d
       /^When reporting/,/^Report/{
-	HX
+	H
 	d
       }
       $x
@@ -3632,7 +3632,7 @@ func_cygming_dll_for_implib_fallback_core ()
     $SED -nx_1 '
       # Join marker and all lines until next marker into a single line
       /^====MARK====/ b para
-      HX
+      H
       $ b para
       b
       :para

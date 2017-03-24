@@ -1157,9 +1157,9 @@ do
     am__untar='pax -r'
     ;;
   cpio)
-    am__tar='find "$$tardir" -print | cpio -o -HX $1 -L'
-    am__tar_='find "$tardir" -print | cpio -o -HX $1 -L'
-    am__untar='cpio -i -HX $1 -d'
+    am__tar='find "$$tardir" -print | cpio -o -H $1 -L'
+    am__tar_='find "$tardir" -print | cpio -o -H $1 -L'
+    am__untar='cpio -i -H $1 -d'
     ;;
   none)
     am__tar=false

@@ -15,7 +15,7 @@ extern double B;
 extern unsigned int NX;
 extern unsigned int N_1;
 extern int TIME_STEP_CNT;
-extern double HX;
+extern double H;
 extern double HX_SQ;
 extern double ALPHA;
 

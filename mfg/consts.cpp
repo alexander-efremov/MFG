@@ -14,7 +14,7 @@ double B = 0.;
 unsigned int NX = 0;
 unsigned int N_1 = 0;
 int TIME_STEP_CNT = 0;
-double HX = 0.;
+double H = 0.;
 double HX_SQ = 0.;
 double ALPHA = 0.;
 
