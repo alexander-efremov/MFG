@@ -27,7 +27,7 @@ inline void thomas_algo(int n, double *matrix, double *f, double *res) {
     assert(n > 2);
     assert(matrix != nullptr);
     assert(f != nullptr);
-    //assert(is_diagonally_dominating_matrix(matrix, n, n) == 1);
+    assert(is_diagonally_dominating_matrix(matrix, n, n) == 1);
 
     double *alpha = (double *) malloc(n * sizeof(double));
     double *beta = (double *) malloc(n * sizeof(double));
