@@ -98,11 +98,10 @@ double get_right_part_inner_points(int ind, double *m_pr, double time_value) {
 }
 
 void fill_rp(double *rp, double *m_pr, double time) {
-    rp[0] = analytical_solution_1(ALPHA, 0., A - 0.5 * H);
-    rp[1] = analytical_solution_1(ALPHA, 0., 0.);
-    //todo:CHECK
-    rp[N_1] = analytical_solution_1(ALPHA, 0., A + N_1 * H);;
-    rp[N_1 + 1] = analytical_solution_1(ALPHA, 0., A + (N_1 + 1) * H);;
+    rp[0] = analytical_solution_1(ALPHA, time, A - 0.5 * H);
+    rp[1] = analytical_solution_1(ALPHA, time, A);
+    rp[N_1] = analytical_solution_1(ALPHA, time, A + N_1 * H);
+    rp[N_1 + 1] = analytical_solution_1(ALPHA, time, A + (N_1 + 1) * H);
 
     // inner points
     for (int i = 2; i < N_1; ++i) {
