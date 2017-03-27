@@ -27,9 +27,7 @@ inline double get_lc_3() {
 
 double *build_a(int n) {
     double *r = (double *) malloc(n * n * sizeof(double));
-    for (int i = 0; i < n * n; ++i) {
-        r[i] = 0.;
-    }
+    for (int i = 0; i < n * n; ++i) r[i] = 0.;
 
     r[0] = get_lc_0();
     r[1] = get_lc_2();
@@ -44,12 +42,17 @@ double *build_a(int n) {
 
     r[n * n - 2] = get_lc_n();
     r[n * n - 1] = get_lc_2();
+
     return r;
 }
 
 inline double func_alpha(double a, double t, double x) {
     return a * t * x * (1 - x);
     //return ALPHA;
+}
+
+inline double get_rp_exact(double sigma_sq, double a, double x, double t) {
+    return a * x * (1. - x) - sigma_sq * a * t * (1. - 2. * x) + a * t * x * (2. * x * x - (10. * x) / 3. + 1.);
 }
 
 double analytical_solution_1(double a, double time, double x) {
@@ -126,8 +129,9 @@ double *solve_1() {
     //print_matrix(m_pr, 1, N_1 + 2);
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl);
-        print_matrix(rp, 1, N_1 + 2);
-        a = build_a(N_1);
+        //print_matrix(rp, 1, N_1 + 2);
+        a = build_a(N_1 + 2);
+        print_matrix(a, N_1 + 2, N_1 + 2);
         thomas_algo(N_1, a, rp, m);
         memcpy(m_pr, m, (N_1 + 2) * sizeof(double));
     }

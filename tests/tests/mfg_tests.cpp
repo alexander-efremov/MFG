@@ -25,11 +25,11 @@ void print_params() {
     printf("HX_SQ = %le\n", HX_SQ);
     printf("TAU = %le\n", TAU);
     printf("TIME_STEP_CNT = %d\n", TIME_STEP_CNT);
-    printf("%f ", 0 - H);
-    for (int i = 0; i <= NX; ++i) {
-        printf("%f ", i * H);
-    }
-    printf("%f\n", NX * H + 0.5 * H);
+//    printf("%f ", 0 - 0.5 * H);
+//    for (int i = 1; i < N_1 + 1; ++i) {
+//        printf("%f ", i * H);
+//    }
+//    printf("%f\n", B + 0.5 * H);
     fflush(stdout);
 }
 
@@ -44,7 +44,6 @@ void assert_params() {
 }
 
 void run_solver_1(unsigned int d) {
-    assert(d >= 50);
 
     A = 0.;
     B = 1.;
@@ -67,11 +66,11 @@ void run_solver_1(unsigned int d) {
 }
 
 TEST_F(MfgFixture, mfg_solver_1) {
-    for (int i = 1; i < 2; ++i) {
+    for (int i = 0; i < 1; ++i) {
         double d = 0;
         switch (i) {
             case 0:
-                d = 50.;
+                d = 10.;
                 break;
             case 1:
                 d = 100.;
