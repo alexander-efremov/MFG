@@ -51,8 +51,8 @@ inline double func_alpha(double a, double t, double x) {
     //return ALPHA_COEF;
 }
 
-inline double get_rp_exact(double sigma_sq, double a, double x, double t) {
-    return a * x * (1. - x) - sigma_sq * a * t * (1. - 2. * x) + a * t * x * (2. * x * x - (10. * x) / 3. + 1.);
+inline double get_rp_exact(double sigma_sq, double a, double m_value, double t) {
+    return a * m_value * (1. - m_value) - sigma_sq * a * t * (1. - 2. * m_value) + a * t * m_value * (2. * m_value * m_value - (10. * m_value) / 3. + 1.);
 }
 
 double analytical_solution_1(double a, double time, double x) {
