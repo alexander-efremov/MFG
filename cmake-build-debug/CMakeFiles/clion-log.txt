@@ -1,4 +1,4 @@
-"C:\Program Files (x86)\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\HOME\Source\Repos\MFG
+"C:\Program Files (x86)\JetBrains\CLion 2016.3.5\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\HOME\Source\Repos\MFG
 -- The C compiler identification is GNU 5.1.0
 -- The CXX compiler identification is GNU 5.1.0
 -- Check for working C compiler: C:/TDM-GCC-64/bin/gcc.exe

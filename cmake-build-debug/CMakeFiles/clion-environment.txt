@@ -1,2 +1,2 @@
 ToolSet: w64 4.0@C:\TDM-GCC-64
-CMake: 3.6.3@C:\Program Files (x86)\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe
+CMake: 3.6.3@C:\Program Files (x86)\JetBrains\CLion 2016.3.5\bin\cmake\bin\cmake.exe

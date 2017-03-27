@@ -120,8 +120,9 @@ double *solve_1() {
     for (int i = 0; i < N_1 + 2; ++i) m[i] = rp[i] = 0.;
 
     m_pr[0] = analytical_solution_1(ALPHA, 0., A - 0.5 * H);
-    for (int i = 1; i < N_1 + 2; ++i)
-        m_pr[i] = analytical_solution_1(ALPHA, 0., A + i * H);
+    for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(ALPHA, 0., A + i * H);
+    m_pr[N_1 + 1] = analytical_solution_1(ALPHA, 0., B + 0.5 * H);
+
     //print_matrix(m_pr, 1, N_1 + 2);
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl);
