@@ -49,6 +49,7 @@ tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.obj: ../tests/lib/gtest-1.7.0
 tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.obj: ../tests/lib/gtest-1.7.0/include/gtest/internal/gtest-type-util.h
 tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.obj: ../tests/tests/mfg_tests.cpp
 
+tests/tests/CMakeFiles/run_tests.dir/misc_tests.cpp.obj: ../malgo/malgo.h
 tests/tests/CMakeFiles/run_tests.dir/misc_tests.cpp.obj: ../mfg/consts.h
 tests/tests/CMakeFiles/run_tests.dir/misc_tests.cpp.obj: ../mfg/utils.h
 tests/tests/CMakeFiles/run_tests.dir/misc_tests.cpp.obj: ../tests/lib/gtest-1.7.0/include/gtest/gtest-death-test.h

@@ -6,19 +6,19 @@
 #include <utils.h>
 
 inline double get_lc_0() {
-    return (7. / (8. * TAU)) - (SIGMA_SQ / (2. * HX_SQ));
+    return 7. / (8. * TAU) + SIGMA_SQ / (2. * H_SQ);
 }
 
 inline double get_lc_n() {
-    return (7. / (8. * TAU)) - (SIGMA_SQ / (2. * HX_SQ));
+    return 7. / (8. * TAU) + SIGMA_SQ / (2. * H_SQ);
 }
 
 inline double get_lc_1() {
-    return 1. / (8. * TAU) - SIGMA_SQ / (2. * HX_SQ);
+    return 1. / (8. * TAU) - SIGMA_SQ / (2. * H_SQ);
 }
 
 inline double get_lc_2() {
-    return 3. / (4. * TAU) + SIGMA_SQ / HX_SQ;
+    return 3. / (4. * TAU) + SIGMA_SQ / H_SQ;
 }
 
 inline double get_lc_3() {
@@ -30,7 +30,7 @@ double *build_a(int n) {
     for (int i = 0; i < n * n; ++i) r[i] = 0.;
 
     r[0] = get_lc_0();
-    r[1] = get_lc_2();
+    r[1] = get_lc_3();
 
     int offset = n;
     for (int i = 1; i < n - 1; ++i) {
@@ -40,8 +40,8 @@ double *build_a(int n) {
         offset += n + 1;
     }
 
-    r[n * n - 2] = get_lc_n();
-    r[n * n - 1] = get_lc_2();
+    r[n * n - 2] = get_lc_1();
+    r[n * n - 1] = get_lc_n();
 
     return r;
 }
@@ -115,25 +115,27 @@ void fill_rp(double *rp, double *m_pr, double time) {
 }
 
 double *solve_1() {
-    double *m = (double *) malloc((N_1 + 2) * sizeof(double));
-    double *m_pr = (double *) malloc((N_1 + 2) * sizeof(double));
-    double *rp = (double *) malloc((N_1 + 2) * sizeof(double));
-    double *a = (double *) malloc((N_1 + 2) * (N_1 + 2) * sizeof(double));
+    const unsigned int n = N_1 + 2;
 
-    for (int i = 0; i < N_1 + 2; ++i) m[i] = rp[i] = 0.;
+    double *m = (double *) malloc(n * sizeof(double));
+    double *m_pr = (double *) malloc(n * sizeof(double));
+    double *rp = (double *) malloc(n * sizeof(double));
+    double *a = (double *) malloc(N_1 * N_1 * sizeof(double));
+
+    for (int i = 0; i < n; ++i) m[i] = rp[i] = 0.;
 
     m_pr[0] = analytical_solution_1(ALPHA, 0., A - 0.5 * H);
     for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(ALPHA, 0., A + i * H);
     m_pr[N_1 + 1] = analytical_solution_1(ALPHA, 0., B + 0.5 * H);
 
-    //print_matrix(m_pr, 1, N_1 + 2);
+    //print_matrix(m_pr, 1, n);
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl);
-        //print_matrix(rp, 1, N_1 + 2);
-        a = build_a(N_1 + 2);
-        print_matrix(a, N_1 + 2, N_1 + 2);
+        //print_matrix(rp, 1, n);
+        a = build_a(N_1);
+        print_matrix(a, N_1, N_1);
         thomas_algo(N_1, a, rp, m);
-        memcpy(m_pr, m, (N_1 + 2) * sizeof(double));
+        memcpy(m_pr, m, n * sizeof(double));
     }
 
     free(m_pr);

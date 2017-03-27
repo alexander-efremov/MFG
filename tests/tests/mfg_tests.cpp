@@ -22,7 +22,7 @@ void print_params() {
     printf("SIGMA = %le\n", SIGMA);
     printf("SIGMA_SQ = %le\n", SIGMA_SQ);
     printf("H = %le\n", H);
-    printf("HX_SQ = %le\n", HX_SQ);
+    printf("H_SQ = %le\n", H_SQ);
     printf("TAU = %le\n", TAU);
     printf("TIME_STEP_CNT = %d\n", TIME_STEP_CNT);
 //    printf("%f ", 0 - 0.5 * H);
@@ -34,7 +34,7 @@ void print_params() {
 }
 
 void assert_params() {
-    assert(HX_SQ = sqrt(H));
+    assert(H_SQ = sqrt(H));
     assert(SIGMA_SQ = sqrt(SIGMA));
     assert(NX > 0);
     assert(N_1 == NX + 1);
@@ -44,7 +44,6 @@ void assert_params() {
 }
 
 void run_solver_1(unsigned int d) {
-
     A = 0.;
     B = 1.;
     SIGMA = 0.1;
@@ -52,7 +51,7 @@ void run_solver_1(unsigned int d) {
     NX = d;
     N_1 = NX + 1;
     H = (B - A) / NX;
-    HX_SQ = H * H;
+    H_SQ = H * H;
     ALPHA = 1.;
     TAU = 1.e-3;
     TIME_STEP_CNT = 1;
@@ -70,7 +69,7 @@ TEST_F(MfgFixture, mfg_solver_1) {
         double d = 0;
         switch (i) {
             case 0:
-                d = 10.;
+                d = 5.;
                 break;
             case 1:
                 d = 100.;
