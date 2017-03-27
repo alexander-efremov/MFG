@@ -129,6 +129,8 @@ void fill_rp(double *rp, double *m_pr, double time) {
     }
 }
 
+
+
 double *solve_1() {
     const unsigned int n = N_1 + 2;
 
@@ -152,6 +154,8 @@ double *solve_1() {
         thomas_algo(N_1, a, rp, m);
         memcpy(m_pr, m, n * sizeof(double));
     }
+
+
 
     free(m_pr);
     free(rp);

@@ -1,5 +1,4 @@
 #include <assert.h>
-#include <math.h>
 
 double *get_exact_solution(double *vec, int nx_1, double time, double hx, double a,
                            double (*analytical_solution)(double, double)) {
@@ -11,7 +10,7 @@ double *get_exact_solution(double *vec, int nx_1, double time, double hx, double
     double *res = new double[nx_1];
 
     for (int i = 0; i < nx_1; i++)
-        res[i] = fabs(analytical_solution(time, a + hx * i));
+        res[i] = analytical_solution(time, a + hx * i);
 
     return res;
 }
