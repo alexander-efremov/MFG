@@ -18,7 +18,7 @@ public:
 
 void print_params() {
     printf("\nNX = %d\n", NX);
-    printf("ALPHA = %le\n", ALPHA);
+    printf("ALPHA_COEF = %le\n", ALPHA_COEF);
     printf("SIGMA = %le\n", SIGMA);
     printf("SIGMA_SQ = %le\n", SIGMA_SQ);
     printf("H = %le\n", H);
@@ -40,7 +40,7 @@ void assert_params() {
     assert(N_1 == NX + 1);
     assert(A == 0.);
     assert(TAU > 0.);
-    assert(ALPHA > 0.);
+    assert(ALPHA_COEF > 0.);
 }
 
 void run_solver_1(unsigned int d) {
@@ -52,7 +52,7 @@ void run_solver_1(unsigned int d) {
     N_1 = NX + 1;
     H = (B - A) / NX;
     H_SQ = H * H;
-    ALPHA = 1.;
+    ALPHA_COEF = 1.;
     TAU = 1.e-3;
     TIME_STEP_CNT = 1;
 

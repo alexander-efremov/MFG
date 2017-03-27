@@ -48,7 +48,7 @@ double *build_a(int n) {
 
 inline double func_alpha(double a, double t, double x) {
     return a * t * x * (1 - x);
-    //return ALPHA;
+    //return ALPHA_COEF;
 }
 
 inline double get_rp_exact(double sigma_sq, double a, double x, double t) {
@@ -59,7 +59,7 @@ double analytical_solution_1(double a, double time, double x) {
     return a * time * (x * x / 6.) * (3 - 2 * x);
 }
 
-double get_right_part_inner_points(int ind, double *m_pr, double time_value) {
+double get_right_part_inner_points(int ind, double *m_pr, double time) {
     // moh - minus_one_half poh - plus_one_half
     double r = 0., m_left, m_right, xi_moh_left, xi_poh_left, xi_moh_right, xi_poh_right, x_left, x_right, u;
     int i, I_left, I_right;
@@ -69,12 +69,12 @@ double get_right_part_inner_points(int ind, double *m_pr, double time_value) {
     x_right = A + ind * H;
 
     // опускаем траектории из этих точек
-    u = func_alpha(ALPHA, time_value, x_left);
+    u = func_alpha(ALPHA_COEF, time, x_left);
     x_left -= TAU * u;
-    u = func_alpha(ALPHA, time_value, x_right);
+    u = func_alpha(ALPHA_COEF, time, x_right);
     x_right -= TAU * u;
     if (x_left < A || x_left > B || x_right < A || x_right > B)
-        printf("Time value %.8le! ERROR INDEX i=%d : x1=%.8le ** x2=%.8le\n ", time_value, ind, x_left, x_right);
+        printf("Time value %.8le! ERROR INDEX i=%d : x1=%.8le ** x2=%.8le\n ", time, ind, x_left, x_right);
 
     I_left = (int) (((x_left - A) / H) + 0.5); // определяем индекс левого интервала линейности
     xi_moh_left = A + I_left * H - 0.5 * H; // левая граница левого интервала линейности
@@ -97,18 +97,22 @@ double get_right_part_inner_points(int ind, double *m_pr, double time_value) {
     m_right = m_pr[I_right] * (xi_poh_right - x_right) + m_pr[I_right + 1] * (x_right - xi_moh_right);
     r += 0.5 * (m_right + m_pr[I_right]) * (A + I_right * H - x_right);
 
+
     return r;
 }
 
 void fill_rp(double *rp, double *m_pr, double time) {
-    rp[0] = analytical_solution_1(ALPHA, time, A - 0.5 * H);
-    rp[1] = analytical_solution_1(ALPHA, time, A);
-    rp[N_1] = analytical_solution_1(ALPHA, time, A + N_1 * H);
-    rp[N_1 + 1] = analytical_solution_1(ALPHA, time, A + (N_1 + 1) * H);
+    rp[0] = analytical_solution_1(ALPHA_COEF, time, A - 0.5 * H);
+    rp[1] = analytical_solution_1(ALPHA_COEF, time, A);
+    rp[N_1] = analytical_solution_1(ALPHA_COEF, time, A + N_1 * H);
+    rp[N_1 + 1] = analytical_solution_1(ALPHA_COEF, time, A + (N_1 + 1) * H);
 
     // inner points
     for (int i = 2; i < N_1; ++i) {
-        rp[i] = get_right_part_inner_points(i - 1, m_pr, time);
+        double val = get_right_part_inner_points(i - 1, m_pr, time);
+        // TODO: что сюда передавать?
+        val += get_rp_exact(SIGMA_SQ, ALPHA_COEF, 0., time);
+        rp[i] = val;
 //        if (rp[i] == 0.)
 //            printf("rp error %d = %e\n", i, rp[i]);
     }
@@ -124,9 +128,9 @@ double *solve_1() {
 
     for (int i = 0; i < n; ++i) m[i] = rp[i] = 0.;
 
-    m_pr[0] = analytical_solution_1(ALPHA, 0., A - 0.5 * H);
-    for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(ALPHA, 0., A + i * H);
-    m_pr[N_1 + 1] = analytical_solution_1(ALPHA, 0., B + 0.5 * H);
+    m_pr[0] = analytical_solution_1(ALPHA_COEF, 0., A - 0.5 * H);
+    for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(ALPHA_COEF, 0., A + i * H);
+    m_pr[N_1 + 1] = analytical_solution_1(ALPHA_COEF, 0., B + 0.5 * H);
 
     //print_matrix(m_pr, 1, n);
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
