@@ -129,7 +129,18 @@ void fill_rp(double *rp, double *m_pr, double time) {
     }
 }
 
+void fill_error(double *err, double *sol, int n, double time) {
+    double *ex_sol = (double *) malloc(n * sizeof(double));
+    for (int i = 0; i < n; ++i)
+        ex_sol[i] = analytical_solution_1(ALPHA_COEF, time, A + i * H);
 
+    print_matrix(ex_sol, 1, n);
+
+    for (int i = 0; i < n; ++i)
+        err[i] = ex_sol - sol;
+
+    free(ex_sol);
+}
 
 double *solve_1() {
     const unsigned int n = N_1 + 2;
@@ -150,12 +161,16 @@ double *solve_1() {
         fill_rp(rp, m_pr, TAU * tl);
         //print_matrix(rp, 1, n);
         a = build_a(N_1);
-        print_matrix(a, N_1, N_1);
+        //print_matrix(a, N_1, N_1);
         thomas_algo(N_1, a, rp, m);
         memcpy(m_pr, m, n * sizeof(double));
     }
+    print_matrix(m, 1, n);
 
-
+    double *err = (double *) malloc(n * sizeof(double));
+    fill_error(err, m, n, TIME_STEP_CNT * TAU);
+    print_matrix(err, 1, n);
+    free(err);
 
     free(m_pr);
     free(rp);
