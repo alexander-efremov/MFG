@@ -45,16 +45,16 @@ double *build_a(double *a, int n) {
     return a;
 }
 
-inline double func_alpha(double a, double t, double x) {
-    return a * t * x * (1 - x);
+inline double func_alpha(double a_coef, double t, double x) {
+    return a_coef * t * x * (1. - x);
     //return A_COEF;
 }
 
-inline double get_rp_exact(double sigma_sq, double a, double x, double t) {
-    return (a * x * x * (3. - 2. * x)) / 6.
-           - (sigma_sq * a * t * (1. - 2. * x)) / 2.
-           + a * a * t * t * x * x * (1. - x) * (1. - x)
-           + (a * a * t * t * x * x * (3. - 2. * x) * (1. - 2. * x)) / 6.;
+inline double get_rp_exact(double sigma_sq, double a_coef, double x, double t) {
+    return (a_coef * x * x * (3. - 2. * x)) / 6.
+           - (sigma_sq * a_coef * t * (1. - 2. * x)) / 2.
+           + a_coef * a_coef * t * t * x * x * (1. - x) * (1. - x)
+           + (a_coef * a_coef * t * t * x * x * (3. - 2. * x) * (1. - 2. * x)) / 6.;
 }
 
 double analytical_solution_1(double a, double time, double x) {
@@ -142,7 +142,7 @@ void fill_error(double *err, double *sol, int n, double time) {
     for (int i = 0; i < n; ++i)
         ex_sol[i] = analytical_solution_1(A_COEF, time, A + i * H);
 
-    print_matrix(ex_sol, 1, n);
+    printf("EXACT SOL \n");print_matrix(ex_sol, 1, n);
 
     for (int i = 0; i < n; ++i)
         err[i] = ex_sol - sol;
@@ -183,7 +183,7 @@ double *solve_1() {
     m_pr[0] = analytical_solution_1(A_COEF, 0., A - H_2);
     for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(A_COEF, 0., A + i * H_2);
     m_pr[N_1 + 1] = analytical_solution_1(A_COEF, 0., B + H_2);
-    print_matrix(m_pr, 1, n);
+    printf("M_PR\n"); print_matrix(m_pr, 1, n);
 
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl);
@@ -193,11 +193,11 @@ double *solve_1() {
         thomas_algo(N_1, a, rp, m);
         memcpy(m_pr, m, n * sizeof(double));
     }
-    print_matrix(m, 1, n);
+    printf("M DONE\n"); print_matrix(m, 1, n);
 
     double *err = (double *) malloc(n * sizeof(double));
     fill_error(err, m, n, TIME_STEP_CNT * TAU);
-    print_matrix(err, 1, n);
+    printf("ERR \n");print_matrix(err, 1, n);
     free(err);
 
     free(m_pr);
