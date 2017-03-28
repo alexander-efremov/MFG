@@ -58,7 +58,7 @@ inline double get_f(double sigma_sq, double a_coef, double x, double t) {
 }
 
 double analytical_solution_1(double a, double t, double x) {
-    return (a * t * x * x  * (3. - 2. * x)) / 6. ;
+    return (a * t * x * x * (3. - 2. * x)) / 6.;
 }
 
 double get_right_part_inner_points(int I, double *m_pr, double time) {
@@ -143,7 +143,7 @@ void fill_error(double *err, double *sol, int n, double time) {
     ex_sol[0] = analytical_solution_1(A_COEF, time, A - 0.5 * H_2);
     for (int i = 0; i < n; ++i)
         ex_sol[i] = analytical_solution_1(A_COEF, time, A + i * H_2);
-    ex_sol[n-1] = analytical_solution_1(A_COEF, time, B + 0.5 * H_2);
+    ex_sol[n - 1] = analytical_solution_1(A_COEF, time, B + 0.5 * H_2);
 
     printf("EXACT SOL \n");
     print_matrix(ex_sol, 1, n);
@@ -185,7 +185,7 @@ double *solve_1() {
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
     m_pr[0] = analytical_solution_1(A_COEF, 0., A - H_2);
-    for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(A_COEF, 0., A + i * H_2);
+    for (int i = 1; i < n - 1; ++i) m_pr[i] = analytical_solution_1(A_COEF, 0., A + i * H_2);
     m_pr[N_1 + 1] = analytical_solution_1(A_COEF, 0., B + H_2);
     printf("M_PR\n");
     print_matrix(m_pr, 1, n);
