@@ -145,6 +145,12 @@ void fill_error(double *err, double *sol, int n, double time) {
 }
 
 double *solve_1() {
+    // Formula (3.19)
+    printf("H * H = %e\n", H * H);
+    printf("8 * TAU * SIGMA_SQ = %e\n", 8 * TAU * SIGMA_SQ);
+    fflush(stdout);
+    assert(H * H <= 8 * TAU * SIGMA_SQ);
+
     const unsigned int n = N_1 + 2;
 
     double *m = (double *) malloc(n * sizeof(double));

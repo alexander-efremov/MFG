@@ -46,7 +46,7 @@ void assert_params() {
 void run_solver_1(unsigned int d) {
     A = 0.;
     B = 1.;
-    SIGMA = 0.1;
+    SIGMA = 10.;
     SIGMA_SQ = SIGMA * SIGMA;
     NX = d;
     N_1 = NX + 1;
