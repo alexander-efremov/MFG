@@ -82,6 +82,42 @@ inline void print_matrix(double *a, int n, int m, int precision = 8) {
     }
 }
 
+inline void print_matrix1(double *a, int n, int m, int precision = 8) {
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            int k = i * n + j;
+            switch (precision) {
+                case 1:
+                    printf("%.1f ", a[k]);
+                    break;
+                case 2:
+                    printf("%.2f ", a[k]);
+                    break;
+                case 3:
+                    printf("%.3f ", a[k]);
+                    break;
+                case 4:
+                    printf("%.4f ", a[k]);
+                    break;
+                case 5:
+                    printf("%.5f ", a[k]);
+                    break;
+                case 6:
+                    printf("%.6f ", a[k]);
+                    break;
+                case 7:
+                    printf("%.7f ", a[k]);
+                    break;
+                case 8:
+                    printf("%.8f ", a[k]);
+                    break;
+                default:break;
+            }
+        }
+        printf("\n");
+    }
+}
+
 inline void print_matrix(double *a, int n, int m, const char *text, int precision = 8) {
     printf("\n%s\n", text);
     for (int i = 0; i < n; ++i) {
