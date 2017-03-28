@@ -132,3 +132,57 @@ TEST_F(MalgoFixture, thomas_algo_test2) {
     free(arr);
 }
 
+TEST_F(MalgoFixture, thomas_algo_test3) {
+    const int n = 3;
+
+    double *a = (double *) malloc(n * sizeof(double));
+    double *b = (double *) malloc(n * sizeof(double));
+    double *c = (double *) malloc(n * sizeof(double));
+    double *rp = (double *) malloc(n * sizeof(double));
+    double *m = (double *) malloc(n * sizeof(double));
+
+//    arr[0] = 1;
+//    arr[1] = 1;
+//    arr[2] = 0;
+//    arr[3] = 1;
+//    arr[4] = 2;
+//    arr[5] = 1;
+//    arr[6] = 0;
+//    arr[7] = 1;
+//    arr[8] = 3;
+
+    a[0] = 1;
+    a[1] = 1;
+    a[2] = 0;
+    b[0] = 1;
+    b[1] = 0;
+    b[2] = 0;
+    c[0] = 1;
+    c[1] = 2;
+    c[2] = 3;
+
+    rp[0] = 2;
+    rp[1] = 4;
+    rp[2] = 4;
+
+    printf("\n");
+    print_vector(rp, n);
+
+    thomas_algo(n, a, c, b, rp, m);
+
+    ASSERT_NEAR(m[0], 1., 1e-2);
+    ASSERT_NEAR(m[1], 1., 1e-2);
+    ASSERT_NEAR(m[2], 1., 1e-2);
+
+    printf("\n");
+    for (int i = 0; i < n; ++i) {
+        printf("%rp ", m[i]);
+    }
+    printf("\n");
+
+    free(rp);
+    free(a);
+    free(b);
+    free(c);
+}
+

@@ -117,18 +117,14 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
 
 void fill_rp(double *rp, double *m_pr, double time, int n) {
     // todo: ТУТ ЧТО ПИСАТЬ??
-    rp[0] = analytical_solution_1(A_COEF, time, A - H_2);
     rp[1] = analytical_solution_1(A_COEF, time, A);
     // (rp[0] + rp[1]) / 2. это БРЕД :(((
     double val0 = get_f(SIGMA_SQ, A_COEF, (rp[0] + rp[1]) / 2., time);
-    rp[0] += val0;
     rp[1] += val0;
 
     rp[n - 2] = analytical_solution_1(A_COEF, time, A + (n - 1) * H);
-    rp[n - 1] = analytical_solution_1(A_COEF, time, A + n * H_2);
     double valN = get_f(SIGMA_SQ, A_COEF, (rp[n - 2] + rp[n - 1]) / 2., time);
     rp[n - 2] += valN;
-    rp[n - 1] += valN;
 
     for (int i = 1; i < n - 1; ++i)
         rp[i] = get_right_part_inner_points(i, m_pr, time);
