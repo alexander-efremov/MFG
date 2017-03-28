@@ -177,6 +177,16 @@ void assert_params() {
     assert(H * H <= 8 * TAU * SIGMA_SQ);
 }
 
+void print_thomas_arrays(double* a, double* b, double* c)
+{
+    printf("THOMAS PARAMS\n");
+    printf("coef a = %e\n");
+    printf("coef b = %e\n");
+    printf("coef c = %e\n");
+
+}
+
+
 double *solve_1() {
     assert_params();
 
