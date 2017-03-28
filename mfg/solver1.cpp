@@ -25,25 +25,24 @@ inline double get_lc_3() {
     return get_lc_1();
 }
 
-double *build_a(int n) {
-    double *r = (double *) malloc(n * n * sizeof(double));
-    for (int i = 0; i < n * n; ++i) r[i] = 0.;
+double *build_a(double* a, int n) {
+    for (int i = 0; i < n * n; ++i) a[i] = 0.;
 
-    r[0] = get_lc_0();
-    r[1] = get_lc_3();
+    a[0] = get_lc_0();
+    a[1] = get_lc_3();
 
     int offset = n;
     for (int i = 1; i < n - 1; ++i) {
-        r[offset] = get_lc_1();
-        r[offset + 1] = get_lc_2();
-        r[offset + 2] = get_lc_3();
+        a[offset] = get_lc_1();
+        a[offset + 1] = get_lc_2();
+        a[offset + 2] = get_lc_3();
         offset += n + 1;
     }
 
-    r[n * n - 2] = get_lc_1();
-    r[n * n - 1] = get_lc_n();
+    a[n * n - 2] = get_lc_1();
+    a[n * n - 1] = get_lc_n();
 
-    return r;
+    return a;
 }
 
 inline double func_alpha(double a, double t, double x) {
@@ -158,17 +157,17 @@ double *solve_1() {
     double *rp = (double *) malloc(n * sizeof(double));
     double *a = (double *) malloc(N_1 * N_1 * sizeof(double));
 
-    for (int i = 0; i < n; ++i) m[i] = rp[i] = 0.;
+    for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
     m_pr[0] = analytical_solution_1(ALPHA_COEF, 0., A - 0.5 * H);
-    for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(ALPHA_COEF, 0., A + i * H);
+    for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(ALPHA_COEF, 0., A + i * 0.5 * H);
     m_pr[N_1 + 1] = analytical_solution_1(ALPHA_COEF, 0., B + 0.5 * H);
 
     //print_matrix(m_pr, 1, n);
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl);
         //print_matrix(rp, 1, n);
-        a = build_a(N_1);
+        a = build_a(a, N_1);
         //print_matrix(a, N_1, N_1);
         thomas_algo(N_1, a, rp, m);
         memcpy(m_pr, m, n * sizeof(double));
