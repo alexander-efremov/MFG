@@ -223,7 +223,7 @@ double *solve_1() {
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
     m_pr[0] = analytical_solution_1(A_COEF, 0., A - H_2);
-    for (int i = 1; i < n - 1; ++i) m_pr[i] = analytical_solution_1(A_COEF, 0., A + i * H_2);
+    for (int i = 1; i < n - 1; ++i) m_pr[i] = analytical_solution_1(A_COEF, 0., A + i * H);
     m_pr[n - 1] = analytical_solution_1(A_COEF, 0., B + H_2);
     printf("M_PR\n");
     print_matrix(m_pr, 1, n);
