@@ -226,7 +226,7 @@ double *solve_1() {
 
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl, n);
-        printf("rp \n"); print_matrix(rp, 1, n);
+        printf("RP \n"); print_matrix(rp, 1, n);
         thomas_algo(n, a, c, b, rp, m);
         memcpy(m_pr, m, n * sizeof(double));
     }
