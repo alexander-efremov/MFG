@@ -215,6 +215,7 @@ double *solve_1() {
     fill_b(b, n);
     fill_c(c, n);
     print_thomas_arrays(a, b, c, n);
+
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
     m_pr[0] = analytical_solution_1(A_COEF, 0., A - H_2);
