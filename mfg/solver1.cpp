@@ -78,8 +78,8 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
         printf("Time value %.8le! ERROR INDEX i=%d : x1=%.8le ** x2=%.8le\n ", time, j, x_left, x_right);
 
     I_left = (int) (((x_left - A) / H) + 0.5); // определяем индекс левого интервала линейности
-    xi_moh_left = A + I_left * H - 0.5 * H; // левая граница левого интервала линейности
-    xi_poh_left = A + I_left * H + 0.5 * H; // правая граница левого интервала линейности
+    xi_moh_left = A + I_left * H - H_2; // левая граница левого интервала линейности
+    xi_poh_left = A + I_left * H + H_2; // правая граница левого интервала линейности
 
     // считаем интеграл по левой подчасти
     // вычислим значение функции в нашей левой точке по формуле 3.7
@@ -88,8 +88,8 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
     r += 0.5 * (m_left + m_pr[I_left + 1]) * (A + I_left * H - x_left);
 
     I_right = (int) (((x_right - A) / H) + 0.5); // определяем индекс правого интервала линейности
-    xi_moh_right = A + I_right * H - 0.5 * H; // левая граница правого интервала линейности
-    xi_poh_right = A + I_right * H + 0.5 * H; // правая граница правого интервала линейности
+    xi_moh_right = A + I_right * H - H_2; // левая граница правого интервала линейности
+    xi_poh_right = A + I_right * H + H_2; // правая граница правого интервала линейности
 
     for (i = I_left + 1; i < I_right; ++i) r += 0.5 * (m_pr[i] + m_pr[i + 1]) * H;
 
@@ -103,14 +103,14 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
 
 void fill_rp(double *rp, double *m_pr, double time) {
     // todo: ПЕРЕПИСАТЬ
-    rp[0] = analytical_solution_1(ALPHA_COEF, time, A - 0.5 * H);
+    rp[0] = analytical_solution_1(ALPHA_COEF, time, A - H_2);
     rp[1] = analytical_solution_1(ALPHA_COEF, time, A);
     double val0 = get_rp_exact(SIGMA_SQ, ALPHA_COEF, (rp[0] + rp[1]) / 2., time);
     rp[0] += val0;
     rp[1] += val0;
 
     rp[N_1] = analytical_solution_1(ALPHA_COEF, time, A + N_1 * H);
-    rp[N_1 + 1] = analytical_solution_1(ALPHA_COEF, time, A + (N_1 + 1) * 0.5 * H);
+    rp[N_1 + 1] = analytical_solution_1(ALPHA_COEF, time, A + (N_1 + 1) * H_2);
     double valN = get_rp_exact(SIGMA_SQ, ALPHA_COEF, (rp[N_1] + rp[N_1 + 1]) / 2., time);
     rp[N_1] += valN;
     rp[N_1 + 1] += valN;
@@ -159,9 +159,9 @@ double *solve_1() {
 
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
-    m_pr[0] = analytical_solution_1(ALPHA_COEF, 0., A - 0.5 * H);
-    for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(ALPHA_COEF, 0., A + i * 0.5 * H);
-    m_pr[N_1 + 1] = analytical_solution_1(ALPHA_COEF, 0., B + 0.5 * H);
+    m_pr[0] = analytical_solution_1(ALPHA_COEF, 0., A - H_2);
+    for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(ALPHA_COEF, 0., A + i * H_2);
+    m_pr[N_1 + 1] = analytical_solution_1(ALPHA_COEF, 0., B + H_2);
 
     //print_matrix(m_pr, 1, n);
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
