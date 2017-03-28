@@ -9,10 +9,6 @@ inline double get_lc_0() {
     return 7. / (8. * TAU) + SIGMA_SQ / (2. * H_SQ);
 }
 
-inline double get_lc_n() {
-    return 7. / (8. * TAU) + SIGMA_SQ / (2. * H_SQ);
-}
-
 inline double get_lc_1() {
     return 1. / (8. * TAU) - SIGMA_SQ / (2. * H_SQ);
 }
@@ -35,6 +31,7 @@ inline double get_lc_3() {
 	 */
 
 inline void fill_a(double *a, int n) {
+    a[0] = 0.;
     for (int i = 1; i < n; ++i)
         a[i] = get_lc_1();
 }
@@ -42,6 +39,7 @@ inline void fill_a(double *a, int n) {
 inline void fill_b(double *b, int n) {
     for (int i = 0; i < n - 1; ++i)
         b[i] = get_lc_3();
+    b[n - 1] = 0.;
 }
 
 inline void fill_c(double *c, int n) {
@@ -50,7 +48,7 @@ inline void fill_c(double *c, int n) {
     for (int i = 1; i < n - 1; ++i)
         c[i] = get_lc_2();
 
-    c[n - 1] = get_lc_n();
+    c[n - 1] = get_lc_0();
 }
 
 inline double func_alpha(double a_coef, double t, double x) {
@@ -105,7 +103,7 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
         m_left = m_pr[I_left];
 
     // применим формулу трапеций - полусумма оснований умножить на высоту
-    r += 0.5 * (m_left + m_pr[I_left + 1]) * (A + (I_left + 1) * H - x_left);
+    r += 0.5 * (m_left + m_pr[I_left + 1]) * (xi_poh_left - x_left);
 
     for (i = I_left + 1; i < I_right; ++i) {
         r += 0.5 * (m_pr[i] + m_pr[i + 1]) * H;
@@ -119,27 +117,20 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
     else
         m_right = m_pr[I_right + 1];
 
-    r += 0.5 * (m_right + m_pr[I_right]) * (A + I_right * H - x_right);
+    r += 0.5 * (m_right + m_pr[I_right]) * (x_right - xi_moh_right);
 
     return r;
 }
 
 void fill_rp(double *rp, double *m_pr, double time, int n) {
-    // todo: ТУТ ЧТО ПИСАТЬ??
-    rp[1] = analytical_solution_1(A_COEF, time, A);
-    // (rp[0] + rp[1]) / 2. это БРЕД :(((
-    double val0 = get_f(SIGMA_SQ, A_COEF, (rp[0] + rp[1]) / 2., time);
-    rp[1] += val0;
-
-    rp[n - 2] = analytical_solution_1(A_COEF, time, A + (n - 1) * H);
-    double valN = get_f(SIGMA_SQ, A_COEF, (rp[n - 2] + rp[n - 1]) / 2., time);
-    rp[n - 2] += valN;
+    rp[0] = 0.;//analytical_solution_1(A_COEF, time, A - H_2);
+    rp[n-1] = 0;
 
     for (int i = 1; i < n - 1; ++i)
         rp[i] = get_right_part_inner_points(i, m_pr, time);
 
     for (int i = 1; i < n - 1; ++i)
-        rp[i] += get_f(SIGMA_SQ, A_COEF, rp[i], time);
+        rp[i] += get_f(SIGMA_SQ, A_COEF, (i-0.5) * H, time);
 }
 
 void fill_error(double *err, double *sol, int n, double time) {
@@ -187,21 +178,26 @@ void assert_params() {
 	 */
 void print_thomas_arrays(double *a, double *b, double *c, int n) {
     printf("THOMAS PARAMS\n");
+    printf("coef 0 = %e\n", get_lc_0());
+    printf("coef n = %e\n", get_lc_0());
     printf("coef a = %e\n", get_lc_1());
     printf("coef b = %e\n", get_lc_2());
     printf("coef c = %e\n", get_lc_3());
-    printf("a\n");
-    for (int i = 0; i < n; ++i) {
-        printf("%e\n", a[i]);
-    }
-    printf("c\n");
-    for (int i = 0; i < n; ++i) {
-        printf("%e\n", c[i]);
-    }
+
     printf("b\n");
     for (int i = 0; i < n; ++i) {
-        printf("%e\n", b[i]);
+        printf("%e ", b[i]);
     }
+    printf("\nc\n");
+    for (int i = 0; i < n; ++i) {
+        printf("%e ", c[i]);
+    }
+
+    printf("\na\n");
+    for (int i = 0; i < n; ++i) {
+        printf("%e ", a[i]);
+    }
+    printf("\n");
 }
 
 
