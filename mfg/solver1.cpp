@@ -25,7 +25,7 @@ inline double get_lc_3() {
     return get_lc_1();
 }
 
-double *build_a(double* a, int n) {
+double *build_a(double *a, int n) {
     for (int i = 0; i < n * n; ++i) a[i] = 0.;
 
     a[0] = get_lc_0();
@@ -110,7 +110,7 @@ void fill_rp(double *rp, double *m_pr, double time) {
     rp[1] += val0;
 
     rp[N_1] = analytical_solution_1(ALPHA_COEF, time, A + N_1 * H);
-    rp[N_1 + 1] = analytical_solution_1(ALPHA_COEF, time, A + (N_1 + 1) * H);
+    rp[N_1 + 1] = analytical_solution_1(ALPHA_COEF, time, A + (N_1 + 1) * 0.5 * H);
     double valN = get_rp_exact(SIGMA_SQ, ALPHA_COEF, (rp[N_1] + rp[N_1 + 1]) / 2., time);
     rp[N_1] += valN;
     rp[N_1 + 1] += valN;

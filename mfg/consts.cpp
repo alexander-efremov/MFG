@@ -16,5 +16,6 @@ unsigned int N_1 = 0;
 int TIME_STEP_CNT = 0;
 double H = 0.;
 double H_SQ = 0.;
+double H_2 = 0.;
 double ALPHA_COEF = 0.;
 

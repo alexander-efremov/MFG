@@ -34,8 +34,9 @@ void print_params() {
 }
 
 void assert_params() {
-    assert(H_SQ = sqrt(H));
-    assert(SIGMA_SQ = sqrt(SIGMA));
+    assert(H_SQ == sqrt(H));
+    assert(H_2 == H / 2.);
+    assert(SIGMA_SQ == sqrt(SIGMA));
     assert(NX > 0);
     assert(N_1 == NX + 1);
     assert(A == 0.);
@@ -52,6 +53,7 @@ void run_solver_1(unsigned int d) {
     N_1 = NX + 1;
     H = (B - A) / NX;
     H_SQ = H * H;
+    H_2 = 0.5 * H;
     ALPHA_COEF = 1.;
     TAU = 1.e-3;
     TIME_STEP_CNT = 1;
