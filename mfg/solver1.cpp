@@ -192,7 +192,6 @@ void print_thomas_arrays(double *a, double *b, double *c, int n) {
     for (int i = 0; i < n; ++i) {
         printf("%e ", c[i]);
     }
-
     printf("\na\n");
     for (int i = 0; i < n; ++i) {
         printf("%e ", a[i]);
