@@ -34,9 +34,9 @@ void print_params() {
 }
 
 void assert_params() {
-    assert(H_SQ == sqrt(H));
+    assert(H_SQ == H*H);
     assert(H_2 == H / 2.);
-    assert(SIGMA_SQ == sqrt(SIGMA));
+    assert(SIGMA_SQ == SIGMA*SIGMA);
     assert(NX > 0);
     assert(N_1 == NX + 1);
     assert(A == 0.);
