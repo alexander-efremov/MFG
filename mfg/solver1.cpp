@@ -176,8 +176,8 @@ double *solve_1() {
     m_pr[0] = analytical_solution_1(ALPHA_COEF, 0., A - H_2);
     for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(ALPHA_COEF, 0., A + i * H_2);
     m_pr[N_1 + 1] = analytical_solution_1(ALPHA_COEF, 0., B + H_2);
+    print_matrix(m_pr, 1, n);
 
-    //print_matrix(m_pr, 1, n);
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl);
         //print_matrix(rp, 1, n);
