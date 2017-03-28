@@ -116,7 +116,7 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
     return r;
 }
 
-void fill_rp(double *rp, double *m_pr, double time) {
+void fill_rp(double *rp, double *m_pr, double time, int n) {
     // todo: ПЕРЕПИСАТЬ
     rp[0] = analytical_solution_1(A_COEF, time, A - H_2);
     rp[1] = analytical_solution_1(A_COEF, time, A);
@@ -124,16 +124,16 @@ void fill_rp(double *rp, double *m_pr, double time) {
     rp[0] += val0;
     rp[1] += val0;
 
-    rp[N_1] = analytical_solution_1(A_COEF, time, A + N_1 * H);
-    rp[N_1 + 1] = analytical_solution_1(A_COEF, time, A + (N_1 + 1) * H_2);
-    double valN = get_f(SIGMA_SQ, A_COEF, (rp[N_1] + rp[N_1 + 1]) / 2., time);
-    rp[N_1] += valN;
-    rp[N_1 + 1] += valN;
+    rp[n - 2] = analytical_solution_1(A_COEF, time, A + (n - 1) * H);
+    rp[n - 1] = analytical_solution_1(A_COEF, time, A + n * H_2);
+    double valN = get_f(SIGMA_SQ, A_COEF, (rp[n - 2] + rp[n - 1]) / 2., time);
+    rp[n - 2] += valN;
+    rp[n - 1] += valN;
 
-    for (int i = 1; i < N_1; ++i)
+    for (int i = 1; i < n - 1; ++i)
         rp[i] = get_right_part_inner_points(i, m_pr, time);
 
-    for (int i = 1; i < N_1; ++i)
+    for (int i = 1; i < n - 1; ++i)
         rp[i] = get_f(SIGMA_SQ, A_COEF, (rp[i - 1] + rp[i]) / 2., time);
 }
 
@@ -175,29 +175,29 @@ void assert_params() {
 double *solve_1() {
     assert_params();
 
-    const unsigned int n = N_1 + 2;
+    const unsigned int n = N_1 + 1;
 
     double *m = (double *) malloc(n * sizeof(double));
     double *m_pr = (double *) malloc(n * sizeof(double));
     double *rp = (double *) malloc(n * sizeof(double));
-    double *a = (double *) malloc(N_1 * N_1 * sizeof(double));
+    double *a = (double *) malloc(n * n * sizeof(double));
+    a = build_a(a, n); //print_matrix(a, n, n);
 
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
     m_pr[0] = analytical_solution_1(A_COEF, 0., A - H_2);
     for (int i = 1; i < n - 1; ++i) m_pr[i] = analytical_solution_1(A_COEF, 0., A + i * H_2);
-    m_pr[N_1 + 1] = analytical_solution_1(A_COEF, 0., B + H_2);
+    m_pr[n - 1] = analytical_solution_1(A_COEF, 0., B + H_2);
     printf("M_PR\n");
     print_matrix(m_pr, 1, n);
 
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
-        fill_rp(rp, m_pr, TAU * tl);
+        fill_rp(rp, m_pr, TAU * tl, n);
         //print_matrix(rp, 1, n);
-        a = build_a(a, N_1);
-        //print_matrix(a, N_1, N_1);
-        thomas_algo(N_1, a, rp, m);
+        thomas_algo(n, a, rp, m);
         memcpy(m_pr, m, n * sizeof(double));
     }
+
     printf("M DONE\n");
     print_matrix(m, 1, n);
 
