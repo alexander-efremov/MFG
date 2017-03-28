@@ -50,7 +50,7 @@ inline double func_alpha(double a_coef, double t, double x) {
     //return A_COEF;
 }
 
-inline double get_rp_exact(double sigma_sq, double a_coef, double x, double t) {
+inline double get_f(double sigma_sq, double a_coef, double x, double t) {
     return (a_coef * x * x * (3. - 2. * x)) / 6.
            - (sigma_sq * a_coef * t * (1. - 2. * x)) / 2.
            + a_coef * a_coef * t * t * x * x * (1. - x) * (1. - x)
@@ -120,13 +120,13 @@ void fill_rp(double *rp, double *m_pr, double time) {
     // todo: ПЕРЕПИСАТЬ
     rp[0] = analytical_solution_1(A_COEF, time, A - H_2);
     rp[1] = analytical_solution_1(A_COEF, time, A);
-    double val0 = get_rp_exact(SIGMA_SQ, A_COEF, (rp[0] + rp[1]) / 2., time);
+    double val0 = get_f(SIGMA_SQ, A_COEF, (rp[0] + rp[1]) / 2., time);
     rp[0] += val0;
     rp[1] += val0;
 
     rp[N_1] = analytical_solution_1(A_COEF, time, A + N_1 * H);
     rp[N_1 + 1] = analytical_solution_1(A_COEF, time, A + (N_1 + 1) * H_2);
-    double valN = get_rp_exact(SIGMA_SQ, A_COEF, (rp[N_1] + rp[N_1 + 1]) / 2., time);
+    double valN = get_f(SIGMA_SQ, A_COEF, (rp[N_1] + rp[N_1 + 1]) / 2., time);
     rp[N_1] += valN;
     rp[N_1 + 1] += valN;
 
@@ -134,7 +134,7 @@ void fill_rp(double *rp, double *m_pr, double time) {
         rp[i] = get_right_part_inner_points(i, m_pr, time);
 
     for (int i = 1; i < N_1; ++i)
-        rp[i] = get_rp_exact(SIGMA_SQ, A_COEF, (rp[i - 1] + rp[i]) / 2., time);
+        rp[i] = get_f(SIGMA_SQ, A_COEF, (rp[i - 1] + rp[i]) / 2., time);
 }
 
 void fill_error(double *err, double *sol, int n, double time) {
