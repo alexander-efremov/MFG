@@ -177,13 +177,31 @@ void assert_params() {
     assert(H * H <= 8 * TAU * SIGMA_SQ);
 }
 
-void print_thomas_arrays(double* a, double* b, double* c)
-{
+/**
+	 * n - число уравнений (строк матрицы)
+	 * a - диагональ, лежащая под главной (нумеруется: [1;n-1])
+	 * c - главная диагональ матрицы A (нумеруется: [0;n-1])
+	 * b - диагональ, лежащая над главной (нумеруется: [0;n-2])
+	 * f - правая часть (столбец)
+	 * x - решение, массив x будет содержать ответ
+	 */
+void print_thomas_arrays(double *a, double *b, double *c, int n) {
     printf("THOMAS PARAMS\n");
-    printf("coef a = %e\n");
-    printf("coef b = %e\n");
-    printf("coef c = %e\n");
-
+    printf("coef a = %e\n", get_lc_1());
+    printf("coef b = %e\n", get_lc_2());
+    printf("coef c = %e\n", get_lc_3());
+    printf("a\n");
+    for (int i = 0; i < n; ++i) {
+        printf("%e\n", a[i]);
+    }
+    printf("c\n");
+    for (int i = 0; i < n; ++i) {
+        printf("%e\n", c[i]);
+    }
+    printf("b\n");
+    for (int i = 0; i < n; ++i) {
+        printf("%e\n", b[i]);
+    }
 }
 
 
@@ -201,7 +219,7 @@ double *solve_1() {
     fill_a(a, n);
     fill_b(b, n);
     fill_c(c, n);
-
+    print_thomas_arrays(a, b, c, n);
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
     m_pr[0] = analytical_solution_1(A_COEF, 0., A - H_2);
