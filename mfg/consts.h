@@ -12,6 +12,6 @@ extern int TIME_STEP_CNT;
 extern double H;
 extern double H_SQ;
 extern double H_2;
-extern double ALPHA_COEF;
+extern double A_COEF;
 
 #endif //MFG_CONSTS_H
