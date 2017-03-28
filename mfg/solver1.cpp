@@ -141,8 +141,8 @@ void fill_error(double *err, double *sol, int n, double time) {
     double *ex_sol = (double *) malloc(n * sizeof(double));
 
     ex_sol[0] = analytical_solution_1(A_COEF, time, A - H_2);
-    for (int i = 0; i < n; ++i)
-        ex_sol[i] = analytical_solution_1(A_COEF, time, A + i * H_2);
+    for (int i = 1; i < n - 1; ++i)
+        ex_sol[i] = analytical_solution_1(A_COEF, time, A + i * H);
     ex_sol[n - 1] = analytical_solution_1(A_COEF, time, B + H_2);
 
     printf("EXACT SOL \n");
