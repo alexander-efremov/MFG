@@ -1,11 +1,5 @@
 #include "consts.h"
 
-#if defined _WIN32 || defined __CYGWIN__ || defined WIN32
-long timerStart = 0;
-#else
-
-#endif
-
 double SIGMA = 0.;
 double SIGMA_SQ = 0.;
 double TAU = 0.;
