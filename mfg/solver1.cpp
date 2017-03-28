@@ -80,6 +80,7 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
     I_left = (int) (((x_left - A) / H) + 0.5); // определяем индекс левого интервала линейности
     xi_moh_left = A + I_left * H - H_2; // левая граница левого интервала линейности
     xi_poh_left = A + I_left * H + H_2; // правая граница левого интервала линейности
+    assert(x_left >= xi_moh_left && x_left <= xi_poh_left);
 
     // считаем интеграл по левой подчасти
     // вычислим значение функции в нашей левой точке по формуле 3.7
@@ -90,6 +91,7 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
     I_right = (int) (((x_right - A) / H) + 0.5); // определяем индекс правого интервала линейности
     xi_moh_right = A + I_right * H - H_2; // левая граница правого интервала линейности
     xi_poh_right = A + I_right * H + H_2; // правая граница правого интервала линейности
+    assert(x_right >= xi_moh_right && x_right <= xi_poh_right);
 
     for (i = I_left + 1; i < I_right; ++i) r += 0.5 * (m_pr[i] + m_pr[i + 1]) * H;
 
