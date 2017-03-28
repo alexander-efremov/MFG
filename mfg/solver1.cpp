@@ -21,6 +21,10 @@ inline double get_lc_3() {
     return get_lc_1();
 }
 
+inline double get_lc_n() {
+    return get_lc_0();
+}
+
 /**
 	 * n - число уравнений (строк матрицы)
 	 * a - диагональ, лежащая под главной (нумеруется: [1;n-1])
@@ -179,7 +183,7 @@ void assert_params() {
 void print_thomas_arrays(double *a, double *b, double *c, int n) {
     printf("THOMAS PARAMS\n");
     printf("coef 0 = %e\n", get_lc_0());
-    printf("coef n = %e\n", get_lc_0());
+    printf("coef n = %e\n", get_lc_n());
     printf("coef a = %e\n", get_lc_1());
     printf("coef b = %e\n", get_lc_2());
     printf("coef c = %e\n", get_lc_3());

@@ -178,33 +178,6 @@ mfg_tests.cpp.s:
 	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/mfg_tests.cpp.s
 .PHONY : mfg_tests.cpp.s
 
-misc_tests.obj: misc_tests.cpp.obj
-
-.PHONY : misc_tests.obj
-
-# target to build an object file
-misc_tests.cpp.obj:
-	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/misc_tests.cpp.obj
-.PHONY : misc_tests.cpp.obj
-
-misc_tests.i: misc_tests.cpp.i
-
-.PHONY : misc_tests.i
-
-# target to preprocess a source file
-misc_tests.cpp.i:
-	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/misc_tests.cpp.i
-.PHONY : misc_tests.cpp.i
-
-misc_tests.s: misc_tests.cpp.s
-
-.PHONY : misc_tests.s
-
-# target to generate assembly for a file
-misc_tests.cpp.s:
-	cd /d C:\Users\HOME\Source\Repos\MFG\cmake-build-debug && $(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/misc_tests.cpp.s
-.PHONY : misc_tests.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -220,9 +193,6 @@ help:
 	@echo ... mfg_tests.obj
 	@echo ... mfg_tests.i
 	@echo ... mfg_tests.s
-	@echo ... misc_tests.obj
-	@echo ... misc_tests.i
-	@echo ... misc_tests.s
 .PHONY : help
 
 
