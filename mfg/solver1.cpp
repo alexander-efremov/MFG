@@ -89,7 +89,11 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
 
     // считаем интеграл по левой подчасти
     // вычислим значение функции в нашей левой точке по формуле 3.7
-    m_left = m_pr[I_left] * (xi_poh_left - x_left) / H + m_pr[I_left + 1] * (x_left - xi_moh_left) / H;
+    if (x_left > H_2)
+        m_left = m_pr[I_left] * (xi_poh_left - x_left) / H + m_pr[I_left + 1] * (x_left - xi_moh_left) / H;
+    else
+        m_left = m_pr[I_left];
+
     // применим формулу трапеций - полусумма оснований умножить на высоту
     r += 0.5 * (m_left + m_pr[I_left + 1]) * (A + (I_left + 1) * H - x_left);
 
@@ -100,7 +104,11 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
 
     // считаем интеграл по правой подчасти
     // вычислим значение функции в нашей правой точке по формуле 3.7
-    m_right = m_pr[I_right] * (xi_poh_right - x_right) / H + m_pr[I_right + 1] * (x_right - xi_moh_right) / H;
+    if (x_right < B - H_2)
+        m_right = m_pr[I_right] * (xi_poh_right - x_right) / H + m_pr[I_right + 1] * (x_right - xi_moh_right) / H;
+    else
+        m_right = m_pr[I_right + 1];
+
     r += 0.5 * (m_right + m_pr[I_right]) * (A + I_right * H - x_right);
 
     return r;
