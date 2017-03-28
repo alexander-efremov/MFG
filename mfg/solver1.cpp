@@ -101,7 +101,7 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
 
     for (i = I_left + 1; i < I_right; ++i) {
         r += 0.5 * (m_pr[i] + m_pr[i + 1]) * H;
-        printf("!!! INTERNAL POINTS  CALCULATION !!!");
+        printf("!!! INTERNAL POINTS  CALCULATION !!!\n");
     }
 
     // считаем интеграл по правой подчасти
