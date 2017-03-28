@@ -69,7 +69,7 @@ TEST_F(MfgFixture, mfg_solver_1) {
         double d = 0;
         switch (i) {
             case 0:
-                d = 5.;
+                d = 10.;
                 break;
             case 1:
                 d = 100.;
