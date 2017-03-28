@@ -143,12 +143,26 @@ void fill_error(double *err, double *sol, int n, double time) {
     free(ex_sol);
 }
 
-double *solve_1() {
-    // Formula (3.19)
-    printf("H * H = %e\n", H * H);
-    printf("8 * TAU * SIGMA_SQ = %e\n", 8 * TAU * SIGMA_SQ);
-    fflush(stdout);
+void assert_params() {
+    assert(H > 0.);
+    assert(H_SQ == H * H);
+    assert(H_2 == H / 2.);
+    assert(SIGMA_SQ == SIGMA * SIGMA);
+    assert(NX > 0);
+    assert(N_1 == NX + 1);
+    assert(A == 0.);
+    assert(TAU > 0.);
+    assert(ALPHA_COEF > 0.);
+    assert(TIME_STEP_CNT >= 1);
+    // (3.19)
+//    printf("H * H = %e\n", H * H);
+//    printf("8 * TAU * SIGMA_SQ = %e\n", 8 * TAU * SIGMA_SQ);
+//    fflush(stdout);
     assert(H * H <= 8 * TAU * SIGMA_SQ);
+}
+
+double *solve_1() {
+    assert_params();
 
     const unsigned int n = N_1 + 2;
 

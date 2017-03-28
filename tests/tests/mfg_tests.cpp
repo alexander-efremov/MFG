@@ -33,17 +33,6 @@ void print_params() {
     fflush(stdout);
 }
 
-void assert_params() {
-    assert(H_SQ == H * H);
-    assert(H_2 == H / 2.);
-    assert(SIGMA_SQ == SIGMA * SIGMA);
-    assert(NX > 0);
-    assert(N_1 == NX + 1);
-    assert(A == 0.);
-    assert(TAU > 0.);
-    assert(ALPHA_COEF > 0.);
-}
-
 void run_solver_1(unsigned int d) {
     A = 0.;
     B = 1.;
@@ -59,7 +48,6 @@ void run_solver_1(unsigned int d) {
     TIME_STEP_CNT = 1;
 
     print_params();
-    assert_params();
 
     double *density = solve_1();
 
