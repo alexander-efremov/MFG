@@ -58,7 +58,7 @@ inline double get_f(double sigma_sq, double a_coef, double x, double t) {
 }
 
 double analytical_solution_1(double a, double t, double x) {
-    return (a * t * x * x  * (3. - 2. * x)) / 6.;
+    return (a * t * x * x  * (3. - 2. * x)) / 6. ;
 }
 
 double get_right_part_inner_points(int I, double *m_pr, double time) {
