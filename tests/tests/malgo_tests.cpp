@@ -287,9 +287,8 @@ TEST_F(MalgoFixture, thomas_algo_test6) {
     double *c = (double *) malloc(n * sizeof(double));
     double *rp = (double *) malloc(n * sizeof(double));
     double *m = (double *) malloc(n * sizeof(double));
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
         a[i] = b[i] = c[i] = rp[i] = m[i] = 0.;
-    }
 
     //под
     a[0] = 0;
