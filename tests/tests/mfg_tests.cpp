@@ -25,11 +25,11 @@ void print_params() {
     printf("H_SQ = %le\n", H_SQ);
     printf("TAU = %le\n", TAU);
     printf("TIME_STEP_CNT = %d\n", TIME_STEP_CNT);
-    printf("%f ", A - H_2);
-    for (int i = 1; i < N_1; ++i) {
-        printf("%f ", i * H);
-    }
-    printf("%f\n", B + H_2);
+//    printf("%f ", A - H_2);
+//    for (int i = 1; i < N_1; ++i) {
+//        printf("%f ", i * H);
+//    }
+//    printf("%f\n", B + H_2);
     fflush(stdout);
 }
 
