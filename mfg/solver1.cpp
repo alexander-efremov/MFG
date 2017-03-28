@@ -25,24 +25,23 @@ inline double get_lc_3() {
     return get_lc_1();
 }
 
-double *build_a(double *a, int n) {
-    for (int i = 0; i < n * n; ++i) a[i] = 0.;
+inline void fill_a(double *a, int n) {
+    for (int i = 0; i < n; ++i)
+        a[i] = get_lc_1();
+}
 
-    a[0] = get_lc_0();
-    a[1] = get_lc_3();
+inline void fill_b(double *b, int n) {
+    for (int i = 0; i < n; ++i)
+        b[i] = get_lc_3();
+}
 
-    int offset = n;
-    for (int i = 1; i < n - 1; ++i) {
-        a[offset] = get_lc_1();
-        a[offset + 1] = get_lc_2();
-        a[offset + 2] = get_lc_3();
-        offset += n + 1;
-    }
+inline void fill_c(double *c, int n) {
+    c[0] = get_lc_0();
 
-    a[n * n - 2] = get_lc_1();
-    a[n * n - 1] = get_lc_n();
+    for (int i = 1; i < n - 1; ++i)
+        c[i] = get_lc_2();
 
-    return a;
+    c[n - 1] = get_lc_n();
 }
 
 inline double func_alpha(double a_coef, double t, double x) {
@@ -180,8 +179,12 @@ double *solve_1() {
     double *m = (double *) malloc(n * sizeof(double));
     double *m_pr = (double *) malloc(n * sizeof(double));
     double *rp = (double *) malloc(n * sizeof(double));
-    double *a = (double *) malloc(n * n * sizeof(double));
-    a = build_a(a, n); //print_matrix(a, n, n);
+    double *a = (double *) malloc(n * sizeof(double));
+    double *b = (double *) malloc(n * sizeof(double));
+    double *c = (double *) malloc(n * sizeof(double));
+    fill_a(a, n);
+    fill_b(b, n);
+    fill_c(c, n);
 
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
@@ -194,7 +197,7 @@ double *solve_1() {
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl, n);
         //print_matrix(rp, 1, n);
-        thomas_algo(n, a, rp, m);
+        thomas_algo(n, a, c, b, rp, m);
         memcpy(m_pr, m, n * sizeof(double));
     }
 
@@ -210,6 +213,8 @@ double *solve_1() {
     free(m_pr);
     free(rp);
     free(a);
+    free(b);
+    free(c);
 
     return m;
 }
