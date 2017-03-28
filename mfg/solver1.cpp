@@ -124,13 +124,13 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
 
 void fill_rp(double *rp, double *m_pr, double time, int n) {
     rp[0] = 0.;//analytical_solution_1(A_COEF, time, A - H_2);
-    rp[n-1] = 0;
+    rp[n - 1] = 0;
 
     for (int i = 1; i < n - 1; ++i)
         rp[i] = get_right_part_inner_points(i, m_pr, time);
 
     for (int i = 1; i < n - 1; ++i)
-        rp[i] += get_f(SIGMA_SQ, A_COEF, (i-0.5) * H, time);
+        rp[i] += get_f(SIGMA_SQ, A_COEF, (i - 0.5) * H, time);
 }
 
 void fill_error(double *err, double *sol, int n, double time) {
@@ -226,7 +226,8 @@ double *solve_1() {
 
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl, n);
-        printf("RP \n"); print_matrix(rp, 1, n);
+        printf("RP \n");
+        print_matrix(rp, 1, n);
         thomas_algo(n, a, c, b, rp, m);
         memcpy(m_pr, m, n * sizeof(double));
     }
