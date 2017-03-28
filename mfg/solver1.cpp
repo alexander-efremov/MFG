@@ -130,19 +130,11 @@ void fill_rp(double *rp, double *m_pr, double time) {
     rp[N_1] += valN;
     rp[N_1 + 1] += valN;
 
-    // inner points
-    for (int i = 1; i < N_1; ++i) {
-        double val = get_right_part_inner_points(i, m_pr, time);
-        rp[i] = val;
-//        if (rp[i] == 0.)
-//            printf("rp error %d = %e\n", i, rp[i]);
-    }
+    for (int i = 1; i < N_1; ++i)
+        rp[i] = get_right_part_inner_points(i, m_pr, time);
 
-    // add F
-    for (int i = 1; i < N_1; ++i) {
-        double val = get_rp_exact(SIGMA_SQ, A_COEF, (rp[i - 1] + rp[i]) / 2., time);
-        rp[i] = val;
-    }
+    for (int i = 1; i < N_1; ++i)
+        rp[i] = get_rp_exact(SIGMA_SQ, A_COEF, (rp[i - 1] + rp[i]) / 2., time);
 }
 
 void fill_error(double *err, double *sol, int n, double time) {
