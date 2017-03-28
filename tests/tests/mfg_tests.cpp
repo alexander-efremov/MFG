@@ -37,11 +37,11 @@ void run_solver_1(unsigned int d) {
     A = 0.;
     A_COEF = 1.;
     B = 1.;
+    NX = d;
+    N_1 = NX + 1;
     H = (B - A) / NX;
     H_2 = 0.5 * H;
     H_SQ = H * H;
-    NX = d;
-    N_1 = NX + 1;
     SIGMA = 10.;
     SIGMA_SQ = SIGMA * SIGMA;
     TAU = 1.e-3;

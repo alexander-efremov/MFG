@@ -139,10 +139,14 @@ void fill_rp(double *rp, double *m_pr, double time) {
 
 void fill_error(double *err, double *sol, int n, double time) {
     double *ex_sol = (double *) malloc(n * sizeof(double));
-    for (int i = 0; i < n; ++i)
-        ex_sol[i] = analytical_solution_1(A_COEF, time, A + i * H);
 
-    printf("EXACT SOL \n");print_matrix(ex_sol, 1, n);
+    ex_sol[0] = analytical_solution_1(A_COEF, time, A - 0.5 * H_2);
+    for (int i = 0; i < n; ++i)
+        ex_sol[i] = analytical_solution_1(A_COEF, time, A + i * H_2);
+    ex_sol[n-1] = analytical_solution_1(A_COEF, time, B + 0.5 * H_2);
+
+    printf("EXACT SOL \n");
+    print_matrix(ex_sol, 1, n);
 
     for (int i = 0; i < n; ++i)
         err[i] = ex_sol - sol;
@@ -162,9 +166,9 @@ void assert_params() {
     assert(A_COEF > 0.);
     assert(TIME_STEP_CNT >= 1);
     // (3.19)
-//    printf("H * H = %e\n", H * H);
-//    printf("8 * TAU * SIGMA_SQ = %e\n", 8 * TAU * SIGMA_SQ);
-//    fflush(stdout);
+    printf("H * H = %e\n", H * H);
+    printf("8 * TAU * SIGMA_SQ = %e\n", 8. * TAU * SIGMA_SQ);
+    fflush(stdout);
     assert(H * H <= 8 * TAU * SIGMA_SQ);
 }
 
@@ -183,7 +187,8 @@ double *solve_1() {
     m_pr[0] = analytical_solution_1(A_COEF, 0., A - H_2);
     for (int i = 1; i < N_1 + 1; ++i) m_pr[i] = analytical_solution_1(A_COEF, 0., A + i * H_2);
     m_pr[N_1 + 1] = analytical_solution_1(A_COEF, 0., B + H_2);
-    printf("M_PR\n"); print_matrix(m_pr, 1, n);
+    printf("M_PR\n");
+    print_matrix(m_pr, 1, n);
 
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl);
@@ -193,11 +198,13 @@ double *solve_1() {
         thomas_algo(N_1, a, rp, m);
         memcpy(m_pr, m, n * sizeof(double));
     }
-    printf("M DONE\n"); print_matrix(m, 1, n);
+    printf("M DONE\n");
+    print_matrix(m, 1, n);
 
     double *err = (double *) malloc(n * sizeof(double));
     fill_error(err, m, n, TIME_STEP_CNT * TAU);
-    printf("ERR \n");print_matrix(err, 1, n);
+    printf("ERR \n");
+    print_matrix(err, 1, n);
     free(err);
 
     free(m_pr);
