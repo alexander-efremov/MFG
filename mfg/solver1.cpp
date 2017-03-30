@@ -165,7 +165,6 @@ void print_thomas_arrays(double *b, double *c, double *d, int n) {
     printf("\n");
 }
 
-
 double *solve_1() {
     assert_params();
 
@@ -206,7 +205,7 @@ double *solve_1() {
     double *ex_m = (double *) malloc(n * sizeof(double));
     ex_m[0] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, A - H_2);
     for (int i = 1; i < n - 1; ++i)
-        ex_m[i] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, A + i * H);
+        ex_m[i] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, A + i * H_2);
     ex_m[n - 1] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, B + H_2);
     printf("EXACT SOL \n");
     print_matrix1(ex_m, 1, n);
