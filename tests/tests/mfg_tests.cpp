@@ -133,7 +133,7 @@ TEST_F(MfgFixture, mfg_solver_1) {
         if (l1_arr[j] > l1_max)
             l1_max = l1_arr[j];
     }
-    printf("L1 MAX ON EXPERIMENTS: %e\n", l1_max);
+    printf("\n\nL1 MAX ON EXPERIMENTS: %e\n", l1_max);
 
     free(l1_arr);
 }
