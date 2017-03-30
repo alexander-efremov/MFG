@@ -432,6 +432,7 @@ TEST_F(MalgoFixture, thomas_algo1_test4) {
     d[3] = 0.;
     d[4] = 0.;
 
+    //
     r[0] = 0.;
     r[1] = 2.;
     r[2] = 4.;
