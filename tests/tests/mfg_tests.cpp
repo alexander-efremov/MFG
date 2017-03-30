@@ -59,7 +59,7 @@ double run_solver_1(int nx, double tau, int time_step_cnt, double sigma) {
     double *err = (double *) malloc(n * sizeof(double));
     double *m = solve_1(n, exact_m);
 
-    for (int i = 0; i < n; ++i)
+    for (int i = 1; i < n-1; ++i)
         err[i] = exact_m[i] - m[i];
 
     double l1 = get_l1_norm(H, n, err);

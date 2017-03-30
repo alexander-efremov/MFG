@@ -191,6 +191,11 @@ inline void print_vector(double *a, int n, int precision = 8) {
     }
 }
 
+inline void fill_arr_diff(double *err, double *arr1, double *arr2, int n) {
+    for (int i = 0; i < n; ++i)
+        err[i] = arr1[i] - arr2[i];
+}
+
 inline void print_vector(int *a, int n) {
     for (int k = 0; k < n; ++k) {
         printf("%d ", a[k]);

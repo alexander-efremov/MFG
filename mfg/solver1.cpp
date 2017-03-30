@@ -114,10 +114,7 @@ void fill_rp(double *rp, double *m_pr, double time, int n) {
         rp[i] += get_f(SIGMA_SQ, A_COEF, (i - 0.5) * H, time);
 }
 
-void fill_arr_diff(double *err, double *arr1, double *arr2, int n) {
-    for (int i = 0; i < n; ++i)
-        err[i] = arr1[i] - arr2[i];
-}
+
 
 void assert_params() {
     assert(H > 0.);
@@ -190,6 +187,8 @@ double *solve_1(int n, double *exact_sol_to_fill) {
 //    printf("M_PR\n");
 //    print_matrix1(m_pr, 1, n);
 
+    double *l1s = (double *) malloc(sizeof(double) * TIME_STEP_CNT);
+
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl, n);
 //        printf("RP \n");
@@ -216,6 +215,7 @@ double *solve_1(int n, double *exact_sol_to_fill) {
 
     fill_arr_by_ex_sol(exact_sol_to_fill, n, TAU * TIME_STEP_CNT);
 
+    free(l1s);
     free(ex_m);
     free(m_pr);
     free(rp);
