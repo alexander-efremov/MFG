@@ -114,13 +114,11 @@ void fill_rp(double *rp, double *m_pr, double time, int n) {
         rp[i] += get_f(SIGMA_SQ, A_COEF, (i - 0.5) * H, time);
 }
 
-double *get_arr_diff(double *arr1, double *arr2, int n) {
-    double *err = (double *) malloc(n * sizeof(double));
+void fill_arr_diff(double *err, double *arr1, double *arr2, int n) {
 
     for (int i = 0; i < n; ++i)
         err[i] = arr1[i] - arr2[i];
 
-    return err;
 }
 
 void assert_params() {
@@ -165,6 +163,12 @@ void print_thomas_arrays(double *b, double *c, double *d, int n) {
     printf("\n");
 }
 
+void fill_arr_by_ex_sol(double *arr, int n, double time) {
+    for (int i = 1; i < n - 1; ++i) arr[i] = analytical_solution_1(A_COEF, time, A + i * H - H_2);
+    arr[0] = arr[1];
+    arr[n - 1] = arr[n - 2];
+}
+
 double *solve_1() {
     assert_params();
 
@@ -173,6 +177,8 @@ double *solve_1() {
     double *m = (double *) malloc(n * sizeof(double));
     double *m_pr = (double *) malloc(n * sizeof(double));
     double *rp = (double *) malloc(n * sizeof(double));
+    double *ex_m = (double *) malloc(n * sizeof(double));
+    double *err = (double *) malloc(n * sizeof(double));
     double *b = (double *) malloc(n * sizeof(double));
     double *c = (double *) malloc(n * sizeof(double));
     double *d = (double *) malloc(n * sizeof(double));
@@ -183,9 +189,8 @@ double *solve_1() {
 
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
-    for (int i = 1; i < n - 1; ++i) m_pr[i] = analytical_solution_1(A_COEF, 0., A + i * H_2);
-    m_pr[0] = m_pr[1];
-    m_pr[n - 1] = m_pr[n - 2];
+    fill_arr_by_ex_sol(m_pr, n, 0.);
+
     printf("M_PR\n");
     print_matrix1(m_pr, 1, n);
 
@@ -202,22 +207,19 @@ double *solve_1() {
     printf("M DONE\n");
     print_matrix1(m, 1, n);
 
-    double *ex_m = (double *) malloc(n * sizeof(double));
-    ex_m[0] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, A - H_2);
-    for (int i = 1; i < n - 1; ++i)
-        ex_m[i] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, A + i * H_2);
-    ex_m[n - 1] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, B + H_2);
+    fill_arr_by_ex_sol(ex_m, n, TAU * TIME_STEP_CNT);
     printf("EXACT SOL \n");
     print_matrix1(ex_m, 1, n);
 
-    double *err = get_arr_diff(ex_m, m, n);
+    fill_arr_diff(err, ex_m, m, n);
     printf("ERR \n");
     print_matrix1(err, 1, n);
-    free(err);
-    free(ex_m);
 
+
+    free(ex_m);
     free(m_pr);
     free(rp);
+    free(err);
     free(b);
     free(c);
     free(d);
