@@ -33,7 +33,6 @@ inline void thomas_algo(int n, double *a, double *c, double *b, double *f, doubl
 
     for (int i = n - 2; i >= 0; i--)
         x[i] = (f[i] - b[i] * x[i + 1]) / c[i];
-
 }
 
 inline void thomas_algo(double *x, int X, double *a, double *b, double *c) {

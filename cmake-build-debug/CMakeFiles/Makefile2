@@ -342,9 +342,9 @@ tests/tests/preinstall:
 # Target rules for target tests/tests/CMakeFiles/run_tests.dir
 
 # All Build rule for target.
+tests/tests/CMakeFiles/run_tests.dir/all: mfg/CMakeFiles/mfg.dir/all
 tests/tests/CMakeFiles/run_tests.dir/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest.dir/all
 tests/tests/CMakeFiles/run_tests.dir/all: tests/lib/gtest-1.7.0/CMakeFiles/gtest_main.dir/all
-tests/tests/CMakeFiles/run_tests.dir/all: mfg/CMakeFiles/mfg.dir/all
 	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f tests\tests\CMakeFiles\run_tests.dir\build.make tests/tests/CMakeFiles/run_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\HOME\Source\Repos\MFG\cmake-build-debug\CMakeFiles --progress-num=12,13,14 "Built target run_tests"

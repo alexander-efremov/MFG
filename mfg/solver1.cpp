@@ -200,7 +200,7 @@ double *solve_1() {
         print_matrix1(rp, 1, n);
         thomas_algo(n, a, c, b, rp, m);
         m[0] = m[1];
-        m[n - 2] = m[n - 1];
+        m[n - 1] = m[n - 2];
         memcpy(m_pr, m, n * sizeof(double));
     }
 
