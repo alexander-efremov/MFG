@@ -324,3 +324,143 @@ TEST_F(MalgoFixture, thomas_algo1_test2) {
     free(d);
     free(x);
 }
+
+TEST_F(MalgoFixture, thomas_algo1_test3) {
+    const int n = 7;
+
+    double *b = (double *) malloc(n * sizeof(double));
+    double *c = (double *) malloc(n * sizeof(double));
+    double *d = (double *) malloc(n * sizeof(double));
+    double *r = (double *) malloc(n * sizeof(double));
+    double *x = (double *) malloc(n * sizeof(double));
+    for (int i = 0; i < n; ++i)
+        b[i] = b[i] = c[i] = d[i] = x[i] = 0.;
+
+    //под
+    b[0] = 0.;
+    b[1] = 0.;
+    b[2] = 2.;
+    b[3] = 4.;
+    b[4] = 4.;
+    b[5] = 2.;
+    b[6] = 0.;
+
+    //главная
+    c[0] = 0.;
+    c[1] = 2.;
+    c[2] = 9.;
+    c[3] = 17.;
+    c[4] = 15.;
+    c[5] = 3.;
+    c[6] = 0.;
+
+    //над
+    d[0] = 0.;
+    d[1] = 1.;
+    d[2] = 2.;
+    d[3] = -4.;
+    d[4] = -8.;
+    d[5] = 0.;
+    d[6] = 0.;
+
+    r[0] = 0;
+    r[1] = -10.;
+    r[2] = -26.;
+    r[3] = -16.;
+    r[4] = -2.;
+    r[5] = 16.;
+    r[6] = 0.;
+
+    printf("\n");
+    print_matrix1(b, 1, n);
+    printf("\n");
+    print_matrix1(c, 1, n);
+    printf("\n");
+    print_matrix1(d, 1, n);
+    printf("\n");
+    print_matrix1(r, 1, n);
+
+    thomas_algo_verzh_modified(n, b, c, d, r, x);
+
+    printf("\n");
+    print_matrix(x, 1, n);
+
+    ASSERT_NEAR(x[0], 0., 1e-2);
+    ASSERT_NEAR(x[1], -4., 1e-2);
+    ASSERT_NEAR(x[2], -2., 1e-2);
+    ASSERT_NEAR(x[3], 0., 1e-2);
+    ASSERT_NEAR(x[4], 2., 1e-2);
+    ASSERT_NEAR(x[5], 4., 1e-2);
+    ASSERT_NEAR(x[6], 0., 1e-2);
+
+    free(r);
+    free(b);
+    free(c);
+    free(d);
+    free(x);
+}
+
+TEST_F(MalgoFixture, thomas_algo1_test4) {
+    const int n = 5;
+
+    double *b = (double *) malloc(n * sizeof(double));
+    double *c = (double *) malloc(n * sizeof(double));
+    double *d = (double *) malloc(n * sizeof(double));
+    double *r = (double *) malloc(n * sizeof(double));
+    double *x = (double *) malloc(n * sizeof(double));
+    for (int i = 0; i < n; ++i)
+        b[i] = b[i] = c[i] = d[i] = x[i] = 0.;
+
+    //под
+    b[0] = 0.;
+    b[1] = 0.;
+    b[2] = 1.;
+    b[3] = 1.;
+    b[4] = 0.;
+
+    //главная
+    c[0] = 0.;
+    c[1] = 1.;
+    c[2] = 2.;
+    c[3] = 3.;
+    c[4] = 0.;
+
+    //над
+    d[0] = 0.;
+    d[1] = 1.;
+    d[2] = 1.;
+    d[3] = 0.;
+    d[4] = 0.;
+
+    r[0] = 0.;
+    r[1] = 2.;
+    r[2] = 4.;
+    r[3] = 4.;
+    r[4] = 0.;
+
+    printf("\n");
+    print_matrix1(b, 1, n);
+    printf("\n");
+    print_matrix1(c, 1, n);
+    printf("\n");
+    print_matrix1(d, 1, n);
+    printf("\n");
+    print_matrix1(r, 1, n);
+
+    thomas_algo_verzh_modified(n, b, c, d, r, x);
+
+    printf("\n");
+    print_matrix(x, 1, n);
+
+    ASSERT_NEAR(x[0], 0., 1e-2);
+    ASSERT_NEAR(x[1], 1., 1e-2);
+    ASSERT_NEAR(x[2], 1., 1e-2);
+    ASSERT_NEAR(x[3], 1., 1e-2);
+    ASSERT_NEAR(x[4], 0., 1e-2);
+
+    free(r);
+    free(b);
+    free(c);
+    free(d);
+    free(x);
+}

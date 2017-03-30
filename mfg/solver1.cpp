@@ -15,23 +15,28 @@
 	 */
 inline void fill_b(double *b, int n) {
     b[0] = 0.;
-    for (int i = 1; i < n; ++i)
+    b[1] = 0.;
+    for (int i = 2; i < n - 1; ++i)
         b[i] = 1. / (8. * TAU) - SIGMA_SQ / H_SQ;
-}
-
-inline void fill_d(double *d, int n) {
-    for (int i = 0; i < n - 1; ++i)
-        d[i] = 1. / (8. * TAU) - SIGMA_SQ / H_SQ;
-    d[n - 1] = 0.;
+    b[n - 1] = 0.;
 }
 
 inline void fill_c(double *c, int n) {
     double val = 7. / (8. * TAU) + SIGMA_SQ / H_SQ;
 
-    c[0] = c[n - 1] = val;
+    c[0] = c[n - 1] = 0.;
 
-    for (int i = 1; i < n - 1; ++i)
+    c[1] = c[n - 2] = val;
+
+    for (int i = 2; i < n - 2; ++i)
         c[i] = 3. / (4. * TAU) + (2. * SIGMA_SQ) / H_SQ;
+}
+
+inline void fill_d(double *d, int n) {
+    d[0] = 0.;
+    for (int i = 1; i < n - 2; ++i)
+        d[i] = 1. / (8. * TAU) - SIGMA_SQ / H_SQ;
+    d[n - 1] = d[n - 2] = 0.;
 }
 
 inline double func_alpha(double a_coef, double t, double x) {
@@ -189,7 +194,7 @@ double *solve_1() {
         fill_rp(rp, m_pr, TAU * tl, n);
         printf("RP \n");
         print_matrix1(rp, 1, n);
-        thomas_algo_verzh(n, b, c, d, rp, m);
+        thomas_algo_verzh_modified(n, b, c, d, rp, m);
         m[0] = m[1];
         m[n - 1] = m[n - 2];
         memcpy(m_pr, m, n * sizeof(double));
