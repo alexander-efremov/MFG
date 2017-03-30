@@ -40,7 +40,6 @@ double run_solver_1(int nx, double tau, int time_step_cnt, double sigma) {
     SIGMA = sigma;
     SIGMA_SQ = SIGMA * SIGMA;
 
-
     NX = nx;
     N_1 = NX + 1;
     H = (B - A) / NX;
