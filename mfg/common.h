@@ -3,9 +3,9 @@
 
 #include "consts.h"
 
-void get_exact_solution(double *res, int nx_1, double time, double hx, double a,double a_param,
-                           double (*analytical_solution)(double, double, double));
+void get_exact_solution(double *res, int nx_1, double time, double hx, double a, double a_param,
+                        double (*analytical_solution)(double, double, double));
 
-double *solve_1();
+double *solve_1(int n, double *exact_sol_to_fill);
 
 #endif //MFG_COMMON_H

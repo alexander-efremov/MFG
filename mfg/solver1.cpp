@@ -115,10 +115,8 @@ void fill_rp(double *rp, double *m_pr, double time, int n) {
 }
 
 void fill_arr_diff(double *err, double *arr1, double *arr2, int n) {
-
     for (int i = 0; i < n; ++i)
         err[i] = arr1[i] - arr2[i];
-
 }
 
 void assert_params() {
@@ -169,10 +167,8 @@ void fill_arr_by_ex_sol(double *arr, int n, double time) {
     arr[n - 1] = arr[n - 2];
 }
 
-double *solve_1() {
+double *solve_1(int n, double *exact_sol_to_fill) {
     assert_params();
-
-    const unsigned int n = N_1 + 1;
 
     double *m = (double *) malloc(n * sizeof(double));
     double *m_pr = (double *) malloc(n * sizeof(double));
@@ -185,36 +181,37 @@ double *solve_1() {
     fill_b(b, n);
     fill_c(c, n);
     fill_d(d, n);
-    print_thomas_arrays(b, c, d, n);
+    //print_thomas_arrays(b, c, d, n);
 
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
     fill_arr_by_ex_sol(m_pr, n, 0.);
 
-    printf("M_PR\n");
-    print_matrix1(m_pr, 1, n);
+//    printf("M_PR\n");
+//    print_matrix1(m_pr, 1, n);
 
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl, n);
-        printf("RP \n");
-        print_matrix1(rp, 1, n);
+//        printf("RP \n");
+//        print_matrix1(rp, 1, n);
         thomas_algo_verzh_modified(n, b, c, d, rp, m);
         m[0] = m[1];
         m[n - 1] = m[n - 2];
         memcpy(m_pr, m, n * sizeof(double));
     }
 
-    printf("M DONE\n");
-    print_matrix1(m, 1, n);
+//    printf("M DONE\n");
+//    print_matrix1(m, 1, n);
 
     fill_arr_by_ex_sol(ex_m, n, TAU * TIME_STEP_CNT);
-    printf("EXACT SOL \n");
-    print_matrix1(ex_m, 1, n);
+//    printf("EXACT SOL \n");
+//    print_matrix1(ex_m, 1, n);
 
     fill_arr_diff(err, ex_m, m, n);
-    printf("ERR \n");
-    print_matrix1(err, 1, n);
+//    printf("ERR \n");
+//    print_matrix1(err, 1, n);
 
+    fill_arr_by_ex_sol(exact_sol_to_fill, n, TAU * TIME_STEP_CNT);
 
     free(ex_m);
     free(m_pr);

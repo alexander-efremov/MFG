@@ -75,7 +75,8 @@ inline void print_matrix(double *a, int n, int m, int precision = 8) {
                 case 8:
                     printf("%.8le ", a[k]);
                     break;
-                default:break;
+                default:
+                    break;
             }
         }
         printf("\n");
@@ -111,7 +112,8 @@ inline void print_matrix1(double *a, int n, int m, int precision = 8) {
                 case 8:
                     printf("%.8f ", a[k]);
                     break;
-                default:break;
+                default:
+                    break;
             }
         }
         printf("\n");
@@ -148,7 +150,8 @@ inline void print_matrix(double *a, int n, int m, const char *text, int precisio
                 case 8:
                     printf("%.8le ", a[k]);
                     break;
-                default:break;
+                default:
+                    break;
             }
         }
         printf("\n");
@@ -182,7 +185,8 @@ inline void print_vector(double *a, int n, int precision = 8) {
             case 8:
                 printf("%.8f ", a[k]);
                 break;
-            default:break;
+            default:
+                break;
         }
     }
 }
@@ -210,14 +214,23 @@ inline double get_l1_norm(double hx, double hy, int x_len, int y_len, double *da
     return r * hx * hy;
 }
 
+inline double get_l1_norm(double h, int x_len, double *data) {
+    double r = 0.;
+    r += data[0] * h / 2.;
+    for (int i = 1; i < x_len - 1; ++i)
+        r += fabs(data[i]) * h;
+    r += data[x_len - 1] * h / 2.;
+    return r;
+}
+
 inline double get_l1_norm_int_trapezoidal(double hx, double hy, int x_len, int y_len, double *data) {
     double r = 0.;
     for (int i = 0; i < x_len; ++i)
         for (int j = 0; j < y_len; ++j)
-            r += 0.25*(fabs(data[y_len * i + j]) +
-                  fabs(data[y_len * (i + 1) + j]) +
-                  fabs(data[y_len * i + j + 1]) +
-                  fabs(data[y_len * (i + 1) + j + 1])) * hx*hy;
+            r += 0.25 * (fabs(data[y_len * i + j]) +
+                         fabs(data[y_len * (i + 1) + j]) +
+                         fabs(data[y_len * i + j + 1]) +
+                         fabs(data[y_len * (i + 1) + j + 1])) * hx * hy;
     return r;
 }
 
@@ -244,7 +257,7 @@ inline bool is_empty_file(FILE *f) {
 inline void append_statistics(int ox_len, int oy_len, double tau, int iterCount, double err_l1_vec,
                               double err_l1_tr, double res_inf, double *extrem, double *extrem_err, int time_steps) {
     FILE *file;
-    const char* filename = "/home/jane/ClionProjects/fem_circle/statistics.dat";
+    const char *filename = "/home/jane/ClionProjects/fem_circle/statistics.dat";
     file = fopen(filename, "a");
     if (file == NULL) {
         perror("Error opening file.");
@@ -262,9 +275,9 @@ inline void append_statistics(int ox_len, int oy_len, double tau, int iterCount,
 }
 
 inline void append_statistics_expl(int ox_len, int oy_len, double tau, double err_l1_vec,
-                              double err_l1_tr, double *extrem, double *extrem_err, int time_steps) {
+                                   double err_l1_tr, double *extrem, double *extrem_err, int time_steps) {
     FILE *file;
-    const char* filename = "/home/jane/ClionProjects/fem_circle/statistics.dat";
+    const char *filename = "/home/jane/ClionProjects/fem_circle/statistics.dat";
     file = fopen(filename, "a");
     if (file == NULL) {
         perror("Error opening file.");
@@ -283,10 +296,8 @@ inline void append_statistics_expl(int ox_len, int oy_len, double tau, double er
 
 inline double calc_array_sum(double *a, int ox_len, int oy_len, bool isAbs) {
     double res = 0;
-    for (int i = 0; i < ox_len; i++)
-    {
-        for (int j = 0; j < oy_len; j++)
-        {
+    for (int i = 0; i < ox_len; i++) {
+        for (int j = 0; j < oy_len; j++) {
             if (isAbs)
                 res += fabs(a[i * oy_len + j]);
             else
@@ -298,10 +309,8 @@ inline double calc_array_sum(double *a, int ox_len, int oy_len, bool isAbs) {
 
 inline double calc_array_sum(int *grid, double *a, int ox_len, int oy_len, bool isAbs) {
     double res = 0;
-    for (int i = 0; i < ox_len; i++)
-    {
-        for (int j = 0; j < oy_len; j++)
-        {
+    for (int i = 0; i < ox_len; i++) {
+        for (int j = 0; j < oy_len; j++) {
             int lev = grid[i * oy_len + j];
 
             if (lev >= 0) {
@@ -328,18 +337,20 @@ inline double *calc_array_extrems(double *a, int ox_len, int oy_len) {
         }
     }
 
-    res[0] = minRes; res[1] = maxRes;
+    res[0] = minRes;
+    res[1] = maxRes;
     return res;
 }
 
 inline void print_surface(const char *filename, int ox_len, int oy_len,
-                   double hx, double hy, int t, double a, double c, double x0, double y0,
-                   double tau, double u, double v, double *data) {
+                          double hx, double hy, int t, double a, double c, double x0, double y0,
+                          double tau, double u, double v, double *data) {
     char name[650];
     sprintf(name, "%s_nx=%d_ny=%d_hx=%f_hy=%f_t=%d_x0=%f_y0=%f_tau=%f_u=%f_v=%f_a=%f_c=%f.dat",
             filename, ox_len + 1, oy_len + 1, hx, hy, t, x0, y0, tau, u, v, a, c);
     FILE *file = fopen(name, "w");
-    fprintf(file, "TITLE = 'DEM DATA | DEM DATA | DEM DATA | DEM DATA'\nVARIABLES = 'x' 'y' %s\nZONE T='SubZone'",filename);
+    fprintf(file, "TITLE = 'DEM DATA | DEM DATA | DEM DATA | DEM DATA'\nVARIABLES = 'x' 'y' %s\nZONE T='SubZone'",
+            filename);
     fprintf(file, "\nI=%d J=%d K=%d ZONETYPE=Ordered", oy_len + 1, ox_len + 1, 1);
     fprintf(file, "\nDATAPACKING=POINT\nDT=(SINGLE SINGLE SINGLE)");
     for (int i = 0; i < ox_len + 1; i++)
@@ -351,8 +362,8 @@ inline void print_surface(const char *filename, int ox_len, int oy_len,
 }
 
 inline void print_line_along_x(const char *filename, int ox_len, int oy_len,
-                        double hx, double hy, int t, double a, double c, double x0, double y0,
-                        double tau, double u, double v, double *data, int fixed_y) {
+                               double hx, double hy, int t, double a, double c, double x0, double y0,
+                               double tau, double u, double v, double *data, int fixed_y) {
     char name[650];
     sprintf(name, "line_by_x_%s_y_fix=%d_nx=%d_ny=%d_hx=%f_hy=%f_t=%d_x0=%f_y0=%f_tau=%f_u=%f_v=%f_a=%f_c=%f.dat",
             filename, fixed_y, ox_len + 1, oy_len + 1, hx, hy, t, x0, y0, tau, u, v, a, c);
@@ -366,8 +377,8 @@ inline void print_line_along_x(const char *filename, int ox_len, int oy_len,
 }
 
 inline void print_line_along_y(const char *filename, int ox_len, int oy_len,
-                        double hx, double hy, int t, double a, double c, double x0, double y0,
-                        double tau, double u, double v, double *data, int fixed_x) {
+                               double hx, double hy, int t, double a, double c, double x0, double y0,
+                               double tau, double u, double v, double *data, int fixed_x) {
     char name[650];
     sprintf(name, "line_by_y_%s_x_fix=%d_nx=%d_ny=%d_hx=%f_hy=%f_t=%d_x0=%f_y0=%f_tau=%f_u=%f_v=%f_a=%f_c=%f.dat",
             filename, fixed_x, ox_len + 1, oy_len + 1, hx, hy, t, x0, y0, tau, u, v, a, c);
