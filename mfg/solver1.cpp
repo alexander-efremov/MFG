@@ -110,21 +110,13 @@ void fill_rp(double *rp, double *m_pr, double time, int n) {
         rp[i] += get_f(SIGMA_SQ, A_COEF, (i - 0.5) * H, time);
 }
 
-void fill_error(double *err, double *sol, int n, double time) {
-    double *ex_sol = (double *) malloc(n * sizeof(double));
-
-    ex_sol[0] = analytical_solution_1(A_COEF, time, A - H_2);
-    for (int i = 1; i < n - 1; ++i)
-        ex_sol[i] = analytical_solution_1(A_COEF, time, A + i * H);
-    ex_sol[n - 1] = analytical_solution_1(A_COEF, time, B + H_2);
-
-    printf("EXACT SOL \n");
-    print_matrix1(ex_sol, 1, n);
+double* get_arr_diff(double *arr1, double *arr2, int n) {
+    double *err = (double *) malloc(n * sizeof(double));
 
     for (int i = 0; i < n; ++i)
-        err[i] = ex_sol[i] - sol[i];
+        err[i] = arr1[i] - arr2[i];
 
-    free(ex_sol);
+    return err;
 }
 
 void assert_params() {
@@ -207,8 +199,15 @@ double *solve_1() {
     printf("M DONE\n");
     print_matrix1(m, 1, n);
 
-    double *err = (double *) malloc(n * sizeof(double));
-    fill_error(err, m, n, TIME_STEP_CNT * TAU);
+    double *ex_sol = (double *) malloc(n * sizeof(double));
+    ex_sol[0] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, A - H_2);
+    for (int i = 1; i < n - 1; ++i)
+        ex_sol[i] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, A + i * H);
+    ex_sol[n - 1] = analytical_solution_1(A_COEF, TIME_STEP_CNT * TAU, B + H_2);
+    printf("EXACT SOL \n");
+    print_matrix1(ex_sol, 1, n);
+
+    double *err = get_arr_diff(err, m, n);
     printf("ERR \n");
     print_matrix1(err, 1, n);
     free(err);
