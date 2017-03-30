@@ -204,3 +204,123 @@ TEST_F(MalgoFixture, thomas_algo_test6) {
     free(b);
     free(c);
 }
+
+TEST_F(MalgoFixture, thomas_algo1_test1) {
+    const int n = 5;
+
+    double *b = (double *) malloc(n * sizeof(double));
+    double *c = (double *) malloc(n * sizeof(double));
+    double *d = (double *) malloc(n * sizeof(double));
+    double *r = (double *) malloc(n * sizeof(double));
+    double *x = (double *) malloc(n * sizeof(double));
+    for (int i = 0; i < n; ++i)
+        b[i] = b[i] = c[i] = d[i] = x[i] = 0.;
+
+    //под
+    b[0] = 0.;
+    b[1] = 2.;
+    b[2] = 4.;
+    b[3] = 4.;
+    b[4] = 2.;
+
+    //главная
+    c[0] = 2.;
+    c[1] = 9.;
+    c[2] = 17.;
+    c[3] = 15.;
+    c[4] = 3.;
+
+    //над
+    d[0] = 1.;
+    d[1] = 2.;
+    d[2] = -4.;
+    d[3] = -8.;
+    d[4] = 0.;
+
+    r[0] = -10.;
+    r[1] = -26.;
+    r[2] = -16.;
+    r[3] = -2.;
+    r[4] = 16.;
+
+    printf("\n");
+    print_matrix1(b, 1, n);
+    printf("\n");
+    print_matrix1(c, 1, n);
+    printf("\n");
+    print_matrix1(d, 1, n);
+    printf("\n");
+    print_matrix1(r, 1, n);
+
+    thomas_algo_verzh(n, b, c, d, r, x);
+
+    printf("\n");
+    print_matrix(x, 1, n);
+
+    ASSERT_NEAR(x[0], -4., 1e-2);
+    ASSERT_NEAR(x[1], -2., 1e-2);
+    ASSERT_NEAR(x[2], 0., 1e-2);
+    ASSERT_NEAR(x[3], 2., 1e-2);
+    ASSERT_NEAR(x[4], 4., 1e-2);
+
+    free(r);
+    free(b);
+    free(c);
+    free(d);
+    free(x);
+}
+
+TEST_F(MalgoFixture, thomas_algo1_test2) {
+    const int n = 3;
+
+    double *b = (double *) malloc(n * sizeof(double));
+    double *c = (double *) malloc(n * sizeof(double));
+    double *d = (double *) malloc(n * sizeof(double));
+    double *r = (double *) malloc(n * sizeof(double));
+    double *x = (double *) malloc(n * sizeof(double));
+    for (int i = 0; i < n; ++i)
+        b[i] = b[i] = c[i] = d[i] = x[i] = 0.;
+
+    //под
+    b[0] = 0.;
+    b[1] = 1.;
+    b[2] = 1.;
+
+    //главная
+    c[0] = 1.;
+    c[1] = 2.;
+    c[2] = 3.;
+
+    //над
+    d[0] = 1.;
+    d[1] = 1.;
+    d[2] = 0.;
+
+    r[0] = 2.;
+    r[1] = 4.;
+    r[2] = 4.;
+
+    printf("\n");
+    print_matrix1(b, 1, n);
+    printf("\n");
+    print_matrix1(c, 1, n);
+    printf("\n");
+    print_matrix1(d, 1, n);
+    printf("\n");
+    print_matrix1(r, 1, n);
+
+    thomas_algo_verzh(n, b, c, d, r, x);
+
+    printf("\n");
+    print_matrix(x, 1, n);
+
+    ASSERT_NEAR(x[0], 1., 1e-2);
+    ASSERT_NEAR(x[1], 1., 1e-2);
+    ASSERT_NEAR(x[2], 1., 1e-2);
+
+    free(r);
+    free(b);
+    free(c);
+    free(d);
+    free(x);
+}
