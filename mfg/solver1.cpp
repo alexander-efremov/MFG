@@ -7,34 +7,31 @@
 
 /**
 	 * n - число уравнений (строк матрицы)
-
-
-	 * a - диагональ, лежащая под главной (нумеруется: [1;n-1])
-	 * b - диагональ, лежащая над главной (нумеруется: [0;n-2])
+	 * b - диагональ, лежащая под главной (нумеруется: [1;n-1])
 	 * c - главная диагональ матрицы A (нумеруется: [0;n-1])
+	 * d - диагональ, лежащая над главной (нумеруется: [0;n-2])
 	 * f - правая часть (столбец)
 	 * x - решение, массив x будет содержать ответ
 	 */
-
-inline void fill_a(double *a, int n) {
-    a[0] = 0.;
+inline void fill_b(double *b, int n) {
+    b[0] = 0.;
     for (int i = 1; i < n; ++i)
-        a[i] = 1. / (8. * TAU) - SIGMA_SQ / H_SQ;
+        b[i] = 1. / (8. * TAU) - SIGMA_SQ / H_SQ;
 }
 
-inline void fill_b(double *b, int n) {
+inline void fill_d(double *d, int n) {
     for (int i = 0; i < n - 1; ++i)
-        b[i] = 1. / (8. * TAU) - SIGMA_SQ / H_SQ;
-    b[n - 1] = 0.;
+        d[i] = 1. / (8. * TAU) - SIGMA_SQ / H_SQ;
+    d[n - 1] = 0.;
 }
 
 inline void fill_c(double *c, int n) {
-    c[0] = 7. / (8. * TAU) + SIGMA_SQ / H_SQ;
+    double val = 7. / (8. * TAU) + SIGMA_SQ / H_SQ;
+
+    c[0] = c[n - 1] = val;
 
     for (int i = 1; i < n - 1; ++i)
         c[i] = 3. / (4. * TAU) + (2. * SIGMA_SQ) / H_SQ;
-
-    c[n - 1] = 7. / (8. * TAU) + SIGMA_SQ / H_SQ;
 }
 
 inline double func_alpha(double a_coef, double t, double x) {
@@ -112,7 +109,7 @@ void fill_rp(double *rp, double *m_pr, double time, int n) {
         rp[i] += get_f(SIGMA_SQ, A_COEF, (i - 0.5) * H, time);
 }
 
-double* get_arr_diff(double *arr1, double *arr2, int n) {
+double *get_arr_diff(double *arr1, double *arr2, int n) {
     double *err = (double *) malloc(n * sizeof(double));
 
     for (int i = 0; i < n; ++i)
@@ -140,14 +137,14 @@ void assert_params() {
 }
 
 /**
-	 * n - число уравнений (строк матрицы)
-	 * a - диагональ, лежащая под главной (нумеруется: [1;n-1])
-	 * c - главная диагональ матрицы A (нумеруется: [0;n-1])
-	 * b - диагональ, лежащая над главной (нумеруется: [0;n-2])
-	 * f - правая часть (столбец)
-	 * x - решение, массив x будет содержать ответ
-	 */
-void print_thomas_arrays(double *a, double *b, double *c, int n) {
+    * n - число уравнений (строк матрицы)
+    * b - диагональ, лежащая под главной (нумеруется: [1;n-1])
+    * c - главная диагональ матрицы A (нумеруется: [0;n-1])
+    * d - диагональ, лежащая над главной (нумеруется: [0;n-2])
+    * f - правая часть (столбец)
+    * x - решение, массив x будет содержать ответ
+    */
+void print_thomas_arrays(double *b, double *c, double *d, int n) {
     printf("b\n");
     for (int i = 0; i < n; ++i) {
         printf("%e ", b[i]);
@@ -156,9 +153,9 @@ void print_thomas_arrays(double *a, double *b, double *c, int n) {
     for (int i = 0; i < n; ++i) {
         printf("%e ", c[i]);
     }
-    printf("\na\n");
+    printf("\nd\n");
     for (int i = 0; i < n; ++i) {
-        printf("%e ", a[i]);
+        printf("%e ", d[i]);
     }
     printf("\n");
 }
@@ -172,13 +169,13 @@ double *solve_1() {
     double *m = (double *) malloc(n * sizeof(double));
     double *m_pr = (double *) malloc(n * sizeof(double));
     double *rp = (double *) malloc(n * sizeof(double));
-    double *a = (double *) malloc(n * sizeof(double));
     double *b = (double *) malloc(n * sizeof(double));
     double *c = (double *) malloc(n * sizeof(double));
-    fill_a(a, n);
+    double *d = (double *) malloc(n * sizeof(double));
     fill_b(b, n);
     fill_c(c, n);
-    print_thomas_arrays(a, b, c, n);
+    fill_d(d, n);
+    print_thomas_arrays(b, c, d, n);
 
     for (int i = 0; i < n; ++i) m[i] = rp[i] = m_pr[i] = 0.;
 
@@ -192,7 +189,7 @@ double *solve_1() {
         fill_rp(rp, m_pr, TAU * tl, n);
         printf("RP \n");
         print_matrix1(rp, 1, n);
-        thomas_algo(n, a, c, b, rp, m);
+        thomas_algo_verzh(n, b, c, d, rp, m);
         m[0] = m[1];
         m[n - 1] = m[n - 2];
         memcpy(m_pr, m, n * sizeof(double));
@@ -217,9 +214,9 @@ double *solve_1() {
 
     free(m_pr);
     free(rp);
-    free(a);
     free(b);
     free(c);
+    free(d);
 
     return m;
 }
