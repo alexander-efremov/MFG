@@ -211,6 +211,9 @@ double *solve_1(int n, double *exact_sol_to_fill) {
 //    printf("ERR \n");
 //    print_matrix1(err, 1, n);
 
+    double l1 = get_l1_norm(H, n, err);
+    printf("L1 NORM = %e\n", l1);
+
     fill_arr_by_ex_sol(exact_sol_to_fill, n, TAU * TIME_STEP_CNT);
 
     free(ex_m);

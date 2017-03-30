@@ -125,7 +125,6 @@ TEST_F(MfgFixture, mfg_solver_1) {
         assert(tau * tsc == 0.01);//0.01 sec
         double l1 = run_solver_1(nx, tau, tsc, sigma);
         l1_arr[i] = l1;
-
     }
 
     double l1_max = -10000000.;
