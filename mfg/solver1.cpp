@@ -5,27 +5,6 @@
 #include <malgo.h>
 #include <utils.h>
 
-inline double get_lc_0() {
-    //return 7. / (8. * TAU) + SIGMA_SQ / (2. * H_SQ);
-    return 1. / (8. * TAU) - SIGMA_SQ / (2. * H_SQ);
-}
-
-inline double get_lc_1() {
-    return 1. / (8. * TAU) - SIGMA_SQ / (2. * H_SQ);
-}
-
-inline double get_lc_2() {
-    return 3. / (4. * TAU) + SIGMA_SQ / H_SQ;
-}
-
-inline double get_lc_3() {
-    return get_lc_1();
-}
-
-inline double get_lc_n() {
-    return get_lc_0();
-}
-
 /**
 	 * n - число уравнений (строк матрицы)
 	 * a - диагональ, лежащая под главной (нумеруется: [1;n-1])
@@ -38,27 +17,26 @@ inline double get_lc_n() {
 inline void fill_a(double *a, int n) {
     a[0] = 0.;
     for (int i = 1; i < n; ++i)
-        a[i] = get_lc_1();
+        a[i] = 1. / (8. * TAU) - SIGMA_SQ / H_SQ;
 }
 
 inline void fill_b(double *b, int n) {
     for (int i = 0; i < n - 1; ++i)
-        b[i] = get_lc_3();
+        b[i] = 1. / (8. * TAU) - SIGMA_SQ / H_SQ;
     b[n - 1] = 0.;
 }
 
 inline void fill_c(double *c, int n) {
-    c[0] = get_lc_0();
+    c[0] = 7. / (8. * TAU) + SIGMA_SQ / H_SQ;
 
     for (int i = 1; i < n - 1; ++i)
-        c[i] = get_lc_2();
+        c[i] = 3. / (4. * TAU) + (2. * SIGMA_SQ) / H_SQ;
 
-    c[n - 1] = get_lc_0();
+    c[n - 1] = 7. / (8. * TAU) + SIGMA_SQ / H_SQ;
 }
 
 inline double func_alpha(double a_coef, double t, double x) {
     return a_coef * t * x * (1. - x);
-    //return A_COEF;
 }
 
 inline double get_f(double sigma_sq, double a_coef, double x, double t) {
@@ -102,10 +80,7 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
 
     // считаем интеграл по левой подчасти
     // вычислим значение функции в нашей левой точке по формуле 3.7
-    if (x_left > H_2)
-        m_left = m_pr[I_left] * (xi_poh_left - x_left) / H + m_pr[I_left + 1] * (x_left - xi_moh_left) / H;
-    else
-        m_left = m_pr[I_left];
+    m_left = m_pr[I_left] * (xi_poh_left - x_left) / H + m_pr[I_left + 1] * (x_left - xi_moh_left) / H;
 
     // применим формулу трапеций - полусумма оснований умножить на высоту
     r += 0.5 * (m_left + m_pr[I_left + 1]) * (xi_poh_left - x_left);
@@ -117,10 +92,7 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
 
     // считаем интеграл по правой подчасти
     // вычислим значение функции в нашей правой точке по формуле 3.7
-    if (x_right < B - H_2)
-        m_right = m_pr[I_right] * (xi_poh_right - x_right) / H + m_pr[I_right + 1] * (x_right - xi_moh_right) / H;
-    else
-        m_right = m_pr[I_right + 1];
+    m_right = m_pr[I_right] * (xi_poh_right - x_right) / H + m_pr[I_right + 1] * (x_right - xi_moh_right) / H;
 
     r += 0.5 * (m_right + m_pr[I_right]) * (x_right - xi_moh_right);
 
@@ -128,7 +100,7 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
 }
 
 void fill_rp(double *rp, double *m_pr, double time, int n) {
-    rp[0] = 0.;//analytical_solution_1(A_COEF, time, A - H_2);
+    rp[0] = 0.;
     rp[n - 1] = 0;
 
     for (int i = 1; i < n - 1; ++i)
@@ -182,13 +154,6 @@ void assert_params() {
 	 * x - решение, массив x будет содержать ответ
 	 */
 void print_thomas_arrays(double *a, double *b, double *c, int n) {
-    printf("THOMAS PARAMS\n");
-    printf("coef 0 = %e\n", get_lc_0());
-    printf("coef n = %e\n", get_lc_n());
-    printf("coef a = %e\n", get_lc_1());
-    printf("coef b = %e\n", get_lc_2());
-    printf("coef c = %e\n", get_lc_3());
-
     printf("b\n");
     for (int i = 0; i < n; ++i) {
         printf("%e ", b[i]);
@@ -234,6 +199,8 @@ double *solve_1() {
         printf("RP \n");
         print_matrix1(rp, 1, n);
         thomas_algo(n, a, c, b, rp, m);
+        m[0] = m[1];
+        m[n - 2] = m[n - 1];
         memcpy(m_pr, m, n * sizeof(double));
     }
 
