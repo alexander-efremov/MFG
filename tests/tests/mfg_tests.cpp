@@ -76,7 +76,7 @@ TEST_F(MfgFixture, mfg_solver_1) {
     int exp_cnt = 6;
     double *l1_arr = (double *) malloc(exp_cnt * sizeof(double));
     for (int i = 0; i < exp_cnt; ++i) {
-        printf("\n\n =============== EXPERIMENT %d ================ \n\n", i + 1);
+        printf("\n\n=============== EXPERIMENT %d ================ \n\n", i + 1);
         int nx = 0;
         double tau = 1e-3;
         double sigma = 1.;
