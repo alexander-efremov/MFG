@@ -73,40 +73,59 @@ double run_solver_1(int nx, double tau, int time_step_cnt, double sigma) {
 }
 
 TEST_F(MfgFixture, mfg_solver_1) {
-    int exp_cnt = 1;
+    int exp_cnt = 6;
     double *l1_arr = (double *) malloc(exp_cnt * sizeof(double));
     for (int i = 0; i < exp_cnt; ++i) {
+        printf("\n\n =============== EXPERIMENT %d ================ \n\n", i + 1);
         int nx = 0;
         double tau = 1e-3;
         double sigma = 1.;
-        int tsc = 1;
+        int tsc = 10;
+        double mult = 1.;
         switch (i) {
             case 0:
                 nx = 50;
-                tau = 1e-3;
-                tsc = 10;
+                tau = tau / mult;
+                tsc = 10 * (int) mult;
                 break;
             case 1:
+                mult = 4.;
                 nx = 100;
+                tau = tau / mult;
+                tsc = 10 * (int) mult;
                 break;
             case 2:
+                mult = 16.;
                 nx = 200;
+                tau = tau / mult;
+                tsc = 10 * (int) mult;
                 break;
             case 3:
+                mult = 32.;
                 nx = 400;
+                tau = tau / mult;
+                tsc = 10 * (int) mult;
                 break;
             case 4:
+                mult = 64.;
                 nx = 800;
+                tau = tau / mult;
+                tsc = 10 * (int) mult;
                 break;
             case 5:
+                mult = 128.;
                 nx = 1600;
+                tau = tau / mult;
+                tsc = 10 * (int) mult;
                 break;
             default:
                 return;
         }
-
+        printf("TAU * TIME_STEP_COUNT = %e", tau * tsc);
+        assert(tau * tsc == 0.01);//0.01 sec
         double l1 = run_solver_1(nx, tau, tsc, sigma);
         l1_arr[i] = l1;
+
     }
 
     double l1_max = -10000000.;
