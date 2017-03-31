@@ -148,7 +148,7 @@ TEST_F(MfgFixture, mfg_solver_1_tsc_const) {
         int nx = 0;
         double tau = 1e-3;
         double sigma = 1.;
-        int tsc = 1;
+        int tsc = 10;
         double mult = 1.;
         switch (i) {
             case 0:

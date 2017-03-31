@@ -45,7 +45,7 @@ inline double func_alpha(double a_coef, double t, double x) {
 
 inline double get_f(double sigma_sq, double a_coef, double x, double t) {
     return (a_coef * x * x * (3. - 2. * x)) / 6.
-           - (sigma_sq * a_coef * t * (1. - 2. * x)) / 2.
+           - sigma_sq * a_coef * t * (1. - 2. * x)
            + a_coef * a_coef * t * t * x * x * (1. - x) * (1. - x)
            + (a_coef * a_coef * t * t * x * x * (3. - 2. * x) * (1. - 2. * x)) / 6.;
 }
@@ -73,13 +73,13 @@ double get_right_part_inner_points(int I, double *m_pr, double time) {
         printf("Time value %.8le! ERROR INDEX i=%d : x1=%.8le ** x2=%.8le\n ", time, j, x_left, x_right);
 
     I_left = (int) (((x_left - A) / H) + 0.5); // определяем индекс левого интервала линейности
-    xi_moh_left = A + I_left * H - H_2; // левая граница левого интервала линейности
-    xi_poh_left = A + I_left * H + H_2; // правая граница левого интервала линейности
+    xi_moh_left = A + (I_left - 0.5) * H; // левая граница левого интервала линейности
+    xi_poh_left = A + (I_left + 0.5) * H; // правая граница левого интервала линейности
     assert(x_left >= xi_moh_left && x_left <= xi_poh_left);
 
     I_right = (int) (((x_right - A) / H) + 0.5); // определяем индекс правого интервала линейности
-    xi_moh_right = A + I_right * H - H_2; // левая граница правого интервала линейности
-    xi_poh_right = A + I_right * H + H_2; // правая граница правого интервала линейности
+    xi_moh_right = A + (I_right - 0.5) * H; // левая граница правого интервала линейности
+    xi_poh_right = A + (I_right + 0.5) * H; // правая граница правого интервала линейности
     assert(x_right >= xi_moh_right && x_right <= xi_poh_right);
 
     // считаем интеграл по левой подчасти
@@ -108,18 +108,21 @@ void fill_rp(double *rp, double *m_pr, double time, int n) {
     rp[n - 1] = 0;
 
     for (int i = 1; i < n - 1; ++i)
-        rp[i] = get_right_part_inner_points(i, m_pr, time);
+        rp[i] = get_right_part_inner_points(i, m_pr, time) / (TAU * H);
 
-    for (int i = 0; i < n; ++i)
+/*    for (int i = 0; i < n; ++i)
         printf("%f ", rp[i]);
     printf("\n\n");
+*/
 
     for (int i = 1; i < n - 1; ++i)
         rp[i] += get_f(SIGMA_SQ, A_COEF, (i - 0.5) * H, time);
-
+/*
     for (int i = 0; i < n; ++i)
         printf("%f ", rp[i]);
     printf("\n\n");
+*/
+
 }
 
 
@@ -167,7 +170,7 @@ void print_thomas_arrays(double *b, double *c, double *d, int n) {
 
 void fill_arr_by_ex_sol(double *arr, int n, double time) {
     for (int i = 1; i < n - 1; ++i)
-        arr[i] = analytical_solution_1(A_COEF, time, A + i * H - H_2);
+        arr[i] = analytical_solution_1(A_COEF, time, A + (i - 0.5) * H);
     arr[0] = arr[1];
     arr[n - 1] = arr[n - 2];
 }
@@ -261,6 +264,9 @@ double *solve_1(int n, double *exact_sol_to_fill) {
     free(b);
     free(c);
     free(d);
+    free(max);
+    free(l1_norm_err);
+    free(l1_norm_sol);
 
     return m;
 }
