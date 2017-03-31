@@ -115,7 +115,6 @@ void fill_rp(double *rp, double *m_pr, double time, int n) {
 }
 
 
-
 void assert_params() {
     assert(H > 0.);
     assert(H_SQ == H * H);
@@ -159,7 +158,8 @@ void print_thomas_arrays(double *b, double *c, double *d, int n) {
 }
 
 void fill_arr_by_ex_sol(double *arr, int n, double time) {
-    for (int i = 1; i < n - 1; ++i) arr[i] = analytical_solution_1(A_COEF, time, A + i * H - H_2);
+    for (int i = 1; i < n - 1; ++i)
+        arr[i] = analytical_solution_1(A_COEF, time, A + i * H - H_2);
     arr[0] = arr[1];
     arr[n - 1] = arr[n - 2];
 }
@@ -175,6 +175,13 @@ double *solve_1(int n, double *exact_sol_to_fill) {
     double *b = (double *) malloc(n * sizeof(double));
     double *c = (double *) malloc(n * sizeof(double));
     double *d = (double *) malloc(n * sizeof(double));
+
+    double *max = (double *) malloc((TIME_STEP_CNT + 1) * sizeof(double));
+    double *l1_norm_err = (double *) malloc((TIME_STEP_CNT + 1) * sizeof(double));
+    double *l1_norm_sol = (double *) malloc((TIME_STEP_CNT + 1) * sizeof(double));
+
+    max[0] = 0.; l1_norm_err[0] = 0.; l1_norm_sol[0] = 0.;
+
     fill_b(b, n);
     fill_c(c, n);
     fill_d(d, n);
@@ -187,8 +194,6 @@ double *solve_1(int n, double *exact_sol_to_fill) {
 //    printf("M_PR\n");
 //    print_matrix1(m_pr, 1, n);
 
-    double *l1s = (double *) malloc(sizeof(double) * TIME_STEP_CNT);
-
     for (int tl = 1; tl <= TIME_STEP_CNT; ++tl) {
         fill_rp(rp, m_pr, TAU * tl, n);
 //        printf("RP \n");
@@ -197,25 +202,42 @@ double *solve_1(int n, double *exact_sol_to_fill) {
         m[0] = m[1];
         m[n - 1] = m[n - 2];
         memcpy(m_pr, m, n * sizeof(double));
+
+        fill_arr_by_ex_sol(ex_m, n, TAU * tl);
+        //    printf("EXACT SOL \n");
+        //    print_matrix1(ex_m, 1, n);
+
+        fill_arr_diff(err, ex_m, m, n);
+        err[0] = 0; err[n-1] = 0;
+        //    printf("ERR \n");
+        //    print_matrix1(err, 1, n);
+
+        max[tl] = get_max_fabs_array(err, n);
+        l1_norm_err[tl] = get_l1_norm(H, n, err);
+        l1_norm_sol[tl] = get_l1_norm(H, n, m);
+
+        printf("TIME LEVEL %d \n", tl);
+        printf("uniform norm %22.14le\n", max[tl]);
+        printf("l1 norm of error %22.14le\n", l1_norm_err[tl]);
+        printf("l1 norm of num solution%22.14le\n", l1_norm_sol[tl]);
     }
 
 //    printf("M DONE\n");
 //    print_matrix1(m, 1, n);
 
-    fill_arr_by_ex_sol(ex_m, n, TAU * TIME_STEP_CNT);
+    max[0] = get_max_fabs_array(l1_norm_err, TIME_STEP_CNT+1);
+    printf("uniform norm of l1 norm of error %22.14le\n", max[0]);
+
+//    fill_arr_by_ex_sol(ex_m, n, TAU * TIME_STEP_CNT);
 //    printf("EXACT SOL \n");
 //    print_matrix1(ex_m, 1, n);
 
-    fill_arr_diff(err, ex_m, m, n);
+//    fill_arr_diff(err, ex_m, m, n);
 //    printf("ERR \n");
 //    print_matrix1(err, 1, n);
 
-    double l1 = get_l1_norm(H, n, err);
-    printf("L1 NORM = %e\n", l1);
-
     fill_arr_by_ex_sol(exact_sol_to_fill, n, TAU * TIME_STEP_CNT);
 
-    free(l1s);
     free(ex_m);
     free(m_pr);
     free(rp);

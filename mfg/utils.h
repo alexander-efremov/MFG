@@ -18,6 +18,14 @@ inline void print_matrix_to_file(int n, int m, double *data, const char *filenam
     fclose(f);
 }
 
+inline void print_vector_to_file(int n, double *data, const char *filename) {
+    FILE *f = fopen(filename, "w");
+    for (int i = 0; i < n; ++i) {
+        fprintf(f, "%20.14le\n", data[n]);
+    }
+    fclose(f);
+}
+
 inline void print_int(const char *str, int i) {
     printf("%s %d\n", str, i);
 }
@@ -191,16 +199,24 @@ inline void print_vector(double *a, int n, int precision = 8) {
     }
 }
 
-inline void fill_arr_diff(double *err, double *arr1, double *arr2, int n) {
-    for (int i = 0; i < n; ++i)
-        err[i] = arr1[i] - arr2[i];
-}
-
 inline void print_vector(int *a, int n) {
     for (int k = 0; k < n; ++k) {
         printf("%d ", a[k]);
     }
     printf("\n");
+}
+
+inline void fill_arr_diff(double *err, double *arr1, double *arr2, int n) {
+    for (int i = 0; i < n; ++i)
+        err[i] = arr1[i] - arr2[i];
+}
+
+inline double get_max_fabs_array(double *arr, int n) {
+    double max = fabs(arr[0]);
+    for (int i = 1; i < n; ++i) {
+        if (max <= fabs(arr[i])) max = fabs(arr[i]);
+    }
+    return max;
 }
 
 inline double get_l1_norm_vec(int x_len, int y_len, double *data) { // new
@@ -222,7 +238,7 @@ inline double get_l1_norm(double hx, double hy, int x_len, int y_len, double *da
 inline double get_l1_norm(double h, int x_len, double *data) {
     double r = 0.;
     r += data[0] * h / 2.;
-    for (int i = 1; i < x_len - 1; ++i)
+    for (int i = 1; i < x_len - 2; ++i)
         r += fabs(data[i]) * h;
     r += data[x_len - 1] * h / 2.;
     return r;

@@ -40,6 +40,7 @@ double run_solver_1(int nx, double tau, int time_step_cnt, double sigma) {
     SIGMA = sigma;
     SIGMA_SQ = SIGMA * SIGMA;
 
+
     NX = nx;
     N_1 = NX + 1;
     H = (B - A) / NX;
@@ -59,8 +60,9 @@ double run_solver_1(int nx, double tau, int time_step_cnt, double sigma) {
     double *err = (double *) malloc(n * sizeof(double));
     double *m = solve_1(n, exact_m);
 
-    for (int i = 1; i < n - 1; ++i)
+    for (int i = 0; i < n; ++i)
         err[i] = exact_m[i] - m[i];
+    err[0] = 0; err[n-1] = 0;
 
     double l1 = get_l1_norm(H, n, err);
 
@@ -72,7 +74,7 @@ double run_solver_1(int nx, double tau, int time_step_cnt, double sigma) {
 }
 
 TEST_F(MfgFixture, mfg_solver_1) {
-    int exp_cnt = 6;
+    int exp_cnt = 4;
     double *l1_arr = (double *) malloc(exp_cnt * sizeof(double));
     for (int i = 0; i < exp_cnt; ++i) {
         printf("\n\n=============== EXPERIMENT %d ================ \n\n", i + 1);
@@ -124,6 +126,7 @@ TEST_F(MfgFixture, mfg_solver_1) {
         assert(tau * tsc == 0.01);//0.01 sec
         double l1 = run_solver_1(nx, tau, tsc, sigma);
         l1_arr[i] = l1;
+
     }
 
     double l1_max = -10000000.;
@@ -136,3 +139,52 @@ TEST_F(MfgFixture, mfg_solver_1) {
     free(l1_arr);
 }
 
+
+TEST_F(MfgFixture, mfg_solver_1_tsc_const) {
+    int exp_cnt = 4;
+    double *l1_arr = (double *) malloc(exp_cnt * sizeof(double));
+    for (int i = 0; i < exp_cnt; ++i) {
+        printf("\n\n=============== EXPERIMENT %d ================ \n\n", i + 1);
+        int nx = 0;
+        double tau = 1e-3;
+        double sigma = 1.;
+        int tsc = 10;
+        double mult = 1.;
+        switch (i) {
+            case 0:
+                nx = 50;
+                break;
+            case 1:
+                nx = 100;
+                break;
+            case 2:
+                nx = 200;
+                break;
+            case 3:
+                nx = 400;
+                break;
+            case 4:
+                nx = 800;
+                break;
+            case 5:
+                nx = 1600;
+                break;
+            default:
+                return;
+        }
+        printf("TAU * TIME_STEP_COUNT = %e", tau * tsc);
+        assert(tau * tsc == 0.01);//0.01 sec
+        double l1 = run_solver_1(nx, tau, tsc, sigma);
+        l1_arr[i] = l1;
+
+    }
+
+    double l1_max = -10000000.;
+    for (int j = 0; j < exp_cnt; ++j) {
+        if (l1_arr[j] > l1_max)
+            l1_max = l1_arr[j];
+    }
+    printf("\n\nL1 MAX ON EXPERIMENTS: %e\n", l1_max);
+
+    free(l1_arr);
+}
