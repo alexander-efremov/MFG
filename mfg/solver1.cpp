@@ -110,8 +110,16 @@ void fill_rp(double *rp, double *m_pr, double time, int n) {
     for (int i = 1; i < n - 1; ++i)
         rp[i] = get_right_part_inner_points(i, m_pr, time);
 
+    for (int i = 0; i < n; ++i)
+        printf("%f ", rp[i]);
+    printf("\n\n");
+
     for (int i = 1; i < n - 1; ++i)
         rp[i] += get_f(SIGMA_SQ, A_COEF, (i - 0.5) * H, time);
+
+    for (int i = 0; i < n; ++i)
+        printf("%f ", rp[i]);
+    printf("\n\n");
 }
 
 
@@ -166,6 +174,8 @@ void fill_arr_by_ex_sol(double *arr, int n, double time) {
 
 double *solve_1(int n, double *exact_sol_to_fill) {
     assert_params();
+
+    char m_fout[25];
 
     double *m = (double *) malloc(n * sizeof(double));
     double *m_pr = (double *) malloc(n * sizeof(double));
@@ -228,11 +238,17 @@ double *solve_1(int n, double *exact_sol_to_fill) {
     max[0] = get_max_fabs_array(l1_norm_err, TIME_STEP_CNT+1);
     printf("uniform norm of l1 norm of error %22.14le\n", max[0]);
 
-//    fill_arr_by_ex_sol(ex_m, n, TAU * TIME_STEP_CNT);
+    sprintf(m_fout, "%f_%f_%s.out", TAU * TIME_STEP_CNT, H, "err");
+    print_vector2D_to_file(n, A, H, err, m_fout);
+
+    sprintf(m_fout, "%f_%f_%s.out", TAU * TIME_STEP_CNT, H, "m");
+    print_vector2D_to_file(n, A, H, m, m_fout);
+
+    fill_arr_by_ex_sol(ex_m, n, TAU * TIME_STEP_CNT);
 //    printf("EXACT SOL \n");
 //    print_matrix1(ex_m, 1, n);
 
-//    fill_arr_diff(err, ex_m, m, n);
+    fill_arr_diff(err, ex_m, m, n);
 //    printf("ERR \n");
 //    print_matrix1(err, 1, n);
 

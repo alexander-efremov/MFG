@@ -18,14 +18,6 @@ inline void print_matrix_to_file(int n, int m, double *data, const char *filenam
     fclose(f);
 }
 
-inline void print_vector_to_file(int n, double *data, const char *filename) {
-    FILE *f = fopen(filename, "w");
-    for (int i = 0; i < n; ++i) {
-        fprintf(f, "%20.14le\n", data[n]);
-    }
-    fclose(f);
-}
-
 inline void print_int(const char *str, int i) {
     printf("%s %d\n", str, i);
 }
@@ -206,6 +198,25 @@ inline void print_vector(int *a, int n) {
     printf("\n");
 }
 
+inline void print_vector_to_file(int n, double *data, const char *filename) {
+    FILE *f = fopen(filename, "w");
+    for (int i = 0; i < n; ++i) {
+        fprintf(f, "%20.14le\n", data[n]);
+    }
+    fclose(f);
+}
+
+inline void print_vector2D_to_file(int n, double first, double h, double *data, const char *filename) {
+    FILE *f = fopen(filename, "w");
+
+    fprintf(f, "%20.14le\t%20.14le\n", first, data[0]);
+    for (int i = 1; i < n-1; ++i) {
+        fprintf(f, "%20.14le\t%20.14le\n", first + (i - 0.5) * h, data[i]);
+    }
+    fprintf(f, "%20.14le\t%20.14le\n", first + (n - 1) * h, data[n-1]);
+    fclose(f);
+}
+
 inline void fill_arr_diff(double *err, double *arr1, double *arr2, int n) {
     for (int i = 0; i < n; ++i)
         err[i] = arr1[i] - arr2[i];
@@ -213,7 +224,7 @@ inline void fill_arr_diff(double *err, double *arr1, double *arr2, int n) {
 
 inline double get_max_fabs_array(double *arr, int n) {
     double max = fabs(arr[0]);
-    for (int i = 1; i < n; ++i) {
+    for (int i = 1; i < n; ++i){
         if (max <= fabs(arr[i])) max = fabs(arr[i]);
     }
     return max;
@@ -239,7 +250,7 @@ inline double get_l1_norm(double h, int x_len, double *data) {
     double r = 0.;
     r += data[0] * h / 2.;
     for (int i = 1; i < x_len - 2; ++i)
-        r += fabs(data[i]) * h;
+        r += fabs(data[i] + data[i+1]) * h / 2.;
     r += data[x_len - 1] * h / 2.;
     return r;
 }
